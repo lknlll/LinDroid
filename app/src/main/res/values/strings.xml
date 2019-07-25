@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LinDroid</string>
+    <string name="draw_rect_title">Draw Rect</string>
+    <string name="GL_title">OpenGL</string>
+</resources>
