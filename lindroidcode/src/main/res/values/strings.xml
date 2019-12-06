@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">LinDroidCode</string>
+    <string name="text_module_info">1.MVP demo 模拟登录\n2.模拟器 demo \n 输入模块数字点击按钮进入</string>
+    <string name="text_shake_info">Shake info:</string>
+    <string name="bt_enter">进入对应模块</string>
+
+    <string-array name="class_names">
+        <item>com.example.lindroidcode.mvp.activities.UserLoginActivity</item>
+        <item>com.example.lindroidcode.sensors.activities.ShakeActivity</item>
+        <item></item>
+        <item></item>
+    </string-array>
 </resources>
