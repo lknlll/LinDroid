@@ -3,6 +3,10 @@
     package="com.example.lindroidcode">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
@@ -11,14 +15,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".leastsquares.LineChartActivity"></activity>
+        <activity
+            android:name=".permission.HandlePermissionActivity"
+            android:label="HandlePermissionActivity"
+            android:theme="@style/activity_translucent" />
+        <activity
+            android:name=".permission.ApplyPermissionActivity"
+            android:label="ApplyPermissionActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter></activity>
+            </intent-filter>
+        </activity>
         <activity android:name=".sensors.activities.ShakeActivity" />
-        <activity android:name=".mvp.activities.UserLoginActivity"/>
+        <activity android:name=".mvp.activities.UserLoginActivity" />
     </application>
 
 </manifest>

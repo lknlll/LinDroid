@@ -1,13 +1,24 @@
 <resources>
     <string name="app_name">LinDroidCode</string>
-    <string name="text_module_info">1.MVP demo 模拟登录\n2.模拟器 demo \n 输入模块数字点击按钮进入</string>
+
+    <string name="text_module_info">1.MVP demo 模拟登录\n2.模拟器 demo \n3.权限管理\n4.折线去趋势\n------\n输入模块数字点击按钮进入</string>
     <string name="text_shake_info">Shake info:</string>
+    <string name="text_flag_permission">Permission Status:</string>
+
     <string name="bt_enter">进入对应模块</string>
+
+    <string name="setting">设置</string>
+    <string name="msg_perm_tip">
+        当前应用缺少必要权限。\n请点击"设置"-"权限"-打开所需权限。\n最后点击两次后退按钮，即可返回。
+    </string>
+    <string name="msg_ask_again">请给予应用必要权限，让程序可正常工作。</string>
+    <string name="msg_perm_denied">您拒绝授予了相关权限，应用内已无法再次询问，您还可以在设置中再次授予该权限。</string>
+    <string name="cancel">取消</string>
 
     <string-array name="class_names">
         <item>com.example.lindroidcode.mvp.activities.UserLoginActivity</item>
         <item>com.example.lindroidcode.sensors.activities.ShakeActivity</item>
-        <item></item>
-        <item></item>
+        <item>com.example.lindroidcode.permission.ApplyPermissionActivity</item>
+        <item>com.example.lindroidcode.leastsquares.LineChartActivity</item>
     </string-array>
 </resources>
