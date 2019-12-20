@@ -36,6 +36,22 @@ public class PermissionHelper {
     public static final int REQUEST_CODE_PERMISSION = 1001;
     public static final int SETTINGS_REQ_CODE = 1002;
 
+    private static PermissionStatusListener sPermissionStatusListener;
+
+    public static PermissionStatusListener getPermissionStatusListener() {
+        return sPermissionStatusListener;
+    }
+
+    public static void dropPermissionStatusListener(){
+        sPermissionStatusListener = null;
+    }
+
+    public static void startPermissionApplyForResult(Activity activity, PermissionStatusListener permissionStatusListener){
+        sPermissionStatusListener = permissionStatusListener;
+        Intent intent = new Intent(activity,HandlePermissionActivity.class);
+        activity.startActivity(intent);
+    }
+
     /**
      */
     public static boolean hasPermissions(Context context, String... perms) {

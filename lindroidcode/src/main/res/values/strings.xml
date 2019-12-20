@@ -4,6 +4,8 @@
     <string name="text_module_info">1.MVP demo 模拟登录\n2.模拟器 demo \n3.权限管理\n4.折线去趋势\n------\n输入模块数字点击按钮进入</string>
     <string name="text_shake_info">Shake info:</string>
     <string name="text_flag_permission">Permission Status:</string>
+    <string name="text_permission_granted">Permission Granted</string>
+    <string name="text_permission_denied">Permission Denied</string>
 
     <string name="bt_enter">进入对应模块</string>
 

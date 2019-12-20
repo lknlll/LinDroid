@@ -7,6 +7,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 import com.example.lindroidcode.R;
 
@@ -28,15 +29,29 @@ public class ApplyPermissionActivity extends AppCompatActivity {
 
         mCheckPermission.setChecked(isGranted);
 
+        final TextView textPermissionListener = findViewById(R.id.text_permission_listener);
+
         if (!isGranted) {
+
+            final PermissionStatusListener permissionStatusListener = new PermissionStatusListener() {
+                @Override
+                public void onGranted() {
+                    textPermissionListener.setText(R.string.text_permission_granted);
+                }
+
+                @Override
+                public void onDenied() {
+                    textPermissionListener.setText(R.string.text_permission_denied);
+                }
+            };
 
             AlertDialog alertDialog = new AlertDialog.Builder(this)
                     .setMessage(R.string.msg_perm_tip)
                     .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(ApplyPermissionActivity.this,HandlePermissionActivity.class);
-                            startActivity(intent);
+
+                            PermissionHelper.startPermissionApplyForResult(ApplyPermissionActivity.this,permissionStatusListener);
                         }
                     })
                     .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {

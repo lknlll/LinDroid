@@ -29,7 +29,12 @@ public class HandlePermissionActivity extends AppCompatActivity implements Permi
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        PermissionHelper.onRequestPermissionsResult(requestCode,permissions,grantResults,this);
+        Log.e(TAG, "onRequestPermissionsResult: " );
+        if (PermissionHelper.getPermissionStatusListener() != null) {
+            PermissionHelper.onRequestPermissionsResult(requestCode,permissions,grantResults,this);
+        }else {
+            Log.e(TAG, "onRequestPermissionsResult: no result listener" );
+        }
 
     }
 
@@ -47,13 +52,15 @@ public class HandlePermissionActivity extends AppCompatActivity implements Permi
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        PermissionHelper.getPermissionStatusListener().onDenied();
+                        finish();
                     }
                 })
                 .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        PermissionHelper.getPermissionStatusListener().onDenied();
+                        finish();
                     }
                 })
                 .create();
@@ -62,47 +69,51 @@ public class HandlePermissionActivity extends AppCompatActivity implements Permi
 
     @Override
     public void onPermissionsDenied(int requestCode, List<String> perms) {
-        boolean isNeverAskedAgain = PermissionHelper.checkDeniedPermissionsNeverAskAgain(this,
-                getString(R.string.msg_perm_denied),
-                R.string.setting, R.string.cancel, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                }, perms);
-        if (!isNeverAskedAgain) {
-            finish();
-        }
+//        boolean isNeverAskedAgain = PermissionHelper.checkDeniedPermissionsNeverAskAgain(this,
+//                getString(R.string.msg_perm_denied),
+//                R.string.setting, R.string.cancel, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        PermissionHelper.getPermissionStatusListener().onDenied();
+//                        finish();
+//                    }
+//                }, perms);
+//        if (!isNeverAskedAgain) {
+//            PermissionHelper.getPermissionStatusListener().onDenied();
+//            finish();
+//        }
+        PermissionHelper.getPermissionStatusListener().onDenied();
+        finish();
     }
 
     @Override
     public void onPermissionsAllGranted() {
         Log.e(TAG, "onPermissionsAllGranted");
+        PermissionHelper.getPermissionStatusListener().onGranted();
         finish();
     }
+    //Todo never ask again
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//
+//        Log.e(TAG, "onActivityResult: " + requestCode + resultCode);
+//        if (requestCode == PermissionHelper.SETTINGS_REQ_CODE) {
+//            //设置返回
+//            boolean isGranted = PermissionHelper.hasPermissions(this, Manifest.permission.CAMERA);
+//            if (!isGranted) {
+//                PermissionHelper.requestPermissions(this, getString(R.string.msg_perm_tip),
+//                        PermissionHelper.REQUEST_CODE_PERMISSION, false,Manifest.permission.CAMERA);
+//            }else{
+//                PermissionHelper.getPermissionStatusListener().onGranted();
+//                finish();
+//            }
+//        }
+//    }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        Log.e(TAG, "onActivityResult: " + requestCode + resultCode);
-        if (requestCode == PermissionHelper.SETTINGS_REQ_CODE) {
-            //设置返回
-            boolean isGranted = PermissionHelper.hasPermissions(this, Manifest.permission.CAMERA);
-            if (!isGranted) {
-                AlertDialog alertDialog = new AlertDialog.Builder(this)
-                        .setMessage(R.string.msg_ask_again)
-                        .setPositiveButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                finish();
-                            }
-                        })
-                        .create();
-                alertDialog.show();
-            }else{
-                finish();
-            }
-        }
+    protected void onDestroy() {
+        PermissionHelper.dropPermissionStatusListener();
+        super.onDestroy();
     }
 }
