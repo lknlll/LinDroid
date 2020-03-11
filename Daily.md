@@ -24,3 +24,6 @@ Git config http.postBuffer 524288000
 | 操作  | Mac | Windows |
 |---|---|---|
 | 排列格式  | option + command + L | |
+**Java基础**
+
+java中不存在byte/short型常量的表示法
