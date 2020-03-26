@@ -24,3 +24,6 @@
         <item>com.example.lindroidcode.leastsquares.LineChartActivity</item>
     </string-array>
 </resources>
+
+<!-- "xxx" is translated here but not found in default locale-->
+<!-- 时区问题？暂不影响代码-->
