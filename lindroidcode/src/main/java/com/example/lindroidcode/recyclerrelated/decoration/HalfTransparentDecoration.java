@@ -46,11 +46,13 @@ public class HalfTransparentDecoration extends RecyclerView.ItemDecoration {
         canvas.drawRect(0.0f, 0.0f, parent.getRight(), 200.0f, mPaint);
         mPaint.setXfermode(null);
         canvas.restoreToCount(layerId);//还原画布
+        Log.e(TAG, "onDrawOver: layerId = " + layerId );
     }
 
     @Override
     public void onDraw(Canvas c, RecyclerView parent, RecyclerView.State state) {
         super.onDraw(c, parent, state);
         layerId = c.saveLayer(0.0f, 0.0f, (float) parent.getWidth(), (float) parent.getHeight(), mPaint, Canvas.ALL_SAVE_FLAG);//保存画布
+        Log.e(TAG, "onDraw: layerId = " + layerId );
     }
 }
