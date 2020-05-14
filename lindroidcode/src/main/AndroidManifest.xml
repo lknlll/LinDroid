@@ -15,7 +15,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".canvas.CanvasActivity"></activity>
+        <activity android:name=".networkstate.NetworkStateActivity"></activity>
+        <activity android:name=".constraintdemo.ConstraintActivity" />
+        <activity android:name=".textviewrelated.TextViewDemoActivity" />
+        <activity android:name=".customizecircleprogress.CircleProgressActivity" />
+        <activity android:name=".xmldemo.XmlDemoActivity" />
+        <activity android:name=".inputstream.InputOutputStreamActivity" />
+        <activity android:name=".canvas.CanvasActivity" />
         <activity
             android:name=".activityrelated.lifecycle.BActivity"
             android:launchMode="singleTop" />

@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">LinDroidCode</string>
 
-    <string name="text_module_info">1.MVP demo 模拟登录\n2.模拟器 demo \n3.权限管理\n4.折线去趋势\n5.RecyclerRelated\n6.ActivityRelated\n7.Canvas\n------\n输入模块数字点击按钮进入</string>
+    <string name="text_module_info">
+        1.MVP demo 模拟登录\n2.模拟器 demo \n3.权限管理\n4.折线去趋势\n5.RecyclerRelated\n6.ActivityRelated\n7.Canvas\n8.InputOutputStream\n9.XmlDemo\n10.CustomizedCircleProgress\n11.TextView\n12.Constraint\n13.NetworkState\n------\n输入模块数字点击按钮进入
+    </string>
     <string name="text_shake_info">Shake info:</string>
     <string name="text_flag_permission">Permission Status:</string>
     <string name="text_permission_granted">Permission Granted</string>
@@ -25,6 +27,12 @@
         <item>com.example.lindroidcode.recyclerrelated.RecyclerConfigActivity</item>
         <item>com.example.lindroidcode.activityrelated.LearnActivityActivity</item>
         <item>com.example.lindroidcode.canvas.CanvasActivity</item>
+        <item>com.example.lindroidcode.inputstream.InputOutputStreamActivity</item>
+        <item>com.example.lindroidcode.xmldemo.XmlDemoActivity</item>
+        <item>com.example.lindroidcode.customizecircleprogress.CircleProgressActivity</item>
+        <item>com.example.lindroidcode.textviewrelated.TextViewDemoActivity</item>
+        <item>com.example.lindroidcode.constraintdemo.ConstraintActivity</item>
+        <item>com.example.lindroidcode.networkstate.NetworkStateActivity</item>
     </string-array>
 </resources>
 

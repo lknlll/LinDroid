@@ -40,7 +40,8 @@ public class CanvasActivity extends AppCompatActivity {
     }
 
     private void showListDialog() {
-        final String[] items = { "clipRect(…)","intersect","union","clipPath 剪裁不规则图形画布", "save, restore", "saveLayer", "restoreToCount" };
+        final String[] items = { "clipRect(…)","intersect","union","clipPath 剪裁不规则图形画布", "save, restore", "saveLayer",
+                "restoreToCount", "drawText", "drawTextAlignCenter", "drawTextAlignRight" };
         AlertDialog.Builder listDialog =
                 new AlertDialog.Builder(CanvasActivity.this);
         listDialog.setTitle("Demo List");

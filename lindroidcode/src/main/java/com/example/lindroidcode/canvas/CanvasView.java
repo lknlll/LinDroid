@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Rect;
+import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -51,6 +52,12 @@ public class CanvasView extends View {
             apiSaveLayerEffect(canvas);
         }else if (6 == mBizNo){
             apiRestoreToCountEffect(canvas);
+        }else if (7 == mBizNo){
+            apiDrawTextEffect(canvas);
+        }else if (8 == mBizNo){
+            apiDrawTextWithAlignEffect(canvas, Paint.Align.CENTER);
+        }else if (9 == mBizNo){
+            apiDrawTextWithAlignEffect(canvas, Paint.Align.RIGHT);
         }
     }
 
@@ -159,6 +166,101 @@ public class CanvasView extends View {
         // 画绿色圆形
         mPaint.setColor(Color.GREEN);
         canvas.drawCircle(150, 150, 40, mPaint);
+    }
+
+    /**
+     * 3 groups of drawText APIs
+     * // 第一类
+     * public void drawText (String text, float x, float y, Paint paint)
+     * public void drawText (String text, int start, int end, float x, float y, Paint paint)
+     * public void drawText (CharSequence text, int start, int end, float x, float y, Paint paint)
+     * public void drawText (char[] text, int index, int count, float x, float y, Paint paint)
+     *
+     * // 第二类
+     * public void drawPosText (String text, float[] pos, Paint paint)
+     * public void drawPosText (char[] text, int index, int count, float[] pos, Paint paint)
+     *
+     * // 第三类
+     * public void drawTextOnPath (String text, Path path, float hOffset, float vOffset, Paint paint)
+     * public void drawTextOnPath (char[] text, int index, int count, Path path, float hOffset, float vOffset, Paint paint)
+     *
+     * drawPosText ()是根据一个个坐标点指定文字位置，drawTextOnPath ()是根据路径绘制
+     * @param canvas
+     */
+    private void apiDrawTextEffect(Canvas canvas){
+        Paint paint=new Paint();
+        paint.setStyle(Paint.Style.FILL);
+        paint.setStrokeWidth(12);
+        paint.setTextSize(100);
+
+        String text="text(200, 400)";
+        canvas.drawText(text, 200, 400, paint);
+
+        //画两条线标记位置
+        paint.setStrokeWidth(4);
+        paint.setColor(Color.RED);
+        canvas.drawLine(0, 400, 2000, 400, paint);
+        paint.setColor(Color.BLUE);
+        canvas.drawLine(200, 0, 200, 2000, paint);
+    }
+    private void apiDrawTextWithAlignEffect(Canvas canvas,Paint.Align align){
+        Paint paint=new Paint();
+        paint.setStyle(Paint.Style.FILL);
+        paint.setStrokeWidth(12);
+        paint.setTextSize(100);
+        paint.setTextAlign(align);
+
+        String text="Text(400, 400)";
+        canvas.drawText(text, 400, 400, paint);
+        /**
+         * x与文字对齐方式有关（通过Paint.setTextAlign()指定，默认为left）
+         * 左对齐 — 文字的左边界
+         * 居中对齐 — 文字的中心位置
+         * 右对齐 — 文字的右边界
+         *
+         * y对应并不是文字的下边界，而是基准线Baseline
+         */
+
+        //画两条线标记位置
+        paint.setStrokeWidth(4);
+        paint.setColor(Color.RED);
+        canvas.drawLine(0, 400, 2000, 400, paint);
+        paint.setColor(Color.BLUE);
+        canvas.drawLine(400, 0, 400, 2000, paint);
+
+        paint.setStrokeWidth(1);
+        Paint.FontMetrics fontMetrics=paint.getFontMetrics();//文字所占矩形
+        Log.e(TAG, "apiDrawTextWithAlignEffect: " + fontMetrics.top + fontMetrics.ascent + fontMetrics.descent + fontMetrics.bottom);
+        canvas.drawLine(0, 400 + fontMetrics.top, 2000, 400 + fontMetrics.top, paint);
+        paint.setColor(Color.BLACK);
+        canvas.drawLine(0, 400 + fontMetrics.ascent, 2000, 400 + fontMetrics.ascent, paint);
+        paint.setColor(Color.RED);
+        canvas.drawLine(0, 400 + fontMetrics.descent, 2000, 400 + fontMetrics.descent, paint);
+        paint.setColor(Color.GREEN);
+        canvas.drawLine(0, 400 + fontMetrics.bottom, 2000, 400 + fontMetrics.bottom, paint);
+
+        /**
+         * 使文字在给出的矩形中居中展示
+         */
+        //矩形背景
+        Paint bgRect=new Paint();
+        bgRect.setStyle(Paint.Style.FILL);
+        bgRect.setColor(Color.YELLOW);
+        RectF rectF=new RectF(200, 800, 800, 1400);
+        canvas.drawRect(rectF, bgRect);
+
+        canvas.drawLine(0, 800+300, 2000, 800+ 300, paint);
+
+        Paint textPaint=new Paint();
+        textPaint.setStyle(Paint.Style.FILL);
+        textPaint.setStrokeWidth(8);
+        textPaint.setTextSize(50);
+        textPaint.setTextAlign(Paint.Align.CENTER);
+        Paint.FontMetrics fontMetricsB =textPaint.getFontMetrics();
+        //计算baseline
+        float distance=(fontMetricsB.bottom - fontMetricsB.top)/2 - fontMetricsB.bottom;
+        float baseline=rectF.centerY()+distance;
+        canvas.drawText(text, rectF.centerX(), baseline, textPaint);
     }
     public void setBizNo(int bizNo) {
         mBizNo = bizNo;
