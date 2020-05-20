@@ -29,12 +29,29 @@ git clone -b BodyLocal_Detect_2020042315111 --depth 1  http://jcode.cbpmgt.com/g
 |---|---|---|
 | 排列格式  | option + command + L | |
 
+color 左侧可以点击 会出现color picker
+
 Git remote authentication change
 Preferences | Appearance & Behavior | System Settings | Passwords
 
 **Java基础**
 
 java中不存在byte/short型常量的表示法
+
+Java 获取class
+
+1：知道java文件的路径
+
+Class userClz=Class.forName("com.oracle.entity.User")
+
+2:通过类的对象获得class
+
+User user=new User();  
+Class userclz=userClz.getClass();
+
+3:通过类的“class运算”，这里我把它称为“运算”，因为不是方法，也不是属性。
+
+Class userClz=User.class;
 
 **Shell**
 
