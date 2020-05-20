@@ -13,4 +13,23 @@
         android:text="属性可以包含多个值，需用“|”分开"
         android:gravity="right|center_vertical"
         app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/tv_margin_not_work"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="wrap_content可能导致某些margin不生效"
+        android:gravity="right|center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_multi_value"/>
+    <TextView
+        android:id="@+id/tv_colored_string"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        tools:text="@string/worlds"
+        app:layout_constraintTop_toBottomOf="@id/tv_margin_not_work"/>
+    <TextView
+        android:id="@+id/tv_benefits_string"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="string.xml处理string的目的，一是国际化，二是减少体积，避免将过多的string存到内存中"
+        app:layout_constraintTop_toBottomOf="@id/tv_colored_string"/>
 </android.support.constraint.ConstraintLayout>

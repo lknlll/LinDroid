@@ -15,7 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".networkstate.NetworkStateActivity"></activity>
+        <activity android:name=".constraintdemo.ConstraintAttributeActivity"></activity>
+        <activity android:name=".anim.AnimActivity" />
+        <activity android:name=".spannable.SpannableTextActivity" />
+        <activity android:name=".networkstate.NetworkStateActivity" />
         <activity android:name=".constraintdemo.ConstraintActivity" />
         <activity android:name=".textviewrelated.TextViewDemoActivity" />
         <activity android:name=".customizecircleprogress.CircleProgressActivity" />

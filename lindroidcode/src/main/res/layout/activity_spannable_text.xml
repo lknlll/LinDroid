@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".spannable.SpannableTextActivity">
+
+    <TextView
+        android:id="@+id/tv_support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView支持展示SpannableString的Span；View中Canvas drawText不支持，SpannableString和SpannableStringBuilder传入后会显示原来的String"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_append"
+        app:layout_constraintTop_toBottomOf="@id/tv_support"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="append"/>
+
+    <TextView
+        android:id="@+id/tv_append"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SpannableStringBuilder,可以append():"
+        app:layout_constraintTop_toBottomOf="@id/tv_support"
+        app:layout_constraintBottom_toBottomOf="@id/bt_append"
+        app:layout_constraintLeft_toRightOf="@id/bt_append"/>
+    <TextView
+        android:id="@+id/tv_spans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bt_append"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

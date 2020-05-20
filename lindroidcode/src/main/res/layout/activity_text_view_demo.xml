@@ -8,7 +8,8 @@
     <TextView
         android:id="@+id/tv_padding_not_work"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
+        android:scrollbars="vertical"
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="40sp"
         android:text="set the background first before setting the padding. Setting the padding then setting the background doesn't work, fonts from 1001 Free Fonts"/>

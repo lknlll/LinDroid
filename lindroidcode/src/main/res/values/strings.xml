@@ -2,7 +2,7 @@
     <string name="app_name">LinDroidCode</string>
 
     <string name="text_module_info">
-        1.MVP demo 模拟登录\n2.模拟器 demo \n3.权限管理\n4.折线去趋势\n5.RecyclerRelated\n6.ActivityRelated\n7.Canvas\n8.InputOutputStream\n9.XmlDemo\n10.CustomizedCircleProgress\n11.TextView\n12.Constraint\n13.NetworkState\n------\n输入模块数字点击按钮进入
+        1.MVP demo 模拟登录\n2.模拟器 demo \n3.权限管理\n4.折线去趋势\n5.RecyclerRelated\n6.ActivityRelated\n7.Canvas\n8.InputOutputStream\n9.XmlDemo\n10.CustomizedCircleProgress\n11.TextView\n12.Constraint\n13.NetworkState\n14.Spannable\n15.Anim\n------\n输入模块数字点击按钮进入
     </string>
     <string name="text_shake_info">Shake info:</string>
     <string name="text_flag_permission">Permission Status:</string>
@@ -18,6 +18,7 @@
     <string name="msg_ask_again">请给予应用必要权限，让程序可正常工作。</string>
     <string name="msg_perm_denied">您拒绝授予了相关权限，应用内已无法再次询问，您还可以在设置中再次授予该权限。</string>
     <string name="cancel">取消</string>
+    <string name="worlds"><Data><![CDATA[<font color="#ff0000">Android</font>的<font color="#0000ff">国际化</font>]]></Data></string>
 
     <string-array name="class_names">
         <item>com.example.lindroidcode.mvp.activities.UserLoginActivity</item>
@@ -33,6 +34,8 @@
         <item>com.example.lindroidcode.textviewrelated.TextViewDemoActivity</item>
         <item>com.example.lindroidcode.constraintdemo.ConstraintActivity</item>
         <item>com.example.lindroidcode.networkstate.NetworkStateActivity</item>
+        <item>com.example.lindroidcode.spannable.SpannableTextActivity</item>
+        <item>com.example.lindroidcode.anim.AnimActivity</item>
     </string-array>
 </resources>
 
