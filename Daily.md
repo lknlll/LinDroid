@@ -53,6 +53,22 @@ Class userclz=userClz.getClass();
 
 Class userClz=User.class;
 
+byte[]转ByteBuffer
+
+byte[] bytes = ......;  
+ByteBuffer buf = ByteBuffer.wrap(bytes);
+
+java的访问控制是停留在编译层的，不会在.class文件中留下任何的痕迹，只在编译的时候进行访问控制的检查。通过反射可以访问任何包下任何类中的成员，例如，访问类的私有成员也是可能的
+
+|   | 类内部 | 本包 | 子类 | 外部包 |
+|---|---|---|---|---|
+| public  |✔|✔|✔|✔|
+| protected  |✔|✔|✔|✘|
+| default  |✔|✔|✘|✘|
+| private  |✔|✘|✘|✘|
+
+List<String>不是List<Object>的子类型, 泛型是Object的类型和泛型是?的类型不同
+
 **Shell**
 
 cd .. 返回上一级
