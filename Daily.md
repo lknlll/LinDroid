@@ -2,6 +2,12 @@
 **ADB**
 adb shell am start com.android.settings/com.android.settings.Settings 打开原生系统Settings
 
+小米再次安装App失败，报错
+Error type 3  
+Error: Activity class {xxx/xxx.MainActivity} does not exist.
+
+adb uninstall packageName 后再安装，可能是卸载不彻底
+
 **MAC**  
 Command+shift+. 显隐/隐藏
 
@@ -9,7 +15,7 @@ Command+shift+. 显隐/隐藏
 Git config http.postBuffer 524288000
 
 只clone单独分支且只拉取一次commit 
-git clone -b BodyLocal_Detect_2020042315111 --depth 1  http://jcode.cbpmgt.com/git/jdjr_risk_face_sevenfresh_identify.git
+git clone -b LinDroid --depth 1  https://github.com/lknlll/LinDroid.git
 可以避免git目录下的pack 文件过大
 
 **社区**  
@@ -33,6 +39,9 @@ color 左侧可以点击 会出现color picker
 
 Git remote authentication change
 Preferences | Appearance & Behavior | System Settings | Passwords
+
+hot key:  
+ inn insert if not null
 
 **Java基础**
 
@@ -68,6 +77,8 @@ java的访问控制是停留在编译层的，不会在.class文件中留下任�
 | private  |✔|✘|✘|✘|
 
 List<String>不是List<Object>的子类型, 泛型是Object的类型和泛型是?的类型不同
+
+&与&&（短路与），|与||（短路或），区别在于，短路与 短路或，当后面表达式的结果对整个结果不产生影响时便不会再执行
 
 **Shell**
 

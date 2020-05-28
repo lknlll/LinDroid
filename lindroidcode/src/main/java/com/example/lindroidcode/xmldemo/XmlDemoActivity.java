@@ -18,5 +18,9 @@ public class XmlDemoActivity extends AppCompatActivity {
         String worlds = getResources().getString(R.string.worlds);
         Spanned ws = Html.fromHtml(worlds);
         mTvColored.setText(ws);//TextView可以显示Html处理的文字
+
+        TextView mTvEscaped = findViewById(R.id.tv_xml_escape);
+        mTvEscaped.append("\n&#60;代表<");
+        mTvEscaped.append("\n&#62;代表>");
     }
 }

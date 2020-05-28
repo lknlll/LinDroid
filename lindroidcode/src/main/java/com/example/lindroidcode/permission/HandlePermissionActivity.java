@@ -21,8 +21,14 @@ public class HandlePermissionActivity extends AppCompatActivity implements Permi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        PermissionHelper.requestPermissions(this, getString(R.string.msg_perm_tip),
-                PermissionHelper.REQUEST_CODE_PERMISSION, false,Manifest.permission.CAMERA);
+        if (getIntent().hasExtra("permissions")) {
+            PermissionHelper.requestPermissions(this, getString(R.string.msg_perm_tip),
+                    PermissionHelper.REQUEST_CODE_PERMISSION, false,getIntent().getStringArrayExtra("permissions"));
+
+        }else {
+            PermissionHelper.requestPermissions(this, getString(R.string.msg_perm_tip),
+                    PermissionHelper.REQUEST_CODE_PERMISSION, false,Manifest.permission.CAMERA);
+        }
     }
 
     @Override

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".storage.StorageActivity">
+
+    <TextView
+        android:id="@+id/tv_storage_overview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="android SD卡主要有两种存储方式 Internal 、 External Storage\n \nInternal Storage Features\nIt’s always available, no permission needed.\nFiles saved here are accessible by only your app.\nWhen the user uninstalls your app, the system removes all your app’s files from internal storage.\nContext.getCacheDir()：/data/data/应用包名/cache/"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_cache_dir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="context.getCacheDir() 内置存储缓存目录，不需要申请权限，当应用被卸载的时候，目录下的文件会被删除, 当安卓设备的存储空间少，或者不够用的时候，系统会自动删除这个目录下的文件，超过1M的文件不建议放在这里"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:layout_constraintTop_toBottomOf="@id/tv_storage_overview"/>
+
+    <TextView
+        android:id="@+id/tv_file_dir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="context.getFilesDir() 不需要申请权限，应用卸载时删除, "
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:layout_constraintTop_toBottomOf="@id/tv_cache_dir"/>
+
+    <Button
+        android:id="@+id/bt_external_cache_dir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="External"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:layout_constraintTop_toBottomOf="@id/tv_file_dir"/>
+</android.support.constraint.ConstraintLayout>

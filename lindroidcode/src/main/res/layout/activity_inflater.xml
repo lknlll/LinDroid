@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bundleknowledge.BundleKnowledgeActivity">
+    tools:context=".inflatelayout.InflaterActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="遍历\nBundle bundle = intent.getExtras();\nSet&#60;String&#62; keySet = bundle.keySet();  //获取所有的Key"
+        style="@style/TextContent"
+        android:id="@+id/tv_inflate_layout"
+        android:text="自定义View时传入布局的方法：\nLayoutInflater.from(context).inflate(R.layout.title,this); \nLayoutInflater的from()可以构造出LayoutInflater对象, 然后调用inflate()可以动态加载一个布局文件的id"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 </android.support.constraint.ConstraintLayout>

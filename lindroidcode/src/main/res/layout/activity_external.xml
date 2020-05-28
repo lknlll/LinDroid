@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".storage.ExternalActivity">
+
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_permission_situation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_external_cache_dir"
+        android:text="context.getExternalCacheDir() 应用外部存储空间, 数据文件私有，系统媒体文件无法访问,在使用的时候，需要判断外部存储的挂载状态（getExternalStorageState(File)），还需要申请读写权限（READ_EXTERNAL_STORAGE， WRITE_EXTERNAL_STORAGE）当其他应用拥有SD卡读写权限的时候，可以访问该目录下的文件"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_permission_situation" />
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_external_file_dir"
+        android:text="context.getExternalFileDir() 应用外部存储空间, 数据文件私有，系统媒体文件无法访问,在使用的时候，需要判断外部存储的挂载状态（getExternalStorageState(File)），还需要申请读写权限（READ_EXTERNAL_STORAGE， WRITE_EXTERNAL_STORAGE）当其他应用拥有SD卡读写权限的时候，可以访问该目录下的文件"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_external_cache_dir" />
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_external_storage_dir"
+        android:text="Environment.getExternalStorageDirectory() 外部存储空间，系统媒体文件可访问,在使用的时候，需要判断外部存储的挂载状态（getExternalStorageState(File)），还需要申请读写权限（READ_EXTERNAL_STORAGE， WRITE_EXTERNAL_STORAGE）"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_external_file_dir" />
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_external_storage_public_dir"
+        android:text="Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) 外部公共空间，系统媒体文件可访问,在使用的时候，需要判断外部存储的挂载状态（getExternalStorageState(File)），还需要申请读写权限（READ_EXTERNAL_STORAGE， WRITE_EXTERNAL_STORAGE）"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_external_storage_dir" />
+</android.support.constraint.ConstraintLayout>

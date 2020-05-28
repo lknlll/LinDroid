@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bundleknowledge.BundleKnowledgeActivity">
-
+    tools:context=".assetknowledge.LearnAssetActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="遍历\nBundle bundle = intent.getExtras();\nSet&#60;String&#62; keySet = bundle.keySet();  //获取所有的Key"
+        android:text="使用assets文件：写到缓存文件里面去，通过获取缓存文件路径 来读取"
         app:layout_constraintTop_toTopOf="parent"/>
 </android.support.constraint.ConstraintLayout>

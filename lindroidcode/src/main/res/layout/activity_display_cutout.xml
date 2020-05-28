@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".displaycutout.DisplayCutoutActivity">
+
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_display_cutout"
+        android:text="Android 9(Pie) 显示屏缺口支持, https://developer.android.google.cn/about/versions/pie/android-9.0#cutout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_mi_adapt"
+        android:text="MIUI https://dev.mi.com/console/doc/detail?pId=1341"
+        app:layout_constraintTop_toBottomOf="@id/tv_display_cutout"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+</android.support.constraint.ConstraintLayout>

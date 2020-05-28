@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -15,7 +17,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".bundleknowledge.BundleKnowledgeActivity"></activity>
+        <activity android:name=".inflatelayout.InflaterActivity"></activity>
+        <activity android:name=".displaycutout.DisplayCutoutActivity" />
+        <activity android:name=".storage.ExternalActivity" />
+        <activity android:name=".storage.StorageActivity" />
+        <activity android:name=".assetknowledge.LearnAssetActivity" />
+        <activity android:name=".javaknowledge.LearnJavaActivity" />
+        <activity android:name=".bundleknowledge.BundleKnowledgeActivity" />
         <activity android:name=".constraintdemo.ConstraintAttributeActivity" />
         <activity android:name=".anim.AnimActivity" />
         <activity android:name=".spannable.SpannableTextActivity" />

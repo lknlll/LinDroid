@@ -18,4 +18,10 @@
         <item name="colorPrimaryDark">@android:color/transparent</item>
     </style>
 
+    <style name="TextContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+    </style>
+
 </resources>

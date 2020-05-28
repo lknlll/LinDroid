@@ -51,6 +51,12 @@ public class PermissionHelper {
         Intent intent = new Intent(activity,HandlePermissionActivity.class);
         activity.startActivity(intent);
     }
+    public static void startPermissionApplyForResult(Activity activity, PermissionStatusListener permissionStatusListener,String... strings){
+        sPermissionStatusListener = permissionStatusListener;
+        Intent intent = new Intent(activity,HandlePermissionActivity.class);
+        intent.putExtra("permissions",strings);
+        activity.startActivity(intent);
+    }
 
     /**
      */
