@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".camera.CameraOverviewActivity">
+
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_surface_overview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="SurfaceView允许在子线程中进行绘制，而普通的View是只能在UI线程中执行绘制工作，所以比较适合进行一些繁重的绘制工作而不会造成app的卡顿"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_fullscreen_camera"
+        android:text="Fullscreen Camera"
+        app:layout_constraintTop_toBottomOf="@id/tv_surface_overview"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+</android.support.constraint.ConstraintLayout>

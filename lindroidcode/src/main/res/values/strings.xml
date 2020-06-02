@@ -2,7 +2,7 @@
     <string name="app_name">LinDroidCode</string>
 
     <string name="text_module_info">
-        1.MVP demo 模拟登录\n2.模拟器 demo \n3.权限管理\n4.折线去趋势\n5.RecyclerRelated\n6.ActivityRelated\n7.Canvas\n8.InputOutputStream\n9.XmlDemo\n10.CustomizedCircleProgress\n11.TextView\n12.Constraint\n13.NetworkState\n14.Spannable\n15.Anim\n16.Bundle\n17.LearnJava\n18.LearnAsset\n19.Storage\n20.DisplayCutout\n21.Inflater\n------\n输入模块数字点击按钮进入
+        1.MVP demo 模拟登录\n2.模拟器 demo \n3.权限管理\n4.折线去趋势\n5.RecyclerRelated\n6.ActivityRelated\n7.Canvas\n8.InputOutputStream\n9.XmlDemo\n10.CustomizedCircleProgress\n11.TextView\n12.Constraint\n13.NetworkState\n14.Spannable\n15.Anim\n16.Bundle\n17.LearnJava\n18.LearnAsset\n19.Storage\n20.DisplayCutout\n21.Inflater\n22.Camera\n------\n输入模块数字点击按钮进入
     </string>
     <string name="text_shake_info">Shake info:</string>
     <string name="text_flag_permission">Permission Status:</string>
@@ -42,6 +42,7 @@
         <item>com.example.lindroidcode.storage.StorageActivity</item>
         <item>com.example.lindroidcode.displaycutout.DisplayCutoutActivity</item>
         <item>com.example.lindroidcode.inflatelayout.InflaterActivity</item>
+        <item>com.example.lindroidcode.camera.CameraOverviewActivity</item>
     </string-array>
 </resources>
 

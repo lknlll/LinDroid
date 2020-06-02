@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 int numSelection = Integer.parseInt(sSelection);
 
                 try {
-                    Class toClass = Class.forName(sToClasses[numSelection-1]);
+                    Class toClass = Class.forName(sToClasses[numSelection-1]);//类名进行类初始化
                     startActivity(new Intent(MainActivity.this,toClass));
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();

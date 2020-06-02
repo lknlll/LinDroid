@@ -13,4 +13,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <TextView
+        style="@style/TextContent"
+        android:text="onStop方法"
+        android:id="@+id/tv_on_stop_timing"
+        app:layout_constraintTop_toBottomOf="@id/bt_start_a"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <Button
+        android:text="bt_lifecycle"
+        android:id="@+id/bt_lifecycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_on_stop_timing"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        style="@style/TextContent"
+        android:text="toast和dialog不触发onPause，对生命周期无影响"
+        android:id="@+id/tv_on_pause_timing"
+        app:layout_constraintTop_toBottomOf="@id/bt_lifecycle"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
 </android.support.constraint.ConstraintLayout>

@@ -34,6 +34,7 @@ git clone -b LinDroid --depth 1  https://github.com/lknlll/LinDroid.git
 | 操作  | Mac | Windows |
 |---|---|---|
 | 排列格式  | option + command + L | |
+| 打开Project Structure  | command + ; | |
 
 color 左侧可以点击 会出现color picker
 
@@ -42,6 +43,10 @@ Preferences | Appearance & Behavior | System Settings | Passwords
 
 hot key:  
  inn insert if not null
+
+编译报错：Program type already present:com.xx.xx
+
+通常是重复依赖的module, aar, jar包导致；
 
 **Java基础**
 
@@ -83,3 +88,9 @@ List<String>不是List<Object>的子类型, 泛型是Object的类型和泛型是
 **Shell**
 
 cd .. 返回上一级
+
+**Gradle**
+
+Could not download okhttp.jar (com.squareup.okhttp3:okhttp:3.10.0)
+
+project gradle中两处加入 mavenCentral()
