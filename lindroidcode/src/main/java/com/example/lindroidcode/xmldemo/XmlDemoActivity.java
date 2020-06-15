@@ -22,5 +22,13 @@ public class XmlDemoActivity extends AppCompatActivity {
         TextView mTvEscaped = findViewById(R.id.tv_xml_escape);
         mTvEscaped.append("\n&#60;代表<");
         mTvEscaped.append("\n&#62;代表>");
+
+        TextView mTvIOSCompare = findViewById(R.id.tv_ios);
+        mTvIOSCompare.append("\n        drawable-ldpi=iphone@0.75x");
+        mTvIOSCompare.append("\n        drawable-mdpi=iphone@1x");
+        mTvIOSCompare.append("\n        drawable-hdpi=iphone@1.5x");
+        mTvIOSCompare.append("\n        drawable-xhdpi=iphone@2x");
+        mTvIOSCompare.append("\n        drawable-xxhdpi=iphone@3x");
+        mTvIOSCompare.append("\n        drawable-xxxhdpi=iphone@4x");
     }
 }

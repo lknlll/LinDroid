@@ -57,6 +57,11 @@ public class LearnJavaActivity extends AppCompatActivity {
 
         mTvVarargs =findViewById(R.id.tv_varargs);
         uncertainArgs("“Varargs”是“variable number of arguments”","函数的参数表中有vararg时要放到最后");
+
+        LearnStatic.checkTiming();
+
+        LearnStatic learnStatic = new LearnStatic();
+        LearnStatic learnStaticB = new LearnStatic();
     }
 
     private void uncertainArgs(String... strings){
@@ -67,4 +72,5 @@ public class LearnJavaActivity extends AppCompatActivity {
         }
 
     }
+
 }

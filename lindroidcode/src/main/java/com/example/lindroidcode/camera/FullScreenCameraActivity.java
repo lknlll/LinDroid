@@ -1,24 +1,38 @@
 package com.example.lindroidcode.camera;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.ImageFormat;
+import android.graphics.Rect;
+import android.graphics.YuvImage;
 import android.hardware.Camera;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.CompoundButton;
+import android.widget.ToggleButton;
 
 import com.example.lindroidcode.R;
+
+import java.io.ByteArrayOutputStream;
+
+import static com.example.lindroidcode.camera.CameraSurfaceView.CODE_BITMAP_FACTORY;
 
 /**
  * 换用AppcompatActivity时，切到后台再切回会出现Toolbar
  */
-public class FullScreenCameraActivity extends Activity implements Camera.PreviewCallback {
+public class FullScreenCameraActivity extends Activity implements Camera.PreviewCallback, View.OnClickListener {
 
     private CameraSurfaceView mCameraSurfaceView;
+    private ToggleButton mToggleBitmapApi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Todo permission
         setContentView(R.layout.activity_full_screen_camera);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -37,8 +51,18 @@ public class FullScreenCameraActivity extends Activity implements Camera.Preview
         }
         getWindow().setAttributes(lp);
         mCameraSurfaceView = findViewById(R.id.camera_preview);
+        mToggleBitmapApi = findViewById(R.id.toggle_is_system_api);
 
         mCameraSurfaceView.setPreviewCallback(this);
+        findViewById(R.id.bt_bitmap_factory_api).setOnClickListener(this);
+
+        ToggleButton toggleLight = findViewById(R.id.toggle_flash);
+        toggleLight.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                mCameraSurfaceView.converse();
+            }
+        });
     }
 
     @Override
@@ -60,5 +84,18 @@ public class FullScreenCameraActivity extends Activity implements Camera.Preview
     @Override
     public void onPreviewFrame(byte[] data, Camera camera) {
         camera.addCallbackBuffer(data);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.bt_bitmap_factory_api:
+                if (mToggleBitmapApi.isChecked()) {
+                    mCameraSurfaceView.cameraTakePic(CODE_BITMAP_FACTORY);
+                }else {
+                    mCameraSurfaceView.cameraTakePic(1);
+                }
+                break;
+        }
     }
 }

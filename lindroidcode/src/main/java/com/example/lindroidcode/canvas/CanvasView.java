@@ -5,6 +5,8 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
@@ -58,13 +60,15 @@ public class CanvasView extends View {
             apiDrawTextWithAlignEffect(canvas, Paint.Align.CENTER);
         }else if (9 == mBizNo){
             apiDrawTextWithAlignEffect(canvas, Paint.Align.RIGHT);
+        }else if (10 == mBizNo){
+            demoXfermode(canvas);
         }
     }
 
     private void initView(){
         // 实例化画笔并设置属性
         mPaint = new Paint();
-
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null);//在View的构造函数中关闭硬件加速可以解决setXfermode(mMode)效果不正确问题
     }
     private void apiClipRectEffect(Canvas canvas){
         canvas.drawColor(Color.BLUE);
@@ -261,6 +265,18 @@ public class CanvasView extends View {
         float distance=(fontMetricsB.bottom - fontMetricsB.top)/2 - fontMetricsB.bottom;
         float baseline=rectF.centerY()+distance;
         canvas.drawText(text, rectF.centerX(), baseline, textPaint);
+    }
+    private void demoXfermode(Canvas canvas){
+        canvas.drawColor(Color.WHITE);
+        canvas.drawRect(new RectF(0, 0, 800, 1400),mPaint);
+        PorterDuffXfermode mPorterDuffXfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_OUT);
+        mPaint.setXfermode(mPorterDuffXfermode);
+        mPaint.setColor(Color.GREEN);
+        mPaint.setAlpha(99);
+        canvas.drawRect(new RectF(0, 0, 1000, 1600),mPaint);
+        mPaint.setXfermode(null);
+        mPaint.setColor(0xFF508CEE);
+        canvas.drawRect(new RectF(1000, 1600, 1010, 1610),mPaint);
     }
     public void setBizNo(int bizNo) {
         mBizNo = bizNo;

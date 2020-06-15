@@ -12,4 +12,10 @@
         android:text="J2SE 1.5提供了“Varargs”机制，函数定义时argument数量不定时使用，传递个数可变的参数，注意与数组、泛型、重载作用的情况,处理时和数组基本相同"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_static"
+        android:text="static代码段: \n类调用静态方法之前就被调用\n在实例化一个对象时，先于构造函数被调用\n仅在类被初次加载的时候被调用一次"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_varargs"/>
 </android.support.constraint.ConstraintLayout>

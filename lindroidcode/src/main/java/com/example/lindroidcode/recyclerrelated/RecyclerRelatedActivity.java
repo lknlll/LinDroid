@@ -2,6 +2,7 @@ package com.example.lindroidcode.recyclerrelated;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -114,6 +115,7 @@ public class RecyclerRelatedActivity extends AppCompatActivity {
          */
         mAbcRecycler.setAdapter(normalRecyclerAdapter);
         mAbcRecycler.setLayoutManager(new LinearLayoutManager(this));
+        mAbcRecycler.setItemAnimator(new DefaultItemAnimator());
 
         if (0 == decorationId) {
             mAbcRecycler.addItemDecoration(new SimplePaddingDecoration(this));

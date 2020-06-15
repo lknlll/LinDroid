@@ -3,7 +3,11 @@ package com.example.lindroidcode.camera;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.ImageFormat;
+import android.graphics.Rect;
+import android.graphics.YuvImage;
 import android.hardware.Camera;
 import android.os.Build;
 import android.util.AttributeSet;
@@ -12,13 +16,17 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 import com.example.lindroidcode.utils.DensityUtils;
+import com.example.lindroidcode.utils.NV21ToBitmap;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.List;
 
 public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Callback, Camera.ErrorCallback {
 
+    public static final int CODE_BITMAP_FACTORY = 0;
     private static final String TAG = CameraSurfaceView.class.getSimpleName();
+    private FlashUtils mFlashUtils;
     private int mWidth = -1;    //surface的宽度
     private int mHeight = -1;   //surface的高度
     private boolean mStarted;
@@ -148,6 +156,7 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
         mSurfaceHolder.addCallback(this);
         mSurfaceHolder.setKeepScreenOn(true);
         mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+        mFlashUtils = new FlashUtils(context.getApplicationContext());
     }
 
     @Override
@@ -236,12 +245,34 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
         mStarted = false ;
     }
 
-    public void cameraAddCallbackBuffer(byte[] buffer){
-        if (camera != null) {
-            camera.addCallbackBuffer(buffer);
-        }else {
-            Log.e(TAG, "cameraAddCallbackBuffer: null camera");
-        }
+    public void cameraTakePic(final int way){
+        //拍照后预览会停掉，未在预览状态时调用会触发Exception，报错：Camera2Client: takePicture: Camera 0: Already taking a picture
+        camera.takePicture(null, null, new Camera.PictureCallback() {
+            @Override
+            public void onPictureTaken(byte[] data, Camera camera) {
+                Camera.Size size = camera.getParameters().getPreviewSize();
+                long tS = System.currentTimeMillis();
+                if (way == CODE_BITMAP_FACTORY) {
+
+                    try{
+                        YuvImage image = new YuvImage(data, ImageFormat.NV21, size.width, size.height, null);
+                        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                        image.compressToJpeg(new Rect(0, 0, size.width, size.height), 100, stream);
+
+                        Bitmap bmp = BitmapFactory.decodeByteArray(stream.toByteArray(), 0, stream.size());
+                        Log.e(TAG, "onPictureTaken: bitmap cost " + (System.currentTimeMillis() - tS));
+                        //TODO：此处可以对位图进行处理，如显示，保存等
+
+                        stream.close();
+                    }catch(Exception ex){
+                        Log.e("Sys","Error:"+ex.getMessage());
+                    }
+                }else {
+                    Bitmap bmp = new NV21ToBitmap(mContext).nv21ToBitmap(data,size.width,size.height);
+                    Log.e(TAG, "onPictureTaken: bitmap cost " + (System.currentTimeMillis() - tS));
+                }
+            }
+        });
     }
     /**
      * 释放资源
@@ -259,5 +290,24 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+    public void openFlashLight(){
+        mFlashUtils.open(camera);
+    }
+
+    public void closeFlashLight(){
+        mFlashUtils.close(camera);
+    }
+
+    //改变手电筒状态
+    public void converse(){
+        if(FlashUtils.isStatus()){
+            mFlashUtils.close(camera);
+        }else{
+            mFlashUtils.open(camera);
+        }
+    }
+    public boolean getFlashlightStatus(){
+        return FlashUtils.isStatus();
     }
 }
