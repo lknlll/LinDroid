@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.R;
+import com.example.aidldemo.AidlClientActivity;
 import com.example.opengleffect.EffectsFilterActivity;
 import com.example.rectview.DrawRectActivity;
 import com.lucasurbas.listitemview.ListItemView;
@@ -32,6 +33,24 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(MainActivity.this, EffectsFilterActivity.class);
+                startActivity(intent);
+            }
+        });
+        ListItemView asyncTaskLoader = findViewById(R.id.async_task_Loader);
+        asyncTaskLoader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, EffectsFilterActivity.class);//Todo finish appList learning
+                startActivity(intent);
+            }
+        });
+        ListItemView aidlDemo = findViewById(R.id.aidl_demo);
+        aidlDemo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, AidlClientActivity.class);
                 startActivity(intent);
             }
         });

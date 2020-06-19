@@ -2,4 +2,6 @@
     <string name="app_name">LinDroid</string>
     <string name="draw_rect_title">Draw Rect</string>
     <string name="GL_title">OpenGL</string>
+    <string name="AsyncTaskLoader_title">AsyncTaskLoader</string>
+    <string name="aidl_demo_title">aidlDemo</string>
 </resources>

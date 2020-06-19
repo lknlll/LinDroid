@@ -17,5 +17,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:liv_title="@string/GL_title"/>
+    <com.lucasurbas.listitemview.ListItemView
+        android:id="@+id/async_task_Loader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liv_title="@string/AsyncTaskLoader_title"/>
+    <com.lucasurbas.listitemview.ListItemView
+        android:id="@+id/aidl_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liv_title="@string/aidl_demo_title"/>
 
 </LinearLayout>

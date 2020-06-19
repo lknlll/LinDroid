@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".opengleffect.EffectsFilterActivity"></activity>
+        <activity android:name=".aidldemo.AidlClientActivity"></activity>
+        <activity android:name=".asynctaskloader.AppListActivity" />
+        <activity android:name=".opengleffect.EffectsFilterActivity" />
         <activity android:name=".rectview.DrawRectActivity" />
         <activity android:name=".lin.MainActivity">
             <intent-filter>

@@ -8,6 +8,11 @@ Error: Activity class {xxx/xxx.MainActivity} does not exist.
 
 adb uninstall packageName 后再安装，可能是卸载不彻底
 
+无线调试：先连线，确保android设备和电脑在一个网内，查看android设备IP（假设192.168.1.199）
+adb tcpip 5555 （端口号）  
+adb connect 192.168.1.199:5555
+
+
 **MAC**  
 Command+shift+. 显隐/隐藏  
 Command+→  行尾
@@ -23,11 +28,12 @@ git clone -b LinDroid --depth 1  https://github.com/lknlll/LinDroid.git
 [掘金](https://juejin.im/)
 
 **MarkDown**  
-换行：两空格一个回车  
+换行：两空格一个回车 或者HTML的 \<br>  
 超链接：\[链接文字\]\(链接地址\)  
 转义：当我们想在 Markdown 文件中显示一些标记符号，可以使用\进行转义  
 下标（符号方式）：θ~1~  上标：θ^2^  
-下标（标签方式）：θ<sub>1</sub>  上标 ：θ<sup>2</sup>
+下标（标签方式）：θ<sub>1</sub>  上标 ：θ<sup>2</sup>  
+序号：数字 加点 加空格
 
 插入程序代码的方式：单行代码前后使用反引号 `，或多行代码前后使用三个反引号```
 
@@ -145,3 +151,9 @@ AndroidManifest.xml  的application 标签中添加
 `<uses-library android:name="org.apache.http.legacy" android:required="false" />`
 
 尽量在Android 9 以后不要用这个库
+
+java.lang.SecurityException: ConnectivityService: Neither user 10037 nor current process has android.permission.CHANGE_WIFI_STATE
+
+检查Manifest是否存在相关权限声明
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+修改WIFI状态

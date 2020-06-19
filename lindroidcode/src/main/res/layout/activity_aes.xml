@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".encryptdecrypt.AesActivity">
+
+    <TextView
+        android:id="@+id/tv_aes_overview"
+        style="@style/TextContent"
+        android:text="Advanced Encryption Standard(aes), 高级加密标准, 对称加密"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        style="@style/TextContent"
+        android:id="@+id/et_plain"
+        app:layout_constraintTop_toBottomOf="@id/tv_aes_overview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="input plain text"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_encrypt"
+        android:text="encrypt then decrypt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_plain"/>
+
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_aes_result"
+        android:text="encrypted: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_encrypt"/>
+</android.support.constraint.ConstraintLayout>

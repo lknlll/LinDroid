@@ -181,6 +181,7 @@ public class TextureRenderer implements GLSurfaceView.Renderer{
                 break;
 
             case R.id.autofix:
+                //不可过多重复调用，会导致native memory leak
                 mEffect = effectFactory.createEffect(EffectFactory.EFFECT_AUTOFIX);
                 mEffect.setParameter("scale", 0.5f);
                 break;
