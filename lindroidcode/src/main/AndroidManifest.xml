@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -17,7 +18,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".encryptdecrypt.AesActivity"></activity>
+        <activity android:name=".mvvm.ui.GithubProfileActivity"></activity>
+        <activity android:name=".algodatastruct.DataStructureAlgorithmActivity" />
+        <activity android:name=".encryptdecrypt.AesActivity" />
         <activity android:name=".encryptdecrypt.EncryptDecryptActivity" />
         <activity android:name=".deviceinfo.DeviceInfoActivity" />
         <activity android:name=".textviewrelated.EditTextDemoActivity" />
@@ -69,11 +72,12 @@
         <activity android:name=".sensors.activities.ShakeActivity" />
         <activity android:name=".mvp.activities.UserLoginActivity" />
 
-        <service android:name=".aidldemo.SchoolService"
+        <service
+            android:name=".aidldemo.SchoolService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.example.lindroidcode.aidldemo.school"/>
+                <action android:name="com.example.lindroidcode.aidldemo.school" />
             </intent-filter>
         </service>
     </application>

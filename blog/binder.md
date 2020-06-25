@@ -9,6 +9,8 @@
 操作系统内核的进程所用的虚拟地址空间需要和应用程序进程空间分离开，前者是内核空间（Kernel Space）后者是用户空间（User Space）,  
 32位操作系统寻址空间是2的32次方，即4G，一般高位1G是内核空间，3G是用户空间。
 
+内核拥有对底层设备的所有访问权限，普通应用程序没有，且用户进程也不能直接访问内核进程。
+
 用户空间需要访问内核空间时，例如文件IO或者网络等，实现方式是通过**系统调用**接口，对内核空间在内核控制下进行有限访问。  
 内存映射就是通过系统调用mmap实现。
 应用程序执行自己代码时，进程状态为用户态，处理器执行用户代码权限较低，用户进程通过系统调用调用内核代码时，进程暂时进入内核态，处理器权限高，可执行特权指令；
@@ -83,3 +85,27 @@ Android系统启动后，创建一个名为_servicemanger_的进程，该进程�
 Client调用Server的Binder引用（一个Object）的方法来调用Server，但这个Object并不是Server真正的实体，Binder驱动做了一层对象转换，将其包装成一个ProxyObject，这个代理对象的方法签名和实体对象都一样，Client请求调用一个方法时，Binder驱动就将其转发到具体的Binder实体的该方法。
 
 Object 称为本地对象，Client调用的Binder引用ProxyObject称为代理对象。
+
+**AIDL 对Binder机制的应用**
+
+aidl: Android Interface Definition Language, 接口定义语言，
+
+步骤：
+
+1. 创建aidl文件，定义带有方法签名的编程接口，这里面的方法可供调用。经过build之后生成可供引用的Java类。例子中ISchool.aidl经过编译生成ISchool.java  
+   ISchool.java 扩展了IInterface，声明了ISchool.aidl中的声明的接口方法
+   1. **IInterface**是一个Base接口，用来标识Server提供的能力，是Server和Client通信的协议。
+   2. 静态抽象内部类**Stub**，继承了Binder类，实现ISchool接口，它的子类需要去具体实现ISchool接口的方法，作为Server的本地对象。
+      1. **Binder类**：提供Binder服务的本地对象的基类，实现了IBinder接口；
+      2. **IBinder**接口是进程间通信的Base接口，声明了跨进程通信所需实现的抽象方法，Client和Server都需要实现这个接口来实现跨进程通信。
+      3. Stub内部有一个静态内部类**Proxy**，它的角色是Binder代理，是Server交给Client调用的本地代理对象，包含一个IBinder对象mRemote，这个对象在Proxy构造方法中被赋值，会在调用Proxy的asRemote()方法时返回；  
+         Proxy也实现ISchool接口，将参数序列化，交给mRemote处理，此处实际上就是通过代理调用Binder驱动去和远程Stub进行通信，这里还需要一个方法asInterface()。
+      4. **asInterface()**，一般是Client bindService()成功以后进行调用，就是将绑定成功之后返回的IBinder对象转换为具体的IInterface接口。Client通过调这个方法返回扩展了IInterface的Server接口，从而能够调用Server的能力。
+         这个方法返回IInterface对象既可能是Stub本身所在的实现了IInterface的对象，也可能是使用传入的IBinder对象创建的代理类Proxy实例，因为Binder也可以为本进程服务，此时就不必通过Binder驱动来中转。  
+      如果方法返回自定义的类，该类必须扩展Parcelable，并且为其单独声明一个aidl文件，import之。
+2. Server App中，定义Service，.aidl文件生成的Java类中有一个名为Stub的内部抽象类，扩展Binder类实现aidl接口，在Service中扩展这个类并具体实现aidl方法。
+   之后将Service注册在Manifest中，添加好action。
+3. 在Service的onBind()中返回上面那个扩展了Stub的类的实例，返回类型IBinder。
+
+Client 和Server在不同进程，Client 请求后调用方线程会被挂起，Binder提供了异步方式，等待Server响应后返回数据，Server的响应线程是在Binder线程池中，而不是主线程。
+

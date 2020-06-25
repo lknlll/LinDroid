@@ -12,6 +12,8 @@ adb uninstall packageName 后再安装，可能是卸载不彻底
 adb tcpip 5555 （端口号）  
 adb connect 192.168.1.199:5555
 
+I/chatty: uid=10322(com.example.lindroidcode) identical 1 line  
+app considered 'chatty' by logcat (more than 5 lines per second), logs of your app will be collapsed.
 
 **MAC**  
 Command+shift+. 显隐/隐藏  
@@ -37,7 +39,10 @@ git clone -b LinDroid --depth 1  https://github.com/lknlll/LinDroid.git
 
 插入程序代码的方式：单行代码前后使用反引号 `，或多行代码前后使用三个反引号```
 
-**Android Studio**  
+**Android Studio**
+
+create class 填写VISIBILITY PUBLIC 全部大写
+
 默认快捷键  
 
 | 操作  | Mac | Windows |
@@ -58,6 +63,31 @@ hot key:
 通常是重复依赖的module, aar, jar包导致；
 
 **Java基础**
+
+Annotation 注解
+
+lambda表达式，闭包，Java 8特性
+
+允许把函数作为一个方法的参数。
+
+参数列表，箭头（->），以及一个表达式或语句块
+
+函数式接口(functional interface)只能有一个抽象方法，可以在Lambda表达式中使用，
+
+```
+        mButton.setOnClickListener(v -> {
+            Log.e(TAG, "lambda");
+        });
+```
+
+```
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e(TAG, "anonymous class");
+            }
+        });
+```
 
 java中不存在byte/short型常量的表示法
 

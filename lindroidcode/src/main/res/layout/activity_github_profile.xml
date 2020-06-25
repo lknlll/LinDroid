@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--相关的数据对象绑定到xml-->
+    <data>
+        <!--导包，类似java导包，导完了下面的variable就可以不用写全路径。-->
+        <import type="android.view.View"/>
+        <import type="com.example.lindroidcode.mvvm.vo.User"/>
+        <import type="com.example.lindroidcode.mvvm.vo.Status"/>
+
+        <variable
+            name="eventHandler"
+            type="com.example.lindroidcode.mvvm.ui.EventHandler" />
+        <variable
+            name="user"
+            type="User" />
+        <variable
+            name="loadStatus"
+            type="Status" />
+        <variable
+            name="resource"
+            type="com.example.lindroidcode.mvvm.vo.Resource" />
+
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        tools:context=".mvvm.ui.GithubProfileActivity">
+        
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lines="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:onInputFinish="@{(text)->eventHandler.onTextSubmit(text)}"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_user"
+            app:imgUrl="@{user.avatarUrl}"
+            visibleGone="@{loadStatus==Status.SUCCESS}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_user"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_user_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_user"
+            visibleGone="@{loadStatus==Status.SUCCESS}"
+            android:text="@{@string/format_name(user.name)}"
+            tools:text="@string/app_name" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_user_repo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+            visibleGone="@{loadStatus==Status.SUCCESS}"
+            android:text="@{@string/format_repo(user.repoNumber)}"
+            tools:text="@string/app_name" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_user_time_update"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_user_repo"
+            visibleGone="@{loadStatus==Status.SUCCESS}"
+            android:text="@{@string/format_repo(user.lastUpdate)}"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{resource.message}"
+            android:id="@+id/tv_error_msg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_user_time_update"
+            visibleGone="@{loadStatus==Status.ERROR}"
+            tools:text="@string/app_name"/>
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            visibleGone="@{loadStatus==Status.LOADING}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_error_msg"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

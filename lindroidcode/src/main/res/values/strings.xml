@@ -2,8 +2,13 @@
     <string name="app_name">LinDroidCode</string>
 
     <string name="text_module_info">
-        1.MVP demo 模拟登录\n2.模拟器 demo \n3.权限管理\n4.折线去趋势\n5.RecyclerRelated\n6.ActivityRelated\n7.Canvas\n8.InputOutputStream\n9.XmlDemo\n10.CustomizedCircleProgress\n11.TextView\n12.Constraint\n13.NetworkState\n14.Spannable\n15.Anim\n16.Bundle\n17.LearnJava\n18.LearnAsset\n19.Storage\n20.DisplayCutout\n21.Inflater\n22.Camera\n23.Handler\n24.DeviceInfo\n25.EncryptDecrypt\n------\n输入模块数字点击按钮进入
+        1.MVP demo 模拟登录\n2.模拟器 demo \n3.权限管理\n4.折线去趋势\n5.RecyclerRelated\n6.ActivityRelated\n7.Canvas\n8.InputOutputStream\n9.XmlDemo\n10.CustomizedCircleProgress\n11.TextView\n12.Constraint\n13.NetworkState\n14.Spannable\n15.Anim\n16.Bundle\n17.LearnJava\n18.LearnAsset\n19.Storage\n20.DisplayCutout\n21.Inflater\n22.Camera\n23.Handler\n24.DeviceInfo\n25.EncryptDecrypt\n26.DataStructureAlgorithm\n27.MVVM Github Profile\n------\n输入模块数字点击按钮进入
     </string>
+
+    <string name="format_name">name:%s</string>
+    <string name="format_repo">repos:%s</string>
+    <string name="format_time">last update:%s</string>
+
     <string name="text_shake_info">Shake info:</string>
     <string name="text_flag_permission">Permission Status:</string>
     <string name="text_permission_granted">Permission Granted</string>
@@ -46,6 +51,8 @@
         <item>com.example.lindroidcode.handler.HandlerOverviewActivity</item>
         <item>com.example.lindroidcode.deviceinfo.DeviceInfoActivity</item>
         <item>com.example.lindroidcode.encryptdecrypt.EncryptDecryptActivity</item>
+        <item>com.example.lindroidcode.algodatastruct.DataStructureAlgorithmActivity</item>
+        <item>com.example.lindroidcode.mvvm.ui.GithubProfileActivity</item>
     </string-array>
 </resources>
 
