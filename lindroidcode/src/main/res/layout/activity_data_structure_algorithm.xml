@@ -9,6 +9,7 @@
     <TextView
         style="@style/TextContent"
         android:id="@+id/tv_origin"
+        android:text="单链表："
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -25,4 +26,19 @@
         android:text="从尾递归反转：\n"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_result"/>
+
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_lru"
+        android:text="Least Recently Used"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_result_path_b"/>
+
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_reverse_digits_in_string"
+        android:text="给定一个字符串 S，返回 “反转后的” 字符串，其中不是数字的字符都保留在原地，而所有数字的位置发生反转。"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_lru"/>
+
 </android.support.constraint.ConstraintLayout>

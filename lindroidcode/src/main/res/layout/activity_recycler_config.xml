@@ -27,6 +27,33 @@
             android:layout_weight="1"
             android:text="RedDivider"/>
     </RadioGroup>
+    <RadioGroup
+        android:id="@+id/rg_layout_manager"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rg_decoration">
+
+        <RadioButton
+            android:id="@+id/rb_linear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Linear"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/rb_grid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Grid"/>
+        <RadioButton
+            android:id="@+id/rb_staggered_grid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="StaggeredGrid"/>
+    </RadioGroup>
 
     <Button
         android:id="@+id/bt_to_recycler"
@@ -34,4 +61,10 @@
         android:layout_width="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="To Recycler"/>
+    <Button
+        android:id="@+id/bt_to_list_view"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/bt_to_recycler"
+        android:text="To ListView"/>
 </android.support.constraint.ConstraintLayout>

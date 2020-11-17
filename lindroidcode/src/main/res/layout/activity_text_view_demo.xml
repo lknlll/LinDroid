@@ -20,4 +20,13 @@
         android:id="@+id/bt_to_edit_text"
         app:layout_constraintTop_toBottomOf="@id/tv_padding_not_work"
         android:text="to_EditText"/>
+
+    <TextView
+        android:id="@+id/tv_tv_api"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/bt_to_edit_text"
+        android:text="attributes:"/>
+
 </android.support.constraint.ConstraintLayout>

@@ -13,6 +13,7 @@ import android.text.style.AbsoluteSizeSpan;
 import android.text.style.BackgroundColorSpan;
 import android.text.style.BulletSpan;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.LeadingMarginSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.ScaleXSpan;
 import android.text.style.StrikethroughSpan;
@@ -27,6 +28,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.lindroidcode.R;
+import com.example.lindroidcode.utils.DensityUtils;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -133,5 +135,19 @@ public class SpannableTextActivity extends AppCompatActivity {
                 0, msp.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);//第一个参数表示项目符号占用的宽度，第二个参数为项目符号的颜色
         tvSpans.setText(msp);
         tvSpans.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView tvSpanLean = findViewById(R.id.tv_span_leaning);
+        StringBuilder sb = new StringBuilder();
+        sb.append("\n 首行缩进");
+        sb.append("\n 1.先创建SpannableString对象");
+        sb.append("\n 2.设置文本缩进的样式，参数arg0，首行缩进的像素，arg1，剩余行缩进的像素,这里我将像素px转换成了手机独立像素dp");
+        sb.append("\n 3.进行样式的设置了,其中参数what是具体样式的实现对象,start则是该样式开始的位置，end对应的是样式结束的位置，参数flags，定义在Spannable中的常量");
+        //1.先创建SpannableString对象
+        SpannableString spannableString = new SpannableString(sb);
+        //2.设置文本缩进的样式，参数arg0，首行缩进的像素，arg1，剩余行缩进的像素,这里我将像素px转换成了手机独立像素dp
+        LeadingMarginSpan.Standard what = new LeadingMarginSpan.Standard(DensityUtils.dp2px(16, this), 0);
+        //3.进行样式的设置了,其中参数what是具体样式的实现对象,start则是该样式开始的位置，end对应的是样式结束的位置，参数flags，定义在Spannable中的常量
+        spannableString.setSpan(what, 0, spannableString.length(), SpannableString.SPAN_INCLUSIVE_INCLUSIVE);
+        tvSpanLean.setText(spannableString);
     }
 }

@@ -3,10 +3,12 @@ package com.example.lindroidcode;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.lindroidcode.leastsquares.Line;
 
@@ -39,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        TextView tvInstruction = findViewById(R.id.text_instruction);
+        tvInstruction.setMovementMethod(ScrollingMovementMethod.getInstance());
     }
 
 

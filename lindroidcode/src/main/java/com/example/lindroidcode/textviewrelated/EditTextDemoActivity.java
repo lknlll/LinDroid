@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.lindroidcode.R;
 
@@ -37,6 +38,11 @@ public class EditTextDemoActivity extends AppCompatActivity {
             }
         };
         et.addTextChangedListener(watcher);
+
+        TextView tvEtApi = findViewById(R.id.tv_et_api);
+        tvEtApi.append("\n不要在Watcher回调中setText 之类，避免死循环");
+        tvEtApi.append("\n设置选中： editText.setSelection(0, lastIndexOf);");
+        tvEtApi.append("\n实时监听光标的位置变化: 自定义EditText override onSelectionChanged()");
 
     }
 }

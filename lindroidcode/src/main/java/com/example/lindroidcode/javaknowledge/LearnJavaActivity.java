@@ -62,6 +62,23 @@ public class LearnJavaActivity extends AppCompatActivity {
 
         LearnStatic learnStatic = new LearnStatic();
         LearnStatic learnStaticB = new LearnStatic();
+
+        TextView tvRegularExpression = findViewById(R.id.tv_regular_expression);
+        tvRegularExpression.append("\n[0-9]+ 表示一位或多位数字，如\"3\"或\"225\"");
+        tvRegularExpression.append("\n[0-9]* 表示0位或多位数字，如\"\"或\"1\"或\"22\"");
+        tvRegularExpression.append("\n[0-9]? 表示0位或一位数字，如\"\"或\"7\"");
+
+        Log.e(TAG, "onCreate: 一位" + "3".matches("[0-9]+"));
+        Log.e(TAG, "onCreate: 多位" + "225".matches("[0-9]+"));
+        Log.e(TAG, "onCreate: 0位" + "".matches("[0-9]+"));
+
+        Log.e(TAG, "onCreate: 一位" + "3".matches("[0-9]*"));
+        Log.e(TAG, "onCreate: 多位" + "225".matches("[0-9]*"));
+        Log.e(TAG, "onCreate: 0位" + "".matches("[0-9]*"));
+
+        Log.e(TAG, "onCreate: 一位" + "3".matches("[0-9]?"));
+        Log.e(TAG, "onCreate: 多位" + "225".matches("[0-9]?"));
+        Log.e(TAG, "onCreate: 0位" + "".matches("[0-9]?"));
     }
 
     private void uncertainArgs(String... strings){

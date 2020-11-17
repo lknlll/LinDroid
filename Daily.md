@@ -1,5 +1,20 @@
 
 **ADB**
+
+adb -s 多设备选择设备  
+
+adb shell
+查看CPU  
+cat /proc/cpuinfo  
+在焦点位置输入XXX  
+input text XXX
+
+adb命令长时间无响应且ctrl+c不能退出可以用  
+\>exit
+
+adb logcat > /Users/linkunning/test/test.log  
+保存log到文件，文件不存在将被创建
+
 adb shell am start com.android.settings/com.android.settings.Settings 打开原生系统Settings
 
 小米再次安装App失败，报错
@@ -17,7 +32,8 @@ app considered 'chatty' by logcat (more than 5 lines per second), logs of your a
 
 **MAC**  
 Command+shift+. 显隐/隐藏  
-Command+→  行尾
+Command+→  行尾  
+Command+Shift+N 新建文件夹
 
 **GIT**  
 Git config http.postBuffer 524288000
@@ -25,6 +41,9 @@ Git config http.postBuffer 524288000
 只clone单独分支且只拉取一次commit 
 git clone -b LinDroid --depth 1  https://github.com/lknlll/LinDroid.git
 可以避免git目录下的pack 文件过大
+
+git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要忽略的文件。如果远程分支上存在这个文件，本地再设置 ignore，将不起作用。
+需先push 该文件的删除，再设置gitignore
 
 **社区**  
 [掘金](https://juejin.im/)
@@ -49,6 +68,7 @@ create class 填写VISIBILITY PUBLIC 全部大写
 |---|---|---|
 | 排列格式  | option + command + L | |
 | 打开Project Structure  | command + ; | |
+| 页签切换  | command + shift + \[ or \] | |
 
 color 左侧可以点击 会出现color picker
 
@@ -63,6 +83,17 @@ hot key:
 通常是重复依赖的module, aar, jar包导致；
 
 **Java基础**
+
+List 按索引添加新元素，  
+void add(int index, E element);
+index 不得大于List.size()，插入后插入的元素变为第index个
+
+android.util.Pair
+```
+Pair pair = new Pair(1, 2);//第一种创建方式 
+Pair pair2 = Pair.create("1", 2);//第二种创建方式 
+//Pair 的 first是获取第一个位置的数据，second是获取第二个位置的数据
+```
 
 Annotation 注解
 
@@ -182,8 +213,21 @@ AndroidManifest.xml  的application 标签中添加
 
 尽量在Android 9 以后不要用这个库
 
+以 Android 10（API 级别 29）及更高版本为目标平台的应用在默认情况下被赋予了对外部存储设备的分区访问权限（即分区存储）。此类应用只能看到本应用专有的目录（通过 Context.getExternalFilesDir() 访问）以及特定类型的媒体
+
 java.lang.SecurityException: ConnectivityService: Neither user 10037 nor current process has android.permission.CHANGE_WIFI_STATE
 
 检查Manifest是否存在相关权限声明
 <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
 修改WIFI状态
+
+java.lang.RuntimeException: Parcelable encountered IOException writing serializable object
+
+intent.getSerializableExtra 时key对应的类或者其子类没有implement Serializable
+
+Supertypes of the following classes cannot be resolved. Please make sure you have the required dependencies in the classpath
+kotlin暂时不支持greendao，相关操作使用Java
+
+Signal protocol 端到端的通讯加密协议
+
+public String toUpperCase() 返回全大写

@@ -50,5 +50,37 @@ public class DataStructureAlgorithmActivity extends AppCompatActivity {
 
         SingleLinkedListSolutions.showList(tvResultB,nHeadB);
 
+        TextView tvLru = findViewById(R.id.tv_lru);
+
+        tvLru.append("\nLRU 最近最少使用");
+        tvLru.append("\nget时视为被使用");
+        tvLru.append("\nput新元素时若缓存已满则移除最近最少使用的元素");
+        tvLru.append("\n思路：HashMap + 双链表");
+        tvLru.append("\nHashMap用于缓存key和节点");
+        tvLru.append("\n初始化size为0，head和tail不计算size");
+        tvLru.append("\n每使用（get）一个移至队首");
+        tvLru.append("\nput时先通过map缓存看表内是否存在");
+        tvLru.append("\n存在时就将该节点移至队首");
+        tvLru.append("\n不存在就创建该节点,增加到map，添加到队首后，将tail前节点（真实的队尾）移除");
+        tvLru.append("\n");
+
+        LRUCache cache = new LRUCache( 2 /* 缓存容量 */ );
+
+        cache.put(1, 1);
+        cache.put(2, 2);
+        tvLru.append("\ncache.get(1) = " + cache.get(1));       // 返回  1
+        cache.put(3, 3);    // 该操作会使得密钥 2 作废
+        tvLru.append("\ncache.get(2) = " + cache.get(2));       // 返回 -1 (未找到)
+        cache.put(4, 4);    // 该操作会使得密钥 1 作废
+        tvLru.append("\ncache.get(1) = " + cache.get(1));       // 返回 -1 (未找到)
+        tvLru.append("\ncache.get(3) = " + cache.get(3));       // 返回  3
+        tvLru.append("\ncache.get(4) = " + cache.get(4));       // 返回  4
+
+        TextView tvReverseDigitsOnly = findViewById(R.id.tv_reverse_digits_in_string);
+        tvReverseDigitsOnly.append("\nString str = \"abc123cde456fgh\"");
+        String str = ReverseOnlyDigits.reverseOnlyDigits("abc123cde456fgh");
+        tvReverseDigitsOnly.append("\n" + str);
+        String strB = ReverseOnlyDigits.reverseOnlyDigitsSaveMemory(str);
+        tvReverseDigitsOnly.append("\n" + strB);
     }
 }

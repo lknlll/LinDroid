@@ -12,4 +12,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:hint="test_text_watcher"/>
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_et_api"
+        app:layout_constraintTop_toBottomOf="@id/et_test_watcher"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 </android.support.constraint.ConstraintLayout>

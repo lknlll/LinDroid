@@ -18,7 +18,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".mvvm.ui.GithubProfileActivity"></activity>
+        <activity android:name=".circleiv.CircleImageViewActivity"></activity>
+        <activity android:name=".kotlinabc.KotlinABCActivity" />
+        <activity android:name=".view.scroll.ScrollKnowledgeActivity" />
+        <activity android:name=".recyclerrelated.ListViewDiffActivity" />
+        <activity android:name=".timer.TimerActivity" />
+        <activity android:name=".learnmultithread.MultiThreadActivity" />
+        <activity android:name=".mvvm.ui.GithubProfileActivity" />
         <activity android:name=".algodatastruct.DataStructureAlgorithmActivity" />
         <activity android:name=".encryptdecrypt.AesActivity" />
         <activity android:name=".encryptdecrypt.EncryptDecryptActivity" />
@@ -55,6 +61,7 @@
         <activity android:name=".recyclerrelated.RecyclerConfigActivity" />
         <activity android:name=".recyclerrelated.RecyclerRelatedActivity" />
         <activity android:name=".leastsquares.LineChartActivity" />
+        <activity android:name=".customchart.barchart.BarChartActivity" />
         <activity
             android:name=".permission.HandlePermissionActivity"
             android:label="HandlePermissionActivity"
