@@ -24,4 +24,40 @@
         android:text="正则表达式"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_static"/>
+
+    <EditText
+        style="@style/TextContent"
+        android:id="@+id/et_pattern_target"
+        android:hint="用您自己的正则表达式"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_regular_expression"/>
+
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_pattern_a"
+        android:text="检查是否匹配“(京东|京东金融)(啊|呢|吗|呀)”"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_pattern_target"/>
+
+    <EditText
+        style="@style/TextContent"
+        android:id="@+id/et_pattern_a"
+        android:text="京东啊"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_pattern_a"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/bt_check_result"
+        android:text="看结果"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_pattern_a"/>
+
+    <TextView
+        style="@style/TextContent"
+        android:id="@+id/tv_j8_feature"
+        android:text="Java 8 new features"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_check_result"/>
 </android.support.constraint.ConstraintLayout>

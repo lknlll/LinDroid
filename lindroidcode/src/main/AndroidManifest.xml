@@ -18,7 +18,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".circleiv.CircleImageViewActivity"></activity>
+        <activity android:name=".nativerelated.NativeRelatedActivity"></activity>
+        <activity android:name=".camera.TextureViewPreviewActivity" />
+        <activity android:name=".circleiv.CircleImageViewActivity" />
         <activity android:name=".kotlinabc.KotlinABCActivity" />
         <activity android:name=".view.scroll.ScrollKnowledgeActivity" />
         <activity android:name=".recyclerrelated.ListViewDiffActivity" />
