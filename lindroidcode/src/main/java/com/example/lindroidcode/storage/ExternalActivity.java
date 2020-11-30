@@ -3,13 +3,12 @@ package com.example.lindroidcode.storage;
 import android.Manifest;
 import android.content.DialogInterface;
 import android.os.Environment;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import com.example.lindroidcode.R;
-import com.example.lindroidcode.permission.ApplyPermissionActivity;
 import com.example.lindroidcode.permission.PermissionHelper;
 import com.example.lindroidcode.permission.PermissionStatusListener;
 

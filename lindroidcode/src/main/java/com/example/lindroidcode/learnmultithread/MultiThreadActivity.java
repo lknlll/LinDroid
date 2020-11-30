@@ -1,6 +1,6 @@
 package com.example.lindroidcode.learnmultithread;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 

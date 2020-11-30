@@ -1,7 +1,7 @@
 package com.example.lindroidcode.mvvm.repo;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.example.lindroidcode.mvvm.api.ApiResponse;
 import com.example.lindroidcode.mvvm.api.ApiService;

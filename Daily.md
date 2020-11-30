@@ -74,7 +74,9 @@ create class 填写VISIBILITY PUBLIC 全部大写
 color 左侧可以点击 会出现color picker
 
 Git remote authentication change
-Preferences | Appearance & Behavior | System Settings | Passwords
+Preferences | Appearance & Behavior | System Settings | Passwords  
+
+Refactor > Migrate to AndroidX 迁移AndroidX
 
 hot key:  
  inn insert if not null
@@ -245,3 +247,17 @@ kotlin暂时不支持greendao，相关操作使用Java
 Signal protocol 端到端的通讯加密协议
 
 public String toUpperCase() 返回全大写
+
+Android Studio 4.1 导入项目提示 Could not find method buildFeatures()for arguments xxx on extension ‘android‘on...
+原因是当下IDE及插件版本下dataBinding的开启方式不正确
+
+```
+buildFeatures {
+    dataBinding = true
+}
+```
+```
+dataBinding {
+    enabled = true
+}
+```

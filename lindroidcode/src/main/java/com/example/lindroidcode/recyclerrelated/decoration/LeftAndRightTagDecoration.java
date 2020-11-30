@@ -3,8 +3,9 @@ package com.example.lindroidcode.recyclerrelated.decoration;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lindroidcode.R;
 

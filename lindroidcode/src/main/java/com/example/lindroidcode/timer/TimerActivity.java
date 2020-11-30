@@ -1,6 +1,6 @@
 package com.example.lindroidcode.timer;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import static com.example.lindroidcode.utils.DataTimeUtils.getHour;
+import static com.example.lindroidcode.utils.DateTimeUtils.getHour;
 
 public class TimerActivity extends AppCompatActivity {
 

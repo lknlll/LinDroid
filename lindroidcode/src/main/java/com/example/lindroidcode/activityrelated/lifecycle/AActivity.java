@@ -1,13 +1,12 @@
 package com.example.lindroidcode.activityrelated.lifecycle;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
 import com.example.lindroidcode.R;
-import com.example.lindroidcode.activityrelated.LearnActivityActivity;
 
 public class AActivity extends AppCompatActivity {
 

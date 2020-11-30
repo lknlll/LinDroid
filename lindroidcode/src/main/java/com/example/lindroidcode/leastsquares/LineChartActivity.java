@@ -1,13 +1,10 @@
 package com.example.lindroidcode.leastsquares;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
 import com.example.lindroidcode.R;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class LineChartActivity extends AppCompatActivity {
 

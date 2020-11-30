@@ -1,12 +1,10 @@
 package com.example.lindroidcode.customchart.barchart;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.FrameLayout;
 
 import com.example.lindroidcode.R;
-import com.example.lindroidcode.leastsquares.Line;
-import com.example.lindroidcode.leastsquares.LineChartView;
 
 public class BarChartActivity extends AppCompatActivity {
 

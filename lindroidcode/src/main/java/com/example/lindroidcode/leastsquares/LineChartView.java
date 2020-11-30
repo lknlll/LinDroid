@@ -3,13 +3,10 @@ package com.example.lindroidcode.leastsquares;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Y轴值为-200到200 折线图

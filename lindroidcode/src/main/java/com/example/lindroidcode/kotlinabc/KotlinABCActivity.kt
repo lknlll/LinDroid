@@ -1,6 +1,6 @@
 package com.example.lindroidcode.kotlinabc
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.lindroidcode.R
 import kotlinx.android.synthetic.main.activity_kotlin_a_b_c.*

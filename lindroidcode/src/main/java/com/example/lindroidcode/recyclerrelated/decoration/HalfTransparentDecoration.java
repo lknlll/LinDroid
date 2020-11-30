@@ -8,8 +8,8 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Shader;
 import android.graphics.Xfermode;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class HalfTransparentDecoration extends RecyclerView.ItemDecoration {
 

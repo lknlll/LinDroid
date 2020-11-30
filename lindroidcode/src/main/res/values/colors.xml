@@ -3,4 +3,8 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="seek_pb_bg">#5dffffff</color>
+    <color name="seek_sc_bg">#aaffffff</color>
+    <color name="common_btn_selected_color">#4fc2ef</color>
 </resources>

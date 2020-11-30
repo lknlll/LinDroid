@@ -1,6 +1,6 @@
 package com.example.lindroidcode.mvvm.binding;
 
-import android.databinding.BindingAdapter;
+import androidx.databinding.BindingAdapter;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ImageView;

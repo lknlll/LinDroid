@@ -6,16 +6,11 @@ import android.graphics.Point;
 import android.hardware.Camera;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.util.Log;
 import android.view.TextureView;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.RelativeLayout;
 
 import com.example.lindroidcode.R;
-
-import java.util.List;
 
 import static com.example.lindroidcode.camera.CameraEngine.CAMERA_PREVIEW_DEFAULT_HEIGHT;
 import static com.example.lindroidcode.camera.CameraEngine.CAMERA_PREVIEW_DEFAULT_WIDTH;

@@ -1,11 +1,12 @@
 package com.example.lindroidcode.recyclerrelated;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.example.lindroidcode.R;
 
@@ -18,6 +19,11 @@ public class RecyclerConfigActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_config);
+
+        TextView tvNotes = findViewById(R.id.tv_notes);
+        tvNotes.setText("lib_base_recycler_helper");
+        tvNotes.append("\nAccording to https://github.com/CymChad/BaseRecyclerViewAdapterHelper");
+        tvNotes.append("\nAudioManagerActivity: swipe delete");
         mBundleConfig = new Bundle();
 
         mRgFilter = findViewById(R.id.rg_decoration);

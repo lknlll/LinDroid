@@ -1,6 +1,6 @@
 package com.example.lindroidcode.xmldemo;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
@@ -30,5 +30,8 @@ public class XmlDemoActivity extends AppCompatActivity {
         mTvIOSCompare.append("\n        drawable-xhdpi=iphone@2x");
         mTvIOSCompare.append("\n        drawable-xxhdpi=iphone@3x");
         mTvIOSCompare.append("\n        drawable-xxxhdpi=iphone@4x");
+
+        TextView mTvIncludeTag = findViewById(R.id.tv_include_tag);
+        mTvIncludeTag.append("\n必须同时重载layout_width和layout_height熟悉，其他的layout属性才会起作用，否这都会被忽略掉");
     }
 }

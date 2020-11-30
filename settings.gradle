@@ -1,1 +1,2 @@
+include ':lib_base_recycler_helper'
 include ':app', ':lindroidcode'

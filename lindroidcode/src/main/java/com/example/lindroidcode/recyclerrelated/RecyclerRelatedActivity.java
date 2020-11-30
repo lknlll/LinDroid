@@ -1,24 +1,19 @@
 package com.example.lindroidcode.recyclerrelated;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 
 import com.example.lindroidcode.R;
 import com.example.lindroidcode.recyclerrelated.decoration.HalfTransparentDecoration;
 import com.example.lindroidcode.recyclerrelated.decoration.LeftAndRightTagDecoration;
 import com.example.lindroidcode.recyclerrelated.decoration.SimpleDividerDecoration;
 import com.example.lindroidcode.recyclerrelated.decoration.SimplePaddingDecoration;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 //Preparation: maven implementation, Adapter, ViewHolder
 
