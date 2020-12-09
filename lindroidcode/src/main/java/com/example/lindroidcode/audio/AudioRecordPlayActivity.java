@@ -38,7 +38,10 @@ import static android.media.MediaRecorder.MEDIA_RECORDER_INFO_MAX_DURATION_REACH
 
 public class AudioRecordPlayActivity extends AppCompatActivity implements View.OnClickListener, SeekBar.OnSeekBarChangeListener {
     private static final int MSG_PLAYER_UPDATE = 0x10;
-    private TextView mCurrentTimeTv , mTotalTimeTv ;
+    private static final int STATE_PREPARED = 1;
+    private static final int STATE_NOT_INITIALIZED = -1;
+    private int mediaState = STATE_NOT_INITIALIZED;
+    private TextView mCurrentTimeTv , mTotalTimeTv;
     private ImageView mPlayerActionIv;
     private TextView mTvAudioTips;
     private Button mBtStartStopRecord;
@@ -144,6 +147,12 @@ public class AudioRecordPlayActivity extends AppCompatActivity implements View.O
         stopRecord();
         stopPlayer();
         super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        releasePlayer();
+        super.onDestroy();
     }
 
     /**
@@ -292,6 +301,11 @@ public class AudioRecordPlayActivity extends AppCompatActivity implements View.O
             mPlayerActionIv.setImageResource(R.mipmap.ic_play);
             bFirstPlay = true;
         });
+
+        mMediaPlayer.setOnErrorListener((mp, what, extra) -> {
+            Log.e(AudioRecordPlayActivity.class.getSimpleName(),"error: " + what);
+            return false;
+        });
     }
 
     private void pausePlayer(){
@@ -329,6 +343,7 @@ public class AudioRecordPlayActivity extends AppCompatActivity implements View.O
                 }
             });
             mMediaPlayer.prepare();
+            mediaState = STATE_PREPARED;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -345,16 +360,18 @@ public class AudioRecordPlayActivity extends AppCompatActivity implements View.O
 
     private void stopPlayer(){
         mMediaPlayer.stop();
-        mMediaPlayer.release();
     }
-
+    private void releasePlayer(){
+        mMediaPlayer.release();
+        mediaState = STATE_NOT_INITIALIZED;
+    }
     private boolean isPlaying(){
         return mMediaPlayer !=null && mMediaPlayer.isPlaying();
     }
 
     private void playerUpdate(){
         float seekTo = 0;
-        if (mMediaPlayer != null && mMediaPlayer.getDuration() != -1) {
+        if (mMediaPlayer != null && mediaState != STATE_NOT_INITIALIZED && mMediaPlayer.getDuration() != -1) {
             seekTo = mMediaPlayer.getCurrentPosition() / (float)mMediaPlayer.getDuration();
         }
         mSeekBar.setProgress((int)(seekTo * 100));
@@ -408,6 +425,9 @@ public class AudioRecordPlayActivity extends AppCompatActivity implements View.O
             mSpinnerAudioMarks.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    if (mediaState == STATE_NOT_INITIALIZED) {
+                        preparePlayer();
+                    }
                     long process = (Long)parent.getItemAtPosition(position);
                     if (mMediaPlayer != null) {
                         mMediaPlayer.start();

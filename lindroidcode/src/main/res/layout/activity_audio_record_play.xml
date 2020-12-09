@@ -50,8 +50,17 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/spinner_audio_records"
         android:spinnerMode="dropdown" />
+    <ImageView
+        android:id="@+id/iv_media_player_state"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/img_media_player_status"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_audio_marks"
+        app:layout_constraintBottom_toTopOf="@id/layout_control"/>
     <include
         layout="@layout/layout_player_controller_bottom"
+        android:id="@+id/layout_control"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         app:layout_constraintLeft_toLeftOf="parent"

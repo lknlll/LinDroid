@@ -217,6 +217,35 @@ publishing{
 }
 ```
 
+一套project各插件版本组合，解决各类编译冲突问题  
+诸如  
+CMake was unable to find a build program corresponding to "Ninja"  
+ERROR: Error occurred while communicating with CMake server.  
+(project root path)/build.gradle  
+
+``` dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1' //maven upload 用
+    }
+```
+
+(project root path)/gradle/wrapper/gradle-wrapper.properties
+
+```distributionUrl=https\://services.gradle.org/distributions/gradle-4.10.1-all.zip```
+
+if using cmake for native code  
+(project root path)/(module path)/build.gradle
+
+```externalNativeBuild {
+       cmake {
+           path "CMakeLists.txt"
+           version "3.10.2"
+       }
+   }
+```
+
+
+
 **Other**
 
 TextLine.sCached leak no need to fix
