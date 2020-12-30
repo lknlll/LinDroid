@@ -18,7 +18,7 @@ public static boolean areEqual(Object first, Object second) {
 这就保证了空安全。所以说，我们用 == 操作符时不需要担心空安全，a == b 并不等同于 a.equals(b)，而是 a?.equals(b) ?: b == null
 
 ###### ?
-?.表示对象为空时就直接返回null
+?.表示对象为空时就直接返回null，仅当对象不为空时才调用后面的方法
 
 ###### as
 类型强转: as 运算符
@@ -45,3 +45,7 @@ object.let{
 val max = if (a > b) a else b
 
 布尔型只有一个Boolean类型，值只能是true或false，不能用0或者非0来代表
+
+###### lateinit 修饰符
+
+用 lateinit 修饰类属性的时候，实际上在告诉编译器：这个属性的初始化的时机和方式与编译器无关，由代码操作

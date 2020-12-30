@@ -1,63 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".javaknowledge.LearnJavaActivity">
 
-    <TextView
-        style="@style/TextContent"
-        android:id="@+id/tv_varargs"
-        android:text="J2SE 1.5提供了“Varargs”机制，函数定义时argument数量不定时使用，传递个数可变的参数，注意与数组、泛型、重载作用的情况,处理时和数组基本相同"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-    <TextView
-        style="@style/TextContent"
-        android:id="@+id/tv_static"
-        android:text="static代码段: \n类调用静态方法之前就被调用\n在实例化一个对象时，先于构造函数被调用\n仅在类被初次加载的时候被调用一次"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_varargs"/>
-    <TextView
-        style="@style/TextContent"
-        android:id="@+id/tv_regular_expression"
-        android:text="正则表达式"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_static"/>
-
-    <EditText
-        style="@style/TextContent"
-        android:id="@+id/et_pattern_target"
-        android:hint="用您自己的正则表达式"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_regular_expression"/>
-
-    <TextView
-        style="@style/TextContent"
-        android:id="@+id/tv_pattern_a"
-        android:text="检查是否匹配“(京东|京东金融)(啊|呢|吗|呀)”"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_pattern_target"/>
-
-    <EditText
-        style="@style/TextContent"
-        android:id="@+id/et_pattern_a"
-        android:text="京东啊"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_pattern_a"/>
-
-    <Button
-        android:layout_height="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:id="@+id/bt_check_result"
-        android:text="看结果"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_pattern_a"/>
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/TextContent"
+            android:id="@+id/tv_deep_copy"
+            android:text="Deep Copy, List as example"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
-        style="@style/TextContent"
-        android:id="@+id/tv_j8_feature"
-        android:text="Java 8 new features"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_check_result"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            style="@style/TextContent"
+            android:id="@+id/tv_varargs"
+            android:text="J2SE 1.5提供了“Varargs”机制，函数定义时argument数量不定时使用，传递个数可变的参数，注意与数组、泛型、重载作用的情况,处理时和数组基本相同"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_deep_copy"/>
+        <TextView
+            style="@style/TextContent"
+            android:id="@+id/tv_static"
+            android:text="static代码段: \n类调用静态方法之前就被调用\n在实例化一个对象时，先于构造函数被调用\n仅在类被初次加载的时候被调用一次"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_varargs"/>
+        <TextView
+            style="@style/TextContent"
+            android:id="@+id/tv_regular_expression"
+            android:text="正则表达式"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_static"/>
+
+        <EditText
+            style="@style/TextContent"
+            android:id="@+id/et_pattern_target"
+            android:hint="用您自己的正则表达式"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_regular_expression"/>
+
+        <TextView
+            style="@style/TextContent"
+            android:id="@+id/tv_pattern_a"
+            android:text="检查是否匹配“(京东|京东金融)(啊|呢|吗|呀)”"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_pattern_target"/>
+
+        <EditText
+            style="@style/TextContent"
+            android:id="@+id/et_pattern_a"
+            android:text="京东啊"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_pattern_a"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/bt_check_result"
+            android:text="看结果"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_pattern_a"/>
+
+        <TextView
+            style="@style/TextContent"
+            android:id="@+id/tv_j8_feature"
+            android:text="Java 8 new features"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_check_result"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -104,6 +104,13 @@ List 按索引添加新元素，
 void add(int index, E element);
 index 不得大于List.size()，插入后插入的元素变为第index个
 
+数组转list使用Arrays.asList(T... a)  
+
+```
+String[] stringArray = {"hello","world","B"};
+List<String> stringB = Arrays.asList(stringArray);
+```  
+
 android.util.Pair
 ```
 Pair pair = new Pair(1, 2);//第一种创建方式 
@@ -180,6 +187,13 @@ java.net.SocketTimeoutException: Read timed out
 cd .. 返回上一级
 
 **Gradle**
+
+Android studio中引入了build.gradle中的applicationId这个概念，作为APP的唯一标识。  
+这样的好处是进行了解耦，applicationId作为APP的唯一标识，而AndroidManifest.xml中的包名package负责代码和资源的路径，包名可以随意改，可以和applicationId不一致。  
+这样还有一个好处，假如你想发布一个免费版，一个收费版，你只需要在build.gradle中把applicationId后面加上免费版的后缀包名（如".free"），收费版加上收费版的后缀，你的代码也不需要对包名进行重构。  
+获取APP唯一标识applicationId的方法为：  
+getApplicationInfo().processName)，或getApplication().getPackageName()，或getApplicationInfo().packageName  
+经测试，获取的都是gradle.build中的applicationId，而不是AndroidManifest.xml中的包名package
 
 Could not download okhttp.jar (com.squareup.okhttp3:okhttp:3.10.0)
 
@@ -288,5 +302,42 @@ buildFeatures {
 ```
 dataBinding {
     enabled = true
+}
+```
+
+xml外设置margin
+```
+LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+lp.setMargins(10, 20, 30, 40);
+imageView.setLayoutParams(lp);
+```  
+
+App安装后一直出现waiting for debugger，开发者选项中设置了“选择调试应用选项”为该应用
+小米安装应用失败之坑：MIUI默认在开发者选项最底部开启了启用MIUI优化；
+
+Cannot fit requested classes in a single dex file (# methods: 66822 > 65536)  
+Android系统定义总方法数是一个short int，short int 最大值为65536  
+超过65k个方法。一个dex已经装不下，需要个多个dex，也就是multiDex
+application module build.gradle: 
+
+```
+android {
+    defaultConfig {
+        //
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+}
+```
+
+如果存在自定义Application子类  
+```
+@Override
+public void onCreate() {
+    super.onCreate();
+    MultiDex.install(this);
 }
 ```

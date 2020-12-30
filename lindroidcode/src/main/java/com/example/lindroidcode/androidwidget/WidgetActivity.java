@@ -26,6 +26,8 @@ public class WidgetActivity extends AppCompatActivity {
         tvSpinnerNote.append("\n使用基本数据类型绑定Adapter");
         tvSpinnerNote.append("\nArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, mItems);\n");
         tvSpinnerNote.append("\n使用自定义数据类型绑定BaseAdapter");
+        tvSpinnerNote.append("\n");
+        tvSpinnerNote.append("\nSeekBar check in audio");
 
         EnableSameSelectionSpinner mSpinnerAudioRecords = findViewById(R.id.spinner_enable_same_selection);
         String[] children = new String[]{"苟利国家生死以","岂因祸福避趋之","本是同根生","相煎何太急"};

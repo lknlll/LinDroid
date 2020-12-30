@@ -6,3 +6,9 @@ cipher n. 密码；暗号
 anonymous adj. 匿名的  
 stagger adj. 交错的  
 emit v. 发射，放射
+
+predicate n. 谓语，述语
+          v. 使……基于；断言；暗示
+          adj. 谓语的，述语的
+          
+disposable adj. 可任意处理的；可自由使用的；用完即可丢弃的

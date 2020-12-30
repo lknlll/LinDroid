@@ -23,7 +23,11 @@ public class RecyclerConfigActivity extends AppCompatActivity {
         TextView tvNotes = findViewById(R.id.tv_notes);
         tvNotes.setText("lib_base_recycler_helper");
         tvNotes.append("\nAccording to https://github.com/CymChad/BaseRecyclerViewAdapterHelper");
-        tvNotes.append("\nAudioManagerActivity: swipe delete");
+        tvNotes.append("\nAudioManagerActivity: swipe delete, item dragging");
+        tvNotes.append("\nDrag issue: 嵌套调用在RecyclerView内时，重复setAdapter会导致Drag失效，");
+        tvNotes.append("\n将OnItemDragListener作为implement了DraggableModule的Adapter的成员变量");
+        tvNotes.append("\n外层RecyclerView bind时如果Adapter已存在则 不再 set，复用已有实例");
+        tvNotes.append("\nuse DataBinding with RecyclerView for data update");
         mBundleConfig = new Bundle();
 
         mRgFilter = findViewById(R.id.rg_decoration);

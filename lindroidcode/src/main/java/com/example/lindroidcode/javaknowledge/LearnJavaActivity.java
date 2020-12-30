@@ -5,11 +5,17 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.lindroidcode.R;
+import com.example.lindroidcode.databinding.ActivityLearnJavaBinding;
+import com.example.lindroidcode.mvp.beans.User;
+import com.example.lindroidcode.utils.TextOperateUtils;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,10 +33,65 @@ public class LearnJavaActivity extends AppCompatActivity {
     private Integer sIA;
     private TextView mTvVarargs;
     private String targetPattern = "(京东|京东金融)(啊|呢|吗|呀)";
+
+    private ActivityLearnJavaBinding mViewBinding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_learn_java);
+        mViewBinding = ActivityLearnJavaBinding.inflate(getLayoutInflater());
+        View view = mViewBinding.getRoot();
+        setContentView(view);
+        List<User> srcList = new ArrayList<>();
+        User user = new User();
+        user.setPassword("1");
+        user.setUsername("a");
+        User userB = new User();
+        userB.setPassword("2");
+        userB.setUsername("B");
+        srcList.add(user);
+        srcList.add(userB);
+        String srcJson = new Gson().toJson(srcList);
+        List<User> desFromSrcJson = new Gson().fromJson(srcJson, new TypeToken<List<User>>(){}.getType());
+        Log.e(TAG, "srcList " + srcJson);
+        TextView tvCopy = mViewBinding.tvDeepCopy;
+        //浅拷贝
+        // 1、遍历循环复制
+        TextOperateUtils.appendLineStartWithChangeLine(tvCopy,
+                new String[]{"浅拷贝",
+                        "1、遍历循环复制",
+                        "2、使用List实现类的构造方法",
+                        "3、list.addAll()",
+                        "4、使用System.arraycopy()方法",
+                        "深拷贝",
+                        "Json"});
+        List<User> destList=new ArrayList<User>(srcList.size());
+        for(User p : srcList){
+            destList.add(p);
+        }
+        Log.e(TAG, "destList " + new Gson().toJson(destList));
+        //2、使用List实现类的构造方法
+        List<User> destListB=new ArrayList<User>(srcList);
+        Log.e(TAG, "destListB " + new Gson().toJson(destListB));
+
+        //3、list.addAll()
+        List<User> destListC=new ArrayList<User>();
+        destListC.addAll(srcList);
+        Log.e(TAG, "destListC " +  new Gson().toJson(destListC));
+
+        //4、使用System.arraycopy()方法
+        User[] srcUsers=srcList.toArray(new User[0]);
+        User[] destUsers=new User[srcUsers.length];
+        System.arraycopy(srcUsers, 0, destUsers, 0, srcUsers.length);
+        Log.e(TAG, "destUsers " + new Gson().toJson(destUsers));
+
+        srcList.get(0).setUsername("!!");
+        Log.e(TAG, "srcList " + new Gson().toJson(srcList));
+        Log.e(TAG, "destList " + new Gson().toJson(destList));
+        Log.e(TAG, "destListB " + new Gson().toJson(destListB));
+        Log.e(TAG, "destListC " + new Gson().toJson(destListC));
+        Log.e(TAG, "destUsers " + new Gson().toJson(destUsers));
+        Log.e(TAG, "desFromSrcJson " + new Gson().toJson(desFromSrcJson));
+
         sA = (short)1;
         sB = (short)1;
         sSA = 1;
@@ -62,7 +123,7 @@ public class LearnJavaActivity extends AppCompatActivity {
             Log.e(TAG, "onCreate: inner iterator" + str );
         }*/
 
-        mTvVarargs =findViewById(R.id.tv_varargs);
+        mTvVarargs = mViewBinding.tvVarargs;
         uncertainArgs("“Varargs”是“variable number of arguments”","函数的参数表中有vararg时要放到最后");
 
         LearnStatic.checkTiming();

@@ -6,21 +6,36 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Bugly -->
+    <!-- OkHttp -->
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- Bugly -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- Bugly -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Bugly -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Bugly -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
 
     <application
+        android:name=".LinDroidApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".androidwidget.WidgetActivity"></activity>
+
+        <activity
+            android:name=".matisse.MatisseSampleActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+
+        <activity android:name=".websocket.WebSocketActivity"></activity>
+        <activity android:name=".rxjava.RxJavaActivity" />
+        <activity android:name=".guava.GuavaFilterActivity" />
+        <activity android:name=".guava.GuavaOverAllActivity" />
+        <activity android:name=".constraintdemo.ConstraintAlphaActivity" />
+        <activity android:name=".androidwidget.WidgetActivity" />
         <activity android:name=".greendaoatoz.AudioManagerActivity" />
         <activity
             android:name=".greendaoatoz.GreenDaoAToZActivity"

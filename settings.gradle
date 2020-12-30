@@ -1,2 +1,4 @@
+include ':lib_glide'
+include ':lib_matisse'
 include ':lib_base_recycler_helper'
 include ':app', ':lindroidcode'

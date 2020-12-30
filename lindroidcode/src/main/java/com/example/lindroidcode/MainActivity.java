@@ -1,7 +1,6 @@
 package com.example.lindroidcode;
 
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
@@ -9,19 +8,29 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.lindroidcode.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText mEditSelection;
     private Button mButtonGo;
+    private ActivityMainBinding mActivityMainBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        int versionCode = BuildConfig.VERSION_CODE;
+        String versionName = BuildConfig.VERSION_NAME;
+        setTitle(getString(R.string.app_name) + versionName);
+        mActivityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
+        View view = mActivityMainBinding.getRoot();
+        setContentView(view);
         final String[] sToClasses = getResources().getStringArray(R.array.class_names);
 
-        mEditSelection = findViewById(R.id.edit_selection);
-        mButtonGo = findViewById(R.id.bt_go);
+        mEditSelection = mActivityMainBinding.editSelection;
+        mButtonGo = mActivityMainBinding.btGo;
 
         mEditSelection.setText(sToClasses.length + "");
         mButtonGo.setOnClickListener(new View.OnClickListener() {
