@@ -3,7 +3,9 @@
 
 adb -s 多设备选择设备  
 
-adb shell
+adb shell  
+不断输出各进程CPU 占用情况  
+top -m 10 -s cpu  
 查看CPU  
 cat /proc/cpuinfo  
 在焦点位置输入XXX  
@@ -12,7 +14,7 @@ input text XXX
 adb命令长时间无响应且ctrl+c不能退出可以用  
 \>exit
 
-adb logcat > /Users/linkunning/test/test.log  
+adb logcat > /Users/xxx/test/test.log  
 保存log到文件，文件不存在将被创建
 
 adb shell am start com.android.settings/com.android.settings.Settings 打开原生系统Settings
@@ -261,6 +263,7 @@ if using cmake for native code
 
 
 **Other**
+github file download https://d.serctl.com/
 
 TextLine.sCached leak no need to fix
 

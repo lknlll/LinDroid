@@ -27,6 +27,7 @@ public class TextViewDemoActivity extends AppCompatActivity {
 
         tvTvApi.append("\n android:maxEms=\"8\" not work use android:maxLength=\"8\" instead");
         tvTvApi.append("\n setTextColor(0xFF0000FF);//0xFF0000FF是int类型的数据，三段分别表示0x|FF|0000FF，0x是代表颜色整数的标记，ff是表示透明度，0000FF表示颜色，注意：必须带透明度");
+        tvTvApi.append("\n setTextSize(TypedValue.COMPLEX_UNIT_SP,18)\n");
 
         findViewById(R.id.bt_to_edit_text).setOnClickListener(new View.OnClickListener() {
             @Override

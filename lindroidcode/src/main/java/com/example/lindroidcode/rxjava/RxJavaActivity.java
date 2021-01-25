@@ -14,6 +14,7 @@ import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 
 public class RxJavaActivity extends AppCompatActivity {
 
@@ -70,6 +71,21 @@ public class RxJavaActivity extends AppCompatActivity {
             @Override
             public void onComplete() {
                 Log.e(TAG,"onComplete: " + System.currentTimeMillis());
+            }
+        });
+
+        Observable.create(new ObservableOnSubscribe<Integer>() {
+            @Override
+            public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
+                emitter.onNext(1);
+                emitter.onNext(2);
+                emitter.onNext(3);
+                emitter.onComplete();
+            }
+        }).subscribe(new Consumer<Integer>() {
+            @Override
+            public void accept(Integer integer) throws Exception {
+                
             }
         });
     }

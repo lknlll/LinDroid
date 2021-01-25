@@ -375,7 +375,7 @@ public class AudioRecordPlayActivity extends AppCompatActivity implements View.O
             seekTo = mMediaPlayer.getCurrentPosition() / (float)mMediaPlayer.getDuration();
         }
         mSeekBar.setProgress((int)(seekTo * 100));
-        mCurrentTimeTv.setText(DateTimeUtils.formattedTime(mMediaPlayer.getCurrentPosition()));
+        mCurrentTimeTv.setText(DateTimeUtils.formattedTime(mMediaPlayer.getCurrentPosition()));//Todo handle java.lang.IllegalStateException
         mHandler.sendEmptyMessageDelayed(MSG_PLAYER_UPDATE , 1000);
     }
 

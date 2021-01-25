@@ -24,7 +24,7 @@
     <TextView
         android:id="@+id/tv_tv_api"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:scrollbars="vertical"
         app:layout_constraintTop_toBottomOf="@id/bt_to_edit_text"
         android:text="attributes:"/>

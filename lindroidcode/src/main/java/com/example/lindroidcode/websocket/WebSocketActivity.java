@@ -1,6 +1,7 @@
 package com.example.lindroidcode.websocket;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,6 +23,8 @@ import okhttp3.WebSocketListener;
 import okio.ByteString;
 
 public class WebSocketActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private static final String TAG = WebSocketActivity.class.getSimpleName();
     private Button btnStart;
     private TextView tvOutput;
     private WebSocket mSocket;
@@ -120,6 +123,7 @@ public class WebSocketActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void output(final String text) {
+        Log.e(TAG, "output: " + text);
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
