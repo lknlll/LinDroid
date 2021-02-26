@@ -37,6 +37,8 @@ Command+shift+. 显隐/隐藏
 Command+→  行尾  
 Command+Shift+N 新建文件夹
 
+sudo vim /etc/hosts，然后输入电脑的密码进入host文件，按 i 键进入编辑状态，修改host。然后，ESC退出编辑状态，输入 :wq 保存并退出vim
+
 **GIT**  
 Git config http.postBuffer 524288000
 
@@ -50,6 +52,9 @@ git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要�
 **社区**  
 [掘金](https://juejin.im/)
 
+**Maven**  
+[阿里云镜像](https://maven.aliyun.com)
+
 **MarkDown**  
 换行：两空格一个回车 或者HTML的 \<br>  
 超链接：\[链接文字\]\(链接地址\)  
@@ -60,6 +65,10 @@ git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要�
 
 插入程序代码的方式：单行代码前后使用反引号 `，或多行代码前后使用三个反引号```  
 星号空格 \* ：项目符号
+
+插入网络图片
+
+\!\[avatar\](https://github.com/lknlll/LinDroid/blob/LinDroid/blog/pic/ThreadLocalIntro.png)
 
 **Android Studio**
 
