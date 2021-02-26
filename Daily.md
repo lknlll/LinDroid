@@ -55,13 +55,20 @@ git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要�
 **Maven**  
 [阿里云镜像](https://maven.aliyun.com)
 
+**工具**  
+[DNS查询](http://tool.chinaz.com/dns/)
+
 **MarkDown**  
 换行：两空格一个回车 或者HTML的 \<br>  
 超链接：\[链接文字\]\(链接地址\)  
 转义：当我们想在 Markdown 文件中显示一些标记符号，可以使用\进行转义  
 下标（符号方式）：θ~1~  上标：θ^2^  
 下标（标签方式）：θ<sub>1</sub>  上标 ：θ<sup>2</sup>  
-序号：数字 加点 加空格
+序号：数字 加点 加空格  
+分割线
+1 \---
+2 \___
+3 \***
 
 插入程序代码的方式：单行代码前后使用反引号 `，或多行代码前后使用三个反引号```  
 星号空格 \* ：项目符号
@@ -353,3 +360,14 @@ public void onCreate() {
     MultiDex.install(this);
 }
 ```
+
+github push fail 报错
+
+Push failed
+Unable to access 'https://github.com/lknlll/LinDroid.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443
+
+Git支持三种协议：git://、ssh://和http://
+
+取消http代理
+
+git config --global --unset http.proxy

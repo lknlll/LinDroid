@@ -12,3 +12,11 @@ predicate n. 谓语，述语
           adj. 谓语的，述语的
           
 disposable adj. 可任意处理的；可自由使用的；用完即可丢弃的
+
+suffix 后缀名
+
+passive 被动的
+
+Prague 布拉格
+
+inheritable adj. 可继承的
