@@ -1,4 +1,4 @@
-###### 总结
+##### 总结
 
 https://github.com/JsonChao/Awesome-Android-Interview
 
@@ -100,7 +100,7 @@ https://www.jianshu.com/p/de220733fdfa
 
 ---
 
-###### Java
+##### Java
 
 final 关键字
 
@@ -116,7 +116,7 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 
 ---
 
-###### Android
+##### Android
 
 内存
 
@@ -196,7 +196,7 @@ UVCCamera
 
 ---
 
-##### JNI 
+###### JNI 
 
 查看手机CPU框架
 
