@@ -20,3 +20,9 @@ passive 被动的
 Prague 布拉格
 
 inheritable adj. 可继承的
+
+poll 轮询
+
+concurrent 并发的
+
+dump v.卸出（数据）；（内存信息）转储  

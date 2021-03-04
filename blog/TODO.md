@@ -1,5 +1,7 @@
 ##### 总结
 
+https://github.com/274942954/AndroidCollection
+
 安卓八股宝典  
 ![avatar](https://github.com/lknlll/LinDroid/blob/LinDroid/blog/pic/android_bagu.jpg) 
 
@@ -71,9 +73,7 @@ annotation 哪几类，都作用在哪些阶段
 
 rxjava 如何实现线程切换的
 
-Handler 如何实现sendMessage 以后 只有自己能接收，target Handler是咋回事
-
-sendMessageDelay 之后的消息是怎么处理，一个队列还是两个队列
+target Handler是咋回事
 
 开源框架原理说一个熟悉的
 
@@ -109,6 +109,8 @@ https://www.jianshu.com/p/de220733fdfa
 
 ##### Java
 
+HashMap、ConcurrentHashMap等，问到最多的类的原理、到底层数据结构、再到数据扩容，以及算法复杂度
+
 final 关键字
 
 www.cnblogs.com/dotgua/p/6357951.html
@@ -124,6 +126,18 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 ---
 
 ##### Android
+
+计算图片的所占用的内存，加载大图
+
+Glide 三级缓存
+
+Application Context在什么情况下不能使用
+
+子线程更新UI SurfaceView
+
+https://zhuanlan.zhihu.com/p/87332093
+
+https://blog.csdn.net/ddwhan0123/article/details/50956307
 
 Handler 
 

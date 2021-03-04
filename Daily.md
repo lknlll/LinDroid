@@ -58,6 +58,8 @@ git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要�
 **工具**  
 [DNS查询](http://tool.chinaz.com/dns/)
 
+[MarkDown](https://www.typora.io/)
+
 **MarkDown**  
 换行：两空格一个回车 或者HTML的 \<br>  
 超链接：\[链接文字\]\(链接地址\)  
@@ -76,6 +78,10 @@ git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要�
 插入网络图片
 
 \!\[avatar\](https://github.com/lknlll/LinDroid/blob/LinDroid/blog/pic/ThreadLocalIntro.png)
+
+块引用：行的开头加上“大于”插入符号（>）
+
+项目符号：在文字前面加上 - 
 
 **Android Studio**
 
