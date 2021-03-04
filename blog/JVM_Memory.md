@@ -1,3 +1,3 @@
 ###### Java 虚拟机 内存管理
 
-![avatar]() 
+![avatar](https://github.com/lknlll/LinDroid/raw/LinDroid/blog/pic/JVMMemery.png) 

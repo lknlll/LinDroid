@@ -44,7 +44,7 @@ main
 
 ThreadLocal提供线程局部变量。这些变量不同于它们的正常变量，即每一个线程访问自身的局部变量时，都有它自己的，独立初始化的副本。该变量通常是与线程关联的私有静态字段，列如用于ID或事物ID。
 
-![avatar](https://github.com/lknlll/LinDroid/blob/LinDroid/blog/pic/ThreadLocalIntro.png) 
+![avatar](https://github.com/lknlll/LinDroid/raw/LinDroid/blog/pic/ThreadLocalIntro.png) 
 
 ThreadLocal把一个对象保存在指定的线程中，也就是创建线程局部变量；作用域是当前线程；对象保存后，只能在指定线程中获取保存的数据，对于其他线程来说则无法获取到数据。
 

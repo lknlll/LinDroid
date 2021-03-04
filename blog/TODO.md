@@ -3,7 +3,7 @@
 https://github.com/274942954/AndroidCollection
 
 安卓八股宝典  
-![avatar](https://github.com/lknlll/LinDroid/blob/LinDroid/blog/pic/android_bagu.jpg) 
+![avatar](https://github.com/lknlll/LinDroid/raw/LinDroid/blog/pic/android_bagu.jpg) 
 
 https://github.com/JsonChao/Awesome-Android-Interview
 
