@@ -39,6 +39,8 @@ Command+Shift+N 新建文件夹
 
 sudo vim /etc/hosts，然后输入电脑的密码进入host文件，按 i 键进入编辑状态，修改host。然后，ESC退出编辑状态，输入 :wq 保存并退出vim
 
+Chrome CMD + SHIFT + P 弹出命令框 后输入 full 将整个网页另存为图片
+
 **GIT**  
 Git config http.postBuffer 524288000
 
