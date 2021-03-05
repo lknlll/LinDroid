@@ -14,6 +14,23 @@ https://www.jianshu.com/p/375ad14096b3
 https://www.jianshu.com/u/921c778fb5e1
 
 ---
+210305
+
+SurfaceView 刷新原理，双缓冲机制
+
+View 和 ViewGroup 对 屏幕事件的响应有何不同
+
+如何实现View 随手指拖放
+
+项目亮点，参考开源项目机制设计了什么；
+
+跨进程：进程守护、AIDL语法中的in, out, inout TAG；挑一个熟悉的说；
+
+子线程Handler向主线程发消息 怎么做；
+
+https://www.cnblogs.com/hun2014/p/5758948.html
+
+Coding 链表交叉点查找；
 
 210301
 
