@@ -13,6 +13,38 @@ https://www.jianshu.com/p/375ad14096b3
 
 https://www.jianshu.com/u/921c778fb5e1
 
+210309
+
+SurfaceView 刷新原理，双缓冲机制
+
+View 和 ViewGroup 对 屏幕事件的响应有何不同
+
+如何实现View 随手指拖放
+
+项目亮点，参考开源项目机制设计了什么；
+
+跨进程：进程守护、AIDL语法中的in, out, inout TAG；挑一个熟悉的说；
+
+子线程Handler向主线程发消息 怎么做；
+
+https://www.cnblogs.com/hun2014/p/5758948.html
+
+Coding 链表交叉点查找；
+
+glide 实现 三级缓存原理 
+
+handler 跨线程传输怎么实现的
+
+okhttp interceptor
+
+Arouter 跨组件间通信 普通类之间怎么实现的
+
+coding 数组将等于某一个值的元素全部移到最前 最快 最省空间两种方式
+
+快排 时间 空间复杂度
+
+自定义View 实现时钟 时针 分针
+
 ---
 210305
 
@@ -143,6 +175,10 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 ---
 
 ##### Android
+
+Context 全解析
+
+https://blog.csdn.net/guolin_blog/article/details/47028975
 
 计算图片的所占用的内存，加载大图
 
