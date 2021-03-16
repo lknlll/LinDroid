@@ -122,8 +122,6 @@ annotation 哪几类，都作用在哪些阶段
 
 rxjava 如何实现线程切换的
 
-target Handler是咋回事
-
 开源框架原理说一个熟悉的
 
 FileProvider 为啥要出，解决什么问题，带来哪些好处
@@ -157,6 +155,9 @@ https://www.jianshu.com/p/de220733fdfa
 ---
 
 ##### Java
+
+i++跟++i在JVM字节码上的区别  
+https://www.jianshu.com/p/4dcf302aa2a8
 
 HashMap、ConcurrentHashMap等，问到最多的类的原理、到底层数据结构、再到数据扩容，以及算法复杂度
 

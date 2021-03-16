@@ -69,7 +69,7 @@
         <item>com.example.lindroidcode.androidwidget.WidgetActivity</item>
         <item>com.example.lindroidcode.guava.GuavaOverAllActivity</item>
         <item>com.example.lindroidcode.rxjava.RxJavaActivity</item>
-        <item>com.example.lindroidcode.websocket.WebSocketActivity</item>
+        <item>com.example.lindroidcode.network.websocket.WebSocketActivity</item>
         <item>com.example.lindroidcode.matisse.MatisseSampleActivity</item>
     </string-array>
 </resources>

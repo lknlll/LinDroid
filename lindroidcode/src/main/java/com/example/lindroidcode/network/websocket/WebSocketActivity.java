@@ -1,4 +1,4 @@
-package com.example.lindroidcode.websocket;
+package com.example.lindroidcode.network.websocket;
 
 import android.os.Bundle;
 import android.util.Log;

@@ -26,3 +26,8 @@ poll 轮询
 concurrent 并发的
 
 dump v.卸出（数据）；（内存信息）转储  
+
+power of 次幂  
+2的3次幂 the third power of 2
+
+aka abbr. also known as

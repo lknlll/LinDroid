@@ -31,7 +31,7 @@
             android:name=".matisse.MatisseSampleActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"/>
 
-        <activity android:name=".websocket.WebSocketActivity"></activity>
+        <activity android:name=".network.websocket.WebSocketActivity"></activity>
         <activity android:name=".rxjava.RxJavaActivity" />
         <activity android:name=".guava.GuavaFilterActivity" />
         <activity android:name=".guava.GuavaOverAllActivity" />
