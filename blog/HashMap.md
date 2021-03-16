@@ -1,12 +1,12 @@
 ##### HashMap
 
-数据结构及增删改查耗时；
+- 数据结构及增删改查耗时；
 
-容量为什么是2的倍数（power-of-two expansion），扩容何时由什么决定；
+- 容量为什么是2的倍数（power-of-two expansion），扩容何时由什么决定；
 
-线程不安全问题；
+- 线程不安全问题；
 
-构造方法；
+- 构造方法；
 
 HashMap中位运算代替常规运算提升效率的例子有什么；
 
@@ -117,7 +117,7 @@ JDK8中，当链表长度达到8，会转化成红黑树，提升效率，
 
 3. 自定义Capacity及loadFactor加载因子，这里有个构造方法里计算阈值的地方tableSizeFor方法；
 
-4 Map参数构造HashMap；
+4. Map参数构造HashMap；
 
     tableSizeFor 返回大于输入参数且最近的2的整数次幂的数；在Java 8 优化
     
