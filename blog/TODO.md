@@ -177,6 +177,8 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 
 ##### Android
 
+[流畅度及FPS(Frames Per Second）监测](https://cloud.tencent.com/developer/article/1698334)
+
 [AOP](https://www.jianshu.com/p/aa1112dbebc7)
 
 Context 全解析
@@ -206,6 +208,8 @@ https://www.jianshu.com/p/f7cabfe19720
 内存
 
 https://gank.io/post/5e79880393b891c522d3bde6
+
+[应用内存优化之OnLowMemory&OnTrimMemory](https://www.cnblogs.com/xiajf/p/3993599.html)
 
 ANR-WatchDog
 
