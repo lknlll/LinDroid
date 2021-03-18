@@ -177,6 +177,8 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 
 ##### Android
 
+[AOP](https://www.jianshu.com/p/aa1112dbebc7)
+
 Context 全解析
 
 https://blog.csdn.net/guolin_blog/article/details/47028975

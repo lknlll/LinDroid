@@ -44,3 +44,17 @@
 对比饿汉，懒汉类加载时不分配内存，getInstance第一次调用才申请内存；
 缺点：多线程getInstance有可能多次new 出实例来；
 
+####### 懒汉模式（线程安全）
+
+    public	class	SingletonTest	{
+        private SingletonTest() {   
+        }   
+        private	static SingletonTest instance;   
+    
+        // 定义一个静态的方法（调用时再初始化SingletonTest，使用synchronized 避免多线程访问时，可能造成重的复初始化问题）
+        public static synchronized SingletonTest getInstance() {   
+            if (instance == null)   
+                instance = new SingletonTest();   
+            return instance;   
+        }   
+    }

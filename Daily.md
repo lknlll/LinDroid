@@ -1,5 +1,5 @@
 
-**ADB**
+###### ADB
 
 adb -s 多设备选择设备  
 
@@ -32,7 +32,7 @@ adb connect 192.168.1.199:5555
 I/chatty: uid=10322(com.example.lindroidcode) identical 1 line  
 app considered 'chatty' by logcat (more than 5 lines per second), logs of your app will be collapsed.
 
-**MAC**  
+###### MAC  
 Command+shift+. 显隐/隐藏  
 Command+→  行尾  
 Command+Shift+N 新建文件夹
@@ -41,7 +41,7 @@ sudo vim /etc/hosts，然后输入电脑的密码进入host文件，按 i 键进
 
 Chrome CMD + SHIFT + P 弹出命令框 后输入 full 将整个网页另存为图片
 
-**GIT**  
+###### GIT  
 Git config http.postBuffer 524288000
 
 只clone单独分支且只拉取一次commit 
@@ -51,18 +51,21 @@ git clone -b LinDroid --depth 1  https://github.com/lknlll/LinDroid.git
 git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要忽略的文件。如果远程分支上存在这个文件，本地再设置 ignore，将不起作用。
 需先push 该文件的删除，再设置gitignore
 
-**社区**  
+
+###### 社区  
 [掘金](https://juejin.im/)
 
-**Maven**  
+###### Maven  
 [阿里云镜像](https://maven.aliyun.com)
 
-**工具**  
+###### 工具
 [DNS查询](http://tool.chinaz.com/dns/)
 
 [MarkDown](https://www.typora.io/)
 
-**MarkDown**  
+[github file download](https://d.serctl.com/)
+
+###### MarkDown  
 换行：两空格一个回车 或者HTML的 \<br>  
 超链接：\[链接文字\]\(链接地址\)  
 转义：当我们想在 Markdown 文件中显示一些标记符号，可以使用\进行转义  
@@ -85,7 +88,7 @@ git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要�
 
 项目符号：在文字前面加上 - 
 
-**Android Studio**
+###### Android Studio
 
 create class 填写VISIBILITY PUBLIC 全部大写
 
@@ -111,7 +114,7 @@ hot key:
 
 通常是重复依赖的module, aar, jar包导致；
 
-**Java基础**
+###### Java
 
 Java虚拟机（JVM）
 
@@ -225,11 +228,11 @@ java.net.SocketTimeoutException: Read timed out
 
 网络请求超时抛出
 
-**Shell**
+###### Shell
 
 cd .. 返回上一级
 
-**Gradle**
+###### Gradle
 
 Android studio中引入了build.gradle中的applicationId这个概念，作为APP的唯一标识。  
 这样的好处是进行了解耦，applicationId作为APP的唯一标识，而AndroidManifest.xml中的包名package负责代码和资源的路径，包名可以随意改，可以和applicationId不一致。  
@@ -303,8 +306,7 @@ if using cmake for native code
 
 
 
-**Other**
-github file download https://d.serctl.com/
+###### Other
 
 TextLine.sCached leak no need to fix
 
