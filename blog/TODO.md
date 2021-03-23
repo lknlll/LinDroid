@@ -13,6 +13,36 @@ https://www.jianshu.com/p/375ad14096b3
 
 https://www.jianshu.com/u/921c778fb5e1
 
+210322
+
+https://leetcode-cn.com/problems/decode-string/
+
+210320
+
+https://leetcode-cn.com/problems/3sum-closest/
+
+210319
+
+https://leetcode-cn.com/problems/multiply-strings/
+
+知乎内容板块，一面
+
+coding 只使用一个数组，实现两个栈。
+
+HashMap 哈希碰撞后的元素是在链表头还是尾，为何Java8 加入了红黑树
+
+Handler里的 IdleHandler ，Barrier是怎么回事
+
+[从一次实际经历来说说IdleHandler的坑](https://www.jianshu.com/p/50a9bbb72d4e)
+
+设计模式，代理模式，retrofit动态代理
+
+activity 启动优化方案，如何确定activity第一帧已经渲染出来，activity何时开始可交互
+
+router 组件间普通类调用怎么实现
+
+Leak canary原理
+
 210309
 
 SurfaceView 刷新原理，双缓冲机制
@@ -86,7 +116,7 @@ ANR 具体哪三种，各多少时间，系统是如何检测到ANR的，ANR窗�
 
 ANR 线上优化方案降低了多少百分比
 
-一个View 如何实现扩大点击热区
+[一个View 如何实现扩大点击热区TouchDelegate](https://mp.weixin.qq.com/s/XZaDsstXDgT_WkMUhb9Y9g)
 
 手写线程安全的单例模式 使用时申请内存（Java kotlin）
 
