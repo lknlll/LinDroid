@@ -2,6 +2,12 @@
 
 https://github.com/274942954/AndroidCollection
 
+[框架](https://mp.weixin.qq.com/s/mbNGOm7l-BZCRj7mCIXCwQ)
+
+[工具](http://www.zhihu.com/question/27140400)
+
+[2016AndroidHack工具](https://mp.weixin.qq.com/s/OfnTTE0LbystM2iCXZdMuw)
+
 安卓八股宝典  
 ![avatar](https://github.com/lknlll/LinDroid/raw/LinDroid/blog/pic/android_bagu.jpg) 
 
@@ -12,6 +18,48 @@ https://github.com/yangchong211/YCBlogs
 https://www.jianshu.com/p/375ad14096b3
 
 https://www.jianshu.com/u/921c778fb5e1
+
+[Fragment重叠](https://mp.weixin.qq.com/s/ka2-5m81wNwWpp9F-lIrWw)
+
+[字符编码](https://mp.weixin.qq.com/s/mbNGOm7l-BZCRj7mCIXCwQ)
+
+[Android Code Review Tools](https://mp.weixin.qq.com/s/PDF5j9nyx7ZOBr_9dQbZpA)
+
+[regular expressions](https://mp.weixin.qq.com/s/1WVuHiJzEKVXMkHnQxF4wg)
+
+[GitHub Android 开源项目](https://www.zhihu.com/question/28481864)
+
+[性能优化](https://mp.weixin.qq.com/s/sgXawD7kFKgivxeeCJUq9w)
+
+[组件化](https://mp.weixin.qq.com/s/nZ_-bYTd3LMh1MRlnRoUeg)
+
+[自定义view 今日头条点赞动画](https://blog.csdn.net/wanghonglei01/article/details/113843317)
+
+[快速排序related Leetcode 1](https://mp.weixin.qq.com/s/b-ouF44gsgOgrFQDUAF_VQ)
+
+[快速排序related Leetcode 2](https://mp.weixin.qq.com/s/KAD5wYEHzLgWF-tGRIQohg)
+
+[递归](https://mp.weixin.qq.com/s/d8Ks9e5XZecGNc1jao_OOA)
+
+[堆排序](https://mp.weixin.qq.com/s/Eh28MJ_U0AhdtvWLUDUnRw)
+
+[CameraX](https://mp.weixin.qq.com/s/z-3qKIN0aQ0inh4T1ooHtA)
+
+[链表的排序](https://mp.weixin.qq.com/s/cOwZJMpNkUUYvzpAC0XHIQ)
+
+[Modern Android Development MAD 深层链接导航](https://mp.weixin.qq.com/s/W1cSvpS-KG3CvGXz9nPcYg)
+
+[Coil：Kotlin图片加载框架](https://blog.csdn.net/vitaviva/article/details/113064062)
+
+[图解git中的最常用命令](http://marklodato.github.io/visual-git-guide/index-zh-cn.html)
+
+[WorkManager 处理需要立刻执行的后台任务](https://mp.weixin.qq.com/s/rTyBHtULXbCNjBdVuE-VTA)
+
+[线程切换,RxJava与Flow的操作符对比](https://juejin.cn/post/6943037393893064734#heading-13)
+
+[Jetpack Compose绘制出可爱的天气动画](https://juejin.cn/post/6944884453038620685)
+
+[Android事件分发，事件是如何到达activity的](https://juejin.cn/post/6918272111152726024)
 
 210322
 
@@ -185,6 +233,8 @@ https://www.jianshu.com/p/de220733fdfa
 ---
 
 ##### Java
+
+[8张原理图](https://mp.weixin.qq.com/s/o7fZrBfVJwZWYFDlgbyuQA)
 
 i++跟++i在JVM字节码上的区别  
 https://www.jianshu.com/p/4dcf302aa2a8

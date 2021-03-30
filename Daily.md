@@ -54,6 +54,10 @@ git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要�
 
 ###### 社区  
 [掘金](https://juejin.im/)
+[Daniel Lew, Expedia](https://blog.danlew.net/)
+[AndroidWeekly](https://androidweekly.net/#latest-issue)
+[AndroidDevGoogleBlog](https://android-developers.googleblog.com/)
+[Mark Allison - Styling Android](https://blog.stylingandroid.com/)
 
 ###### Maven  
 [阿里云镜像](https://maven.aliyun.com)
@@ -92,13 +96,14 @@ git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要�
 
 create class 填写VISIBILITY PUBLIC 全部大写
 
-默认快捷键  
+[默认快捷键](https://developer.android.com/studio/intro/keyboard-shortcuts)  
 
 | 操作  | Mac | Windows |
 |---|---|---|
 | 排列格式  | option + command + L | |
 | 打开Project Structure  | command + ; | |
 | 页签切换  | command + shift + \[ or \] | |
+| 选择连续增加的代码块  | Option+向上箭头 | Ctrl+W |
 
 color 左侧可以点击 会出现color picker
 
