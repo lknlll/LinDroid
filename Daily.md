@@ -42,6 +42,7 @@ sudo vim /etc/hosts，然后输入电脑的密码进入host文件，按 i 键进
 Chrome CMD + SHIFT + P 弹出命令框 后输入 full 将整个网页另存为图片
 
 ###### GIT  
+[Fundamental](http://www.cnblogs.com/tugenhua0707/p/4050072.html)
 Git config http.postBuffer 524288000
 
 只clone单独分支且只拉取一次commit 
@@ -53,6 +54,8 @@ git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要�
 
 
 ###### 社区  
+[codekk库分享、源码解析、框架设计、好文推荐、内推](https://a.codekk.com/)
+[开源库检索](https://android-arsenal.com/)
 [掘金](https://juejin.im/)
 [Daniel Lew, Expedia](https://blog.danlew.net/)
 [AndroidWeekly](https://androidweekly.net/#latest-issue)

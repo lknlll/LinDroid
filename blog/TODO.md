@@ -11,6 +11,10 @@ https://github.com/274942954/AndroidCollection
 安卓八股宝典  
 ![avatar](https://github.com/lknlll/LinDroid/raw/LinDroid/blog/pic/android_bagu.jpg) 
 
+[源码解析](https://github.com/LittleFriendsGroup/AndroidSdkSourceAnalysis)
+
+[kymjs张涛](http://kymjs.com/code/2016/03/08/01/)
+
 https://github.com/JsonChao/Awesome-Android-Interview
 
 https://github.com/yangchong211/YCBlogs
@@ -18,6 +22,14 @@ https://github.com/yangchong211/YCBlogs
 https://www.jianshu.com/p/375ad14096b3
 
 https://www.jianshu.com/u/921c778fb5e1
+
+Retrofit大体流程：从interface通过动态代理创建OKHttp的Request再通过OKHttp拦截器按定制逻辑判断，之后从连接池中取出链接发送请求。
+
+Rxjava切线程，流操作。自定义操作符，subscribe()方法不调用会怎样，
+
+[性能优化典范](https://www.kancloud.cn/kancloud/android-performance)
+
+[身份证号码验证](http://www.cnblogs.com/xudong-bupt/p/3293838.html)
 
 [Fragment重叠](https://mp.weixin.qq.com/s/ka2-5m81wNwWpp9F-lIrWw)
 
@@ -174,6 +186,8 @@ https://blog.csdn.net/mnb65482/article/details/80458571
 
 手写算法：查找二叉树最大深度、最小深度，递归非递归，DFS BFS
 
+[BinarySearchTree](https://mp.weixin.qq.com/s/_TJNQi_h2d_rKUeKldWgoQ)
+
 https://mp.weixin.qq.com/s/VQc-2KVdsfppiesKE7XpvA
 
 状态机模式
@@ -234,6 +248,34 @@ https://www.jianshu.com/p/de220733fdfa
 
 ##### Java
 
+[错误做法二](https://mp.weixin.qq.com/s/uamUsLpOW9BA8a6Tw9e8ag)
+
+[错误做法](https://mp.weixin.qq.com/s/S5dRhHPIhcJlHRLEedCaYg)
+
+[HashMap和HashTable](https://mp.weixin.qq.com/s/cjuAIIiMLwWsZgsb6wwmUw)
+
+[并发](http://www.jianshu.com/p/cb1a23bc82d0)
+
+[创建对象的5种方式](https://mp.weixin.qq.com/s/KqlzsY8GW4uiHfxfUHV3MQ)
+
+[题1-10](https://mp.weixin.qq.com/s/HH3h1-jWd4oxJxe7GmushQ)
+
+[题11-20](https://mp.weixin.qq.com/s/EVatjziGn3H3nspAMgMapA)
+
+[题21-25](https://mp.weixin.qq.com/s/rZNptew4MsNo6R83cYpm-w)
+
+[题26-30](https://mp.weixin.qq.com/s/UbLaqOzQsr7cR_ygJLC8YQ)
+
+[题41-45](https://mp.weixin.qq.com/s/FORnFQk3j4T_zCXYMkYK2g)
+
+[题46-55](https://mp.weixin.qq.com/s/dliBjpXF1a2PXdbSCyDb6g)
+
+[题56-60](https://mp.weixin.qq.com/s/A0Dt4Uykg1BnjODWEsSebw)
+
+[题60-71](https://mp.weixin.qq.com/s/f1AXtZx8ycOYsRn2u7t9sA)
+
+[题](https://mp.weixin.qq.com/s/ztUQDBgcKoI7k-QsaGx3Bg)
+
 [8张原理图](https://mp.weixin.qq.com/s/o7fZrBfVJwZWYFDlgbyuQA)
 
 i++跟++i在JVM字节码上的区别  
@@ -256,6 +298,58 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 ---
 
 ##### Android
+
+[系统演进](http://gityuan.com/2019/03/20/android_future/)
+
+[WebView中H5页面全屏播放视频](https://mp.weixin.qq.com/s/3s1VJU6PjGjS-lJLvQMZWQ)
+
+[自定义View loading fail success状态切换](https://github.com/ouyben/StatusView-master)
+
+[Recycler二次封装](https://github.com/xingda920813/SimpleRecyclerView)
+
+[WebView点击超链接启动QQ](https://mp.weixin.qq.com/s/LeBUpMfZ_JMnApcPrSnTzA)
+
+[自动填充短信验证码](https://mp.weixin.qq.com/s/A0Gy-Od1dv6s5fwfoJtEvw)
+
+[设备唯一标识](https://mp.weixin.qq.com/s/RSUvosZwwe6Vh9PxYQBx9Q)
+
+[Firebase概览](https://mp.weixin.qq.com/s/b8dPccqby7SecPg-mnuKXw)
+
+[锯齿背景优惠券效果CustomView](http://www.jianshu.com/p/b27d0f9b3856)
+
+[银行卡自动格式化及归属银行](https://mp.weixin.qq.com/s/gRp8oYBzOSQXnEHXwnfieQ)
+
+[EventBus startup](https://mp.weixin.qq.com/s/Pnjzg8e6mbgPuwmdlD9V6g)
+
+[EventBus usage](https://mp.weixin.qq.com/s/7ANqpWn8FDfkJAN3svUeGA)
+
+[日期控件](https://mp.weixin.qq.com/s/G505pbQViAYzKw0k95poxQ)
+
+[Blankj AndroidUtilCode](https://github.com/Blankj/AndroidUtilCode)
+
+[守望先锋的加载动画](https://github.com/zhangyuChen1991/OverWatchLoading)
+
+[滑动验证码](https://github.com/mcxtzhang/SwipeCaptcha)
+
+[LeanTextView](https://mp.weixin.qq.com/s/7jqhXqUcvEUo8IbOHv0ohw)
+
+[SimpleTagImageView](https://github.com/wujingchao/SimpleTagImageView)
+
+[文字可点击TextView](https://github.com/AlexMofer/MultiActionTextView)
+
+[选取内容生成分享图片](https://github.com/zhangke3016/GeneratePicture)
+
+[GoodsInfoPage](https://github.com/hexianqiao3755/GoodsInfoPage)
+
+[自定义旋转木马动画布局](https://mp.weixin.qq.com/s/g_S6mfJ8Lo9sAGCvdOpELg)
+
+[另一个自定义浮层GuideView](https://github.com/binIoter/GuideView)
+
+[自定义浮层GuideView](https://github.com/llxdaxia/GuideView)
+
+[投票对比View](https://mp.weixin.qq.com/s/5pYBoEN4CTYdHwOZ7cd4cw)
+
+[SuperTextView](https://mp.weixin.qq.com/s/Q05wzXk4pcASfbT2q2HzRQ)
 
 [流畅度及FPS(Frames Per Second）监测](https://cloud.tencent.com/developer/article/1698334)
 
