@@ -54,6 +54,7 @@ git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要�
 
 
 ###### 社区  
+[GoogleCodeLab](http://clmirror.storage.googleapis.com/index.html)
 [codekk库分享、源码解析、框架设计、好文推荐、内推](https://a.codekk.com/)
 [开源库检索](https://android-arsenal.com/)
 [掘金](https://juejin.im/)
@@ -66,6 +67,8 @@ git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要�
 [阿里云镜像](https://maven.aliyun.com)
 
 ###### 工具
+[找图标](https://mp.weixin.qq.com/s/EWSU7lfE2YTOk0FvGm-cXw)
+
 [DNS查询](http://tool.chinaz.com/dns/)
 
 [MarkDown](https://www.typora.io/)

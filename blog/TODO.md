@@ -299,13 +299,63 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 
 ##### Android
 
+[ExpandTable with Animation点击展开的表格](https://github.com/haibuzou/ExpandTable)
+
+[数字增加和减小动画 TextView](https://github.com/Bakumon/NumberAnimTextView)
+
+[等待加载状态控件](https://github.com/ImKarl/WaitView)
+
+[Bezier曲线动画](https://www.jianshu.com/p/fea4d1f6512a)
+
+[BesselLoadingView](https://github.com/Jerey-Jobs/BesselLoadingView)
+
+[Camera拍照,相片裁剪,给图片贴贴纸,打标签](https://github.com/Skykai521/StickerCamera)
+
+[标尺滚动选择](https://github.com/qindachang/RulerView)
+
+[时间轴页面](https://github.com/weipeilong123/OrderStateLine)
+
+[课程表组件](https://github.com/HMY314/CourseTableLayout)
+
+[CustomizedView网购 ，物流信息等进度](https://github.com/liuhaizhu/StateProgressView-master)
+
+[CustomizedNumberProgressBar](https://github.com/daimajia/NumberProgressBar)
+
+[自定义图层刮奖，双向跑马灯，抽奖大转盘，下拉抽屉](https://github.com/shenjiajun53/CustomizedViews)
+
+[ObjectAnimator酷炫的小球贝塞尔变化](https://www.jianshu.com/p/138ad32540ce)
+
+[画板组件](https://github.com/cccxm/CrazyPalette)
+
+[倒计时CountDownTimer](https://mp.weixin.qq.com/s/ykZk--2ANDnMvuJH4UCOuQ)
+
+[自定义View仿百度加载效果](https://mp.weixin.qq.com/s/ZnZ16nFaAV8rsx2jrRBjXA)
+
+[电量](https://mp.weixin.qq.com/s/ZZJWyfKL7A5nR-JawinfwA)
+
+[点击缩略图, 显示高清图组件](https://github.com/Hitomis/TransferImage)
+
+[FlexboxLayout](https://mp.weixin.qq.com/s/w76l1fpbsEyWoowytDj0iw)
+
 [系统演进](http://gityuan.com/2019/03/20/android_future/)
+
+[2017 Google I/O](https://mp.weixin.qq.com/s/lhNXe23rhZd-yIQVAEEp1g)
 
 [WebView中H5页面全屏播放视频](https://mp.weixin.qq.com/s/3s1VJU6PjGjS-lJLvQMZWQ)
 
 [自定义View loading fail success状态切换](https://github.com/ouyben/StatusView-master)
 
 [Recycler二次封装](https://github.com/xingda920813/SimpleRecyclerView)
+
+[Recycler一个Adapter搞定所有列表](https://github.com/pinguo-zhouwei/CustomAdapter)
+
+[RecyclerView 表格](https://github.com/zhouchaoyuan/excelPanel)
+
+[RecyclerView ItemTouchHelper侧滑删除,拖拽](https://mp.weixin.qq.com/s/X4l9L0chevuO5sihadj9qg)
+
+[RecyclerView侧滑菜单，Item拖拽，滑动删除Item，自动加载，Header，Footer，Item分组黏贴](https://github.com/yanzhenjie/SwipeRecyclerView)
+
+[Recycler单选全选](https://mp.weixin.qq.com/s/Y7P0C3hcIgkyFn6DUOTjOQ)
 
 [WebView点击超链接启动QQ](https://mp.weixin.qq.com/s/LeBUpMfZ_JMnApcPrSnTzA)
 
