@@ -1,5 +1,7 @@
 ##### 总结
 
+[Xueli总结](https://mp.weixin.qq.com/s/yKsgPWx1WBvQg5geiW5PPg)
+
 https://github.com/274942954/AndroidCollection
 
 [框架](https://mp.weixin.qq.com/s/mbNGOm7l-BZCRj7mCIXCwQ)
@@ -200,8 +202,6 @@ https://mp.weixin.qq.com/s/IvFwAAoxS2D9h-pFQagzXg
 
 210225
 
-App launch 过程中切换了哪些进程
-
 冷启动、热启动
 
 https://developer.android.com/topic/performance/vitals/launch-time?hl=zh-cn
@@ -298,6 +298,79 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 ---
 
 ##### Android
+[Sunflower模拟园艺应用学习Jetpack谷歌开发者](https://mp.weixin.qq.com/s/k-zQVB5EhsKXIR1H3hbGYQ)
+
+[Native Crash 收集](https://juejin.cn/post/6844903663593324558)
+
+[ViewModel谷歌开发者](https://mp.weixin.qq.com/s/uGWH1os8Kq3Pp6_x5hXI8Q)
+
+[Android Profiler AS3.0](https://juejin.cn/post/6844903663014526983)
+
+[9对非 SDK 接口的限制](https://mp.weixin.qq.com/s/fS_3DOpAJfa_MJ2rCvPGWA)
+
+[9PieReleaseNote](https://mp.weixin.qq.com/s/Kc99l_nOfxbMRUnrU3tDuA)
+
+[P电量管理](https://mp.weixin.qq.com/s/APhUH7MBDUZ6tQv0xDgaWQ)
+
+[apktool反编译APK](https://blog.csdn.net/SonnyJack/article/details/79273023)
+
+[Rxjava入门](https://juejin.cn/post/6844903518407507976)
+
+[QQ、微信、微博的第三方登录和分享](https://juejin.cn/post/6844903518407507976)
+
+[Serializable Parcelable](https://juejin.cn/post/6844903518826921991)
+
+[建立开发规范](https://juejin.cn/post/6844903518776590349)
+
+[指纹对称加密及登录功能](https://juejin.cn/post/6844903516973039630)
+
+[开源时间日期选择合集](https://juejin.cn/post/6844903517015015431)
+
+[YMenuView扩展菜单](http://www.jianshu.com/p/9b05b22c474f)
+
+[APP从启动到主页面流程，切换了哪些进程](https://mp.weixin.qq.com/s/DWpzUBTWQNKzIwtgxtWXTA)
+
+[UI性能优化](https://juejin.cn/post/6844903495351402503)
+
+[FileProvider 7.0 feature](https://www.jianshu.com/p/be817f3aa145)
+
+[微博导航条](https://mp.weixin.qq.com/s/F-ANom-uI4k0ClWxirMyDA)
+
+[自定义ViewGroup多功能流与网格布局](https://github.com/LRH1993/AutoFlowLayout)
+
+[ConstraintLayout ConstraintSet 动画](https://mp.weixin.qq.com/s/mRSVDOfxhswZ28d4ZFL-bA)
+
+[ConstraintLayout性能优势原理解析](https://mp.weixin.qq.com/s/gGR2itbY7hh9fo61SxaMQQ)
+
+[Kotlin 入门FAQ](https://mp.weixin.qq.com/s/MpJxeON1HV6GY78-FW8t2w)
+
+[Room 迁移测试](https://mp.weixin.qq.com/s/mwLt8ZXSt2qDabNZ2ubWYw)
+
+[Architecture Components Lifecycles LiveData ViewModel Room](https://mp.weixin.qq.com/s/0CwOj79mH-earWtC1yOq1A)
+
+[8.0 Oreo 画中画模式](https://mp.weixin.qq.com/s/DZACkOioPC1mGmtFnJzvfw)
+
+[App设计，场景切换导航](https://mp.weixin.qq.com/s/zhX5yAteNprhlB5e6RQlIw)
+
+[今日头条四个字轮番变透明度加载动画](https://mp.weixin.qq.com/s/TbJEl-8QmxONc5WL6_8gFw)
+
+[Android O changes](https://mp.weixin.qq.com/s/CkKHueorWJUdtW25y3N5Bw)
+
+[Android O release](https://mp.weixin.qq.com/s/t_tXd0OWFUQZ1X2RB82qgw)
+
+[Android O features](https://mp.weixin.qq.com/s/iEkzPLyf7IlBXTA3uazqkA)
+
+[可以伸缩的搜索栏](https://github.com/yuqirong/FlexibleSearchBar)
+
+[标签（label/tag）选择/展示控件](https://github.com/lcodecorex/LabelLayout)
+
+[桌面视频壁纸](https://github.com/DingMouRen/VideoWallpaper)
+
+[小球沿路径移动](http://www.jianshu.com/p/b6a5b20cf3b9)
+
+[设置界面样板](https://github.com/leonHua/LSettingView)
+
+[ExoPlayer Google 媒体播放器](https://github.com/google/ExoPlayer)
 
 [ExpandTable with Animation点击展开的表格](https://github.com/haibuzou/ExpandTable)
 
@@ -326,6 +399,8 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 [ObjectAnimator酷炫的小球贝塞尔变化](https://www.jianshu.com/p/138ad32540ce)
 
 [画板组件](https://github.com/cccxm/CrazyPalette)
+
+[Customize涂鸦View](https://github.com/developerHaoz/DoodleView)
 
 [倒计时CountDownTimer](https://mp.weixin.qq.com/s/ykZk--2ANDnMvuJH4UCOuQ)
 
