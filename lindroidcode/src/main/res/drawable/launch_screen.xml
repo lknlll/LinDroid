@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item>
+        <shape>
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+    <item android:bottom="180dp">
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/splash_logo"
+            />
+    </item>
+    <item android:bottom="90dp">
+        <bitmap
+            android:gravity="center_horizontal|bottom"
+            android:src="@mipmap/splash_text"
+            />
+    </item>
+
+</layer-list>

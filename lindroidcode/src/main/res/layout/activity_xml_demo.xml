@@ -56,4 +56,19 @@
         android:layout_width="match_parent"
         android:text="include标签"
         app:layout_constraintTop_toBottomOf="@id/tv_attrs"/>
+    <TextView
+        android:id="@+id/bt_view_stub"
+        android:text="ViewStubSample"
+        style="@style/text_full_width_clickable"
+        app:layout_constraintTop_toBottomOf="@id/tv_include_tag"/>
+    <TextView
+        android:id="@+id/bt_shape"
+        android:text="shapeSample"
+        style="@style/text_full_width_clickable"
+        app:layout_constraintTop_toBottomOf="@id/bt_view_stub"/>
+    <TextView
+        android:id="@+id/bt_layer_list"
+        android:text="layer-list"
+        style="@style/text_full_width_clickable"
+        app:layout_constraintTop_toBottomOf="@id/bt_shape"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

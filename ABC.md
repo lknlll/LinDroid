@@ -31,3 +31,12 @@ power of 次幂
 2的3次幂 the third power of 2
 
 aka abbr. also known as
+
+gradient 渐变
+
+Incubate 孵化
+
+orchard 果园
+
+gutter n.（道路边的）排水沟，街沟；（屋顶的）檐槽，天沟；（保龄球球道两边的）球槽  
+IDE里代码行左侧的打断点显示行号等的槽

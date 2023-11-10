@@ -73,5 +73,13 @@ public class RecyclerConfigActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.bt_to_choose_address).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecyclerConfigActivity.this,RecyclerFindAddressActivity.class);
+                intent.putExtras(mBundleConfig);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -73,4 +73,10 @@
         android:layout_width="match_parent"
         app:layout_constraintBottom_toTopOf="@id/bt_to_recycler"
         android:text="To ListView"/>
+    <Button
+        android:id="@+id/bt_to_choose_address"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/bt_to_list_view"
+        android:text="To Choose Address"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

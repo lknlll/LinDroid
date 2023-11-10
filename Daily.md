@@ -3,6 +3,9 @@
 
 adb -s 多设备选择设备  
 
+adb bugreport  
+导出ANR本地日志
+
 adb shell  
 不断输出各进程CPU 占用情况  
 top -m 10 -s cpu  
@@ -16,6 +19,15 @@ adb命令长时间无响应且ctrl+c不能退出可以用
 
 adb logcat > /Users/xxx/test/test.log  
 保存log到文件，文件不存在将被创建
+
+保存带时间log到给定path  
+adb shell logcat -v time > /Users/eleme/StudioProjects/wallet/android-o2olifecircle-git/log11111.txt
+
+过滤关键词保存带时间log到给定path 
+adb shell logcat -v time | grep LMagex.LOG > /Users/eleme/StudioProjects/wallet/android-o2olifecircle-git/log11111.txt
+
+设置日志关键词、等级 
+adb shell setprop log.tag.OrchardController VERBOSE 
 
 adb shell am start com.android.settings/com.android.settings.Settings 打开原生系统Settings
 
@@ -32,10 +44,17 @@ adb connect 192.168.1.199:5555
 I/chatty: uid=10322(com.example.lindroidcode) identical 1 line  
 app considered 'chatty' by logcat (more than 5 lines per second), logs of your app will be collapsed.
 
+push到设备中
+adb push /Users/eleme/StudioProjects/warlock/app/build/outputs/apk/debug/app-debug.apk /sdcard/Download
+
+设置logcat缓冲区大小
+adb logcat -G 50M
+
 ###### MAC  
 Command+shift+. 显隐/隐藏  
 Command+→  行尾  
 Command+Shift+N 新建文件夹
+Command+Shift+5 录屏
 
 sudo vim /etc/hosts，然后输入电脑的密码进入host文件，按 i 键进入编辑状态，修改host。然后，ESC退出编辑状态，输入 :wq 保存并退出vim
 
@@ -52,17 +71,18 @@ git clone -b LinDroid --depth 1  https://github.com/lknlll/LinDroid.git
 git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要忽略的文件。如果远程分支上存在这个文件，本地再设置 ignore，将不起作用。
 需先push 该文件的删除，再设置gitignore
 
+git cherry-pick可以选择某一个分支中的一个或几个commit(s)来进行操作（操作的对象是commit），是本地操作
 
 ###### 社区  
-[GoogleCodeLab](http://clmirror.storage.googleapis.com/index.html)
-[codekk库分享、源码解析、框架设计、好文推荐、内推](https://a.codekk.com/)
-[开源库检索](https://android-arsenal.com/)
-[掘金](https://juejin.im/)
-[Daniel Lew, Expedia](https://blog.danlew.net/)
-[AndroidWeekly](https://androidweekly.net/#latest-issue)
-[AndroidDevGoogleBlog](https://android-developers.googleblog.com/)
-[Mark Allison - Styling Android](https://blog.stylingandroid.com/)
-
+[GoogleCodeLab](http://clmirror.storage.googleapis.com/index.html)  
+[codekk库分享、源码解析、框架设计、好文推荐、内推](https://a.codekk.com/)  
+[开源库检索](https://android-arsenal.com/)  
+[掘金](https://juejin.im/)  
+[Daniel Lew, Expedia](https://blog.danlew.net/)  
+[AndroidWeekly](https://androidweekly.net/#latest-issue)  
+[AndroidDevGoogleBlog](https://android-developers.googleblog.com/)  
+[Mark Allison - Styling Android](https://blog.stylingandroid.com/)  
+[WAN ANDROID](https://www.wanandroid.com/)
 ###### Maven  
 [阿里云镜像](https://maven.aliyun.com)
 
@@ -108,6 +128,7 @@ create class 填写VISIBILITY PUBLIC 全部大写
 |---|---|---|
 | 排列格式  | option + command + L | |
 | 打开Project Structure  | command + ; | |
+| Preferences  | command + , | |
 | 页签切换  | command + shift + \[ or \] | |
 | 选择连续增加的代码块  | Option+向上箭头 | Ctrl+W |
 
@@ -115,6 +136,9 @@ color 左侧可以点击 会出现color picker
 
 Git remote authentication change
 Preferences | Appearance & Behavior | System Settings | Passwords  
+
+编辑器的左侧显示 Lambda 表达式的图标，点击查看其所代表的匿名内部类
+Preferences | Editor | General | Gutter Icons | 勾选 Lambda
 
 Refactor > Migrate to AndroidX 迁移AndroidX
 
@@ -124,6 +148,14 @@ hot key:
 编译报错：Program type already present:com.xx.xx
 
 通常是重复依赖的module, aar, jar包导致；
+
+database 调试
+
+App run 在搭载 API 级别 26 或更高版本的ROM上
+
+View > Tool Windows > App Inspection
+
+在左侧边栏上方，Open New Query 标签页可进行SQL语句
 
 ###### Java
 
@@ -314,8 +346,8 @@ if using cmake for native code
        }
    }
 ```
-
-
+当前目录下输出app模块的依赖树
+./gradlew :app:dependencies > test.txt
 
 ###### Other
 
@@ -409,3 +441,16 @@ Git支持三种协议：git://、ssh://和http://
 取消http代理
 
 git config --global --unset http.proxy
+
+AAPT: error: resource android:attr/lStar not found  
+基本是androidx某些依赖的版本冲突导致：  
+尝试将  
+implementation ‘androidx.appcompat:appcompat:1.4.0’
+改成  
+implementation 'androidx.appcompat:appcompat:1.3.1’
+
+com.google.android.material:material 这个库
+使用1.6.1时编不过，报错
+AAPT: error: resource android:color/system_neutral1_1000 not found.
+解决：
+降为1.5.0-alpha02

@@ -44,6 +44,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String","BUILD_ENV","\"release\""
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String","BUILD_ENV","\"debug\""
         }
     }
     externalNativeBuild {
@@ -62,6 +68,7 @@ dependencies {
     implementation project(':lib_base_recycler_helper')
     implementation project(':lib_matisse')
     implementation project(':lib_glide')
+    implementation project(':lib_gradle_sample')
 
     //LiveData, ViewModel
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
@@ -78,7 +85,7 @@ dependencies {
     implementation constraintlayout_maven.api
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation recyclerview_maven.api
-    implementation 'com.google.android.material:material:1.0.0'//FloatingActionButton, Snackbar
+    implementation 'com.google.android.material:material:1.5.0-alpha02'//FloatingActionButton, Snackbar
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

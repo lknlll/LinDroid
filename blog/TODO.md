@@ -11,6 +11,9 @@ https://github.com/274942954/AndroidCollection
 [2016AndroidHack工具](https://mp.weixin.qq.com/s/OfnTTE0LbystM2iCXZdMuw)
 
 安卓八股宝典  
+
+[CnPeng](https://github.com/CnPeng/LearningNotes)
+
 ![avatar](https://github.com/lknlll/LinDroid/raw/LinDroid/blog/pic/android_bagu.jpg) 
 
 [源码解析](https://github.com/LittleFriendsGroup/AndroidSdkSourceAnalysis)
@@ -75,6 +78,20 @@ Rxjava切线程，流操作。自定义操作符，subscribe()方法不调用会
 
 [Android事件分发，事件是如何到达activity的](https://juejin.cn/post/6918272111152726024)
 
+[自定义Lint实践](https://tech.meituan.com/2016/03/21/android-custom-lint.html)
+
+220822 Byte ð 商业化 广告业务
+
+ViewRootImpl
+
+setContentView之后流程
+
+Gradle脚本，流程
+
+[Handler同步屏障](https://mp.weixin.qq.com/s/CNpnS6y2IYobzDa7rAjy1Q)
+
+algo: 无重复最长子串长度，滑动窗口
+
 210322
 
 https://leetcode-cn.com/problems/decode-string/
@@ -124,6 +141,8 @@ https://www.cnblogs.com/hun2014/p/5758948.html
 Coding 链表交叉点查找；
 
 glide 实现 三级缓存原理 
+
+磁盘复用 DiskCacheWriteLocker 
 
 handler 跨线程传输怎么实现的
 
@@ -298,6 +317,9 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 ---
 
 ##### Android
+
+[meta-data](https://www.cnblogs.com/xnnydx/p/4691487.html)
+
 [Sunflower模拟园艺应用学习Jetpack谷歌开发者](https://mp.weixin.qq.com/s/k-zQVB5EhsKXIR1H3hbGYQ)
 
 [Native Crash 收集](https://juejin.cn/post/6844903663593324558)
@@ -582,6 +604,29 @@ https://www.jianshu.com/p/111f79ab2106
 
 UVCCamera
 
+[CoordinatorLayout](https://www.jianshu.com/p/dd79ae898448)
+
+[vs code 打开文件总是只有一个tab标签页](http://www.west999.com/info/html/wangyezhizuo/css/20200423/4669392.html)
+
+[octotree](https://www.octotree.io/)
+
+[Gradle的build scan(构建审视)](https://www.jianshu.com/p/d08d885c4301)
+
+[Log.isLoggable](https://www.cnblogs.com/maxinliang/p/4024442.html)
+
+[org.json 拼装与解析](https://blog.csdn.net/halazi100/article/details/106220135/)
+
+[String to long](https://www.cnblogs.com/zlw-xf/p/9302479.html)
+
+[字符串指定位置插入字符](https://blog.csdn.net/weixin_37562241/article/details/105759041)
+
+[Go2Shell与 OSX 10.11.5的兼容问题](https://www.jianshu.com/p/145afa9145f1)
+
+[Mac下安装，升级Node、npm](https://zhuanlan.zhihu.com/p/64125228)
+
+https://pic.huodongjia.com/ganhuodocs/2017-12-29/1514519168.88.pdf
+
+https://juejin.cn/post/7041834777229393934
 ---
 
 ###### JNI 

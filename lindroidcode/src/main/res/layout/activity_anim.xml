@@ -5,14 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".anim.AnimActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_anim_series"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv_anim_intro"
         android:text="Android 动画抽象类Animation，对它的继承有透明度（AlphaAnimation）、旋转（RotateAnimation）、缩放（ScaleAnimation）和位移（TranslateAnimation），AnimationSet动画集合。实现原理是每次绘图时View所在的ViewGroup中的dispathDraw，可以通过xml或class代码内实现，使用AnimationUtils类的静态方法loadAnimation()来加载XML中的动画XML文件"
-        app:layout_constraintTop_toTopOf="parent"/>
-
+        app:layout_constraintTop_toBottomOf="@id/tv_anim_series"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,4 +52,41 @@
         android:text="AnimSet"
         app:layout_constraintTop_toBottomOf="@id/tv_anim_intro"
         app:layout_constraintLeft_toRightOf="@id/bt_anim_alpha_from_xml"/>
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/rl_anim_switcher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_anim_scale_from_xml">
+        <ImageView
+            android:id="@+id/iv_former"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_launcher_background"/>
+        <ImageView
+            android:id="@+id/iv_later"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:alpha="0"
+            android:src="@mipmap/ic_img_placeholder"/>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_object_anim"
+        android:text="Object Anim"
+        app:layout_constraintTop_toTopOf="@id/rl_anim_switcher"
+        app:layout_constraintBottom_toBottomOf="@id/rl_anim_switcher"
+        app:layout_constraintLeft_toRightOf="@id/rl_anim_switcher"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_object_anim_clip_inside_disappear"
+        android:text="ObjectAnimClipInsideDisappear"
+        android:padding="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toBottomOf="@id/rl_anim_switcher"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

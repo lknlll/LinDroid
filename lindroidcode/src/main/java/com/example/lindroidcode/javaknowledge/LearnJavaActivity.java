@@ -3,6 +3,7 @@ package com.example.lindroidcode.javaknowledge;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.lindroidcode.R;
 import com.example.lindroidcode.databinding.ActivityLearnJavaBinding;
+import com.example.lindroidcode.javaknowledge.beans.ItemChooseFinalModel;
 import com.example.lindroidcode.mvp.beans.User;
 import com.example.lindroidcode.utils.TextOperateUtils;
 import com.google.gson.Gson;
@@ -38,6 +40,16 @@ public class LearnJavaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        String foodData = "[]";
+//        String foodData = "\"[]\"";
+        List<ItemChooseFinalModel> selectedFood = new ArrayList<>();
+        if (!TextUtils.isEmpty(foodData)) {
+            selectedFood = new Gson().fromJson(foodData, new TypeToken<ArrayList<ItemChooseFinalModel>>() {
+            }.getType());
+        }
+
+
         mViewBinding = ActivityLearnJavaBinding.inflate(getLayoutInflater());
         View view = mViewBinding.getRoot();
         setContentView(view);

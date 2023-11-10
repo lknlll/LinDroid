@@ -2,8 +2,18 @@ package com.example.opengleffect;
 
 import android.opengl.GLES20;
 
+/**
+ * The type Gl toolbox.
+ */
 public class GLToolbox {
 
+    /**
+     * Load shader int.
+     *
+     * @param shaderType the shader type
+     * @param source     the source
+     * @return the int
+     */
     public static int loadShader(int shaderType, String source) {
         int shader = GLES20.glCreateShader(shaderType);
         if (shader != 0) {
@@ -22,6 +32,13 @@ public class GLToolbox {
         return shader;
     }
 
+    /**
+     * Create program int.
+     *
+     * @param vertexSource   the vertex source
+     * @param fragmentSource the fragment source
+     * @return the int
+     */
     public static int createProgram(String vertexSource,
                                     String fragmentSource) {
         int vertexShader = loadShader(GLES20.GL_VERTEX_SHADER, vertexSource);
@@ -53,6 +70,11 @@ public class GLToolbox {
         return program;
     }
 
+    /**
+     * Check gl error.
+     *
+     * @param op the op
+     */
     public static void checkGlError(String op) {
         int error;
         while ((error = GLES20.glGetError()) != GLES20.GL_NO_ERROR) {
@@ -60,6 +82,9 @@ public class GLToolbox {
         }
     }
 
+    /**
+     * Init tex params.
+     */
     public static void initTexParams() {
         GLES20.glTexParameteri(GLES20.GL_TEXTURE_2D,
                 GLES20.GL_TEXTURE_MAG_FILTER, GLES20.GL_LINEAR);
