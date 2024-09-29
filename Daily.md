@@ -96,7 +96,7 @@ git cherry-pick可以选择某一个分支中的一个或几个commit(s)来进�
 [github file download](https://d.serctl.com/)
 
 ###### MarkDown  
-换行：两空格一个回车 或者HTML的 \<br>  
+换行：两空格一个回车 或者表格内可以用HTML的 \<br>  
 超链接：\[链接文字\]\(链接地址\)  
 转义：当我们想在 Markdown 文件中显示一些标记符号，可以使用\进行转义  
 下标（符号方式）：θ~1~  上标：θ^2^  
@@ -441,6 +441,10 @@ Git支持三种协议：git://、ssh://和http://
 取消http代理
 
 git config --global --unset http.proxy
+
+github访问host日更
+
+https://git.yoqi.me/lyq/github-host/
 
 AAPT: error: resource android:attr/lStar not found  
 基本是androidx某些依赖的版本冲突导致：  

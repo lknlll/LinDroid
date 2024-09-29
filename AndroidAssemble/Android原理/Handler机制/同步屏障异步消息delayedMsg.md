@@ -1,4 +1,4 @@
-###### Android 异步消息机制 Handler 相关问题
+###### 同步屏障 异步消息 相关问题
 
 - postDelayed()和sendMessageDelay 之后的消息是怎么处理，一个队列还是两个队列
 
