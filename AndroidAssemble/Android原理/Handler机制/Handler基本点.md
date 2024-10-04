@@ -192,7 +192,7 @@ Todo
 [Cockroach](https://github.com/android-notes/Cockroach)
 
 ##### WHY Leak and Ref link
-将 Handler 定义成静态的内部类，在内部持有Activity的弱引用，并在Acitivity的onDestroy()中调用handler.removeCallbacksAndMessages(null)及时移除所有消息。
+将 Handler 定义成静态的内部类，在内部持有Activity的弱引用，并在Activity的onDestroy()中调用handler.removeCallbacksAndMessages(null)及时移除所有消息。
 
 Handler在Activity主线程中发送消息导致Leak的持有情况分析
 
@@ -204,7 +204,7 @@ Handler在Activity主线程中发送消息导致Leak的持有情况分析
 
 Activity的匿名内部类的实例mHandler持有引用了，而Handler的引用是被Message持有了，Message引用是被MessageQueue持有，所以较为完整的引用链是：
 
-主线程 —> threadlocal —> Looper —> MessageQueue —> Message —> Handler —> Activity
+主线程 —> threadLocal —> Looper —> MessageQueue —> Message —> Handler —> Activity
 
 GC Root也就是主线程，主线程一直在运行肯定不不会被JVM回收
 
@@ -352,3 +352,8 @@ runWithScissors()方法接受一个Runnable和超时时间，调用此方法提�
 
 TODO
 https://cloud.tencent.com/developer/article/1746579
+
+##### 各种消息发送的区别
+
+Todo
+比较 post 和 sendMessage

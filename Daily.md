@@ -281,7 +281,12 @@ java.net.SocketTimeoutException: Read timed out
 
 cd .. 返回上一级
 
-###### Gradle
+##### Gradle
+
+###### Java compatibility
+
+Java version supported by a specific Gradle release:
+https://docs.gradle.org/current/userguide/compatibility.html#java_runtime
 
 Android studio中引入了build.gradle中的applicationId这个概念，作为APP的唯一标识。  
 这样的好处是进行了解耦，applicationId作为APP的唯一标识，而AndroidManifest.xml中的包名package负责代码和资源的路径，包名可以随意改，可以和applicationId不一致。  

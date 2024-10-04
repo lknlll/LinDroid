@@ -91,7 +91,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
 
-    implementation 'com.blankj:utilcode:1.22.10@aar'//Todo source
+    implementation 'com.blankj:utilcode:1.30.7'//Todo source
     implementation 'org.greenrobot:greendao:3.2.2'
 
     implementation 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
