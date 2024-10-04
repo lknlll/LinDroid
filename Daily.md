@@ -1,4 +1,6 @@
 
+[TOC]索引
+
 ###### ADB
 
 adb -s 多设备选择设备  
@@ -55,6 +57,7 @@ Command+shift+. 显隐/隐藏
 Command+→  行尾  
 Command+Shift+N 新建文件夹
 Command+Shift+5 录屏
+control+space 切输入法
 
 sudo vim /etc/hosts，然后输入电脑的密码进入host文件，按 i 键进入编辑状态，修改host。然后，ESC退出编辑状态，输入 :wq 保存并退出vim
 
@@ -96,6 +99,9 @@ git cherry-pick可以选择某一个分支中的一个或几个commit(s)来进�
 [github file download](https://d.serctl.com/)
 
 ###### MarkDown  
+
+目录： [TOC]
+加粗：\*\*文本\*\*
 换行：两空格一个回车 或者表格内可以用HTML的 \<br>  
 超链接：\[链接文字\]\(链接地址\)  
 转义：当我们想在 Markdown 文件中显示一些标记符号，可以使用\进行转义  

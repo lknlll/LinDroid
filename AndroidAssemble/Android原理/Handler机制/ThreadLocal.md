@@ -1,6 +1,8 @@
-ThreadLocal 
+ThreadLocal
+[TOC]
 
-线程本地变量，
+线程本地变量
+##### 案例
 
 ```
 class ThreadLocalTest {
@@ -38,17 +40,43 @@ class ThreadLocalTest {
 
 main  
 线程A  
-线程B  
+线程B
 
-原理：
+##### 原理解析
 
 ThreadLocal提供线程局部变量。这些变量不同于它们的正常变量，即每一个线程访问自身的局部变量时，都有它自己的，独立初始化的副本。该变量通常是与线程关联的私有静态字段，列如用于ID或事物ID。
 
-![avatar](https://github.com/lknlll/LinDroid/raw/LinDroid/blog/pic/ThreadLocalIntro.png) 
+![avatar](https://github.com/lknlll/LinDroid/raw/LinDroid/blog/pic/ThreadLocalIntro.png)
 
 ThreadLocal把一个对象保存在指定的线程中，也就是创建线程局部变量；作用域是当前线程；对象保存后，只能在指定线程中获取保存的数据，对于其他线程来说则无法获取到数据。
 
-Android系统在 Handler 机制中使用了它来保证每一个线程中都有一个独立的 Looper 对象
+因为ThreadLocal的get()是先取了当前线程，然后根据当前线程获得了其对应的ThreadLocalMap实例，ThreadLocalMap的K是使用了当前ThreadLocal。
+
+```
+    //ThreadLocal的get方法：
+    public T get() {
+        Thread t = Thread.currentThread();
+        ThreadLocalMap map = getMap(t);
+        if (map != null) {
+            ThreadLocalMap.Entry e = map.getEntry(this);
+            if (e != null) {
+                @SuppressWarnings("unchecked")
+                T result = (T)e.value;
+                return result;
+            }
+        }
+        return setInitialValue();
+    }
+
+    ThreadLocalMap getMap(Thread t) {
+        return t.threadLocals;
+    }
+    
+```
+
+
+##### Looper和线程绑定
+Android系统在 Handler 机制中使用了它来保证每一个线程中都有一个独立的 Looper 对象，当前线程的Looper是存放在当前线程的ThreadLocalMap中的。
 
 Looper源码注释中的示例如下
 
@@ -103,7 +131,7 @@ Looper中有一个static final 的sThreadLocal
 ```
 
 ThreadLocalMap是为了维护线程私有值创建的自定义哈希映射。  
-其中线程的私有数据都是非常大且使用寿命长的数据  
+其中线程的私有数据都是非常大且使用寿命长的数据
 
 变量存本地的好处？
 

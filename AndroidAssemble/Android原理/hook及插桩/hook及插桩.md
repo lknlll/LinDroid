@@ -11,6 +11,8 @@ Android 中的 Hook 机制，大致有两个方式：
 插桩是以静态的方式修改第三方的代码，也就是从编译阶段，对源代码（中间代码）进行编译，而后重新打包，是静态的篡改； 而Hook则不需要再编译阶段修改第三方的源码或中间代码，是在运行时通过反射的方式修改调用，是一种动态的篡改
 
 Android插件化原理解析——Hook机制之动态代理
+
+https://zhaomenghuan.js.org/blog/android-plugin-framework-proxy-hook.html
 http://weishu.me/2016/01/28/understand-plugin-framework-proxy-hook/
 
 android 插桩基本概念
@@ -18,3 +20,6 @@ https://blog.csdn.net/fei20121106/article/details/51879047
 
 Android逆向之旅
 http://www.520monkey.com/
+
+Android Hook Activity 的几种姿势
+https://blog.csdn.net/gdutxiaoxu/article/details/81459910
