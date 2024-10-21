@@ -255,13 +255,23 @@ implementation 和 api 的module间穿透性
 
 ---
 
-彬哥
+彬哥(obsolete)
 
 https://github.com/Mp5A5/Good-Salary
 
 个人复盘
 
 https://www.jianshu.com/p/de220733fdfa
+
+[清梅](https://github.com/qingmei2)
+
+[扔物线](https://juejin.cn/user/2524134386185736/posts)
+
+[AndroidPerformance](https://www.androidperformance.com/)
+
+[AntDream](https://juejin.cn/user/254742427861981/posts)
+
+[自定义ViewAndOthers](https://github.com/GcsSloop/AndroidNote)
 
 ---
 
@@ -627,6 +637,7 @@ UVCCamera
 https://pic.huodongjia.com/ganhuodocs/2017-12-29/1514519168.88.pdf
 
 https://juejin.cn/post/7041834777229393934
+
 ---
 
 ###### JNI 

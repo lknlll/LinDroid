@@ -302,3 +302,9 @@ https://juejin.cn/user/2225067266683095/posts
 
 Activity.finish() 之后 10s 才 onDestroy
 https://juejin.cn/post/6898588053451833351
+
+Carson Android
+https://carsonho.blog.csdn.net/?type=blog
+
+qingmei2-blogs
+https://github.com/qingmei2/blogs

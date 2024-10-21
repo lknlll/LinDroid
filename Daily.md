@@ -53,6 +53,11 @@ adb push /Users/eleme/StudioProjects/warlock/app/build/outputs/apk/debug/app-deb
 adb logcat -G 50M
 
 ###### MAC  
+
+Go2shell
+
+fcrackzip
+
 Command+shift+. 显隐/隐藏  
 Command+→  行尾  
 Command+Shift+N 新建文件夹
@@ -281,6 +286,8 @@ java.net.SocketTimeoutException: Read timed out
 
 cd .. 返回上一级
 
+control + z 终止当前命令
+
 ##### Gradle
 
 ###### Java compatibility
@@ -361,6 +368,9 @@ if using cmake for native code
 ./gradlew :app:dependencies > test.txt
 
 ###### Other
+
+微信文件传输网页
+https://filehelper.weixin.qq.com/
 
 TextLine.sCached leak no need to fix
 
@@ -469,3 +479,6 @@ com.google.android.material:material 这个库
 AAPT: error: resource android:color/system_neutral1_1000 not found.
 解决：
 降为1.5.0-alpha02
+
+remote job
+https://github.com/lukasz-madon/awesome-remote-job
