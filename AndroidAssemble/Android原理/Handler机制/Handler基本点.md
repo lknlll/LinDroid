@@ -357,3 +357,13 @@ https://cloud.tencent.com/developer/article/1746579
 
 Todo
 比较 post 和 sendMessage
+
+
+##### 消息监控
+
+https://mp.weixin.qq.com/s/4dcLYoE0KxFRr3KhO74F9Q
+
+
+深入Handler源码分析（上
+
+https://mp.weixin.qq.com/s/ISmEZb3Gf5Sh0sZgUKxXPA

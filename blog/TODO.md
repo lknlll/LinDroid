@@ -76,8 +76,6 @@ Rxjava切线程，流操作。自定义操作符，subscribe()方法不调用会
 
 [Jetpack Compose绘制出可爱的天气动画](https://juejin.cn/post/6944884453038620685)
 
-[Android事件分发，事件是如何到达activity的](https://juejin.cn/post/6918272111152726024)
-
 [自定义Lint实践](https://tech.meituan.com/2016/03/21/android-custom-lint.html)
 
 220822 Byte ð 商业化 广告业务
@@ -327,6 +325,12 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 ---
 
 ##### Android
+
+[popupMenu](https://www.oryoy.com/news/android-kai-fa-ji-qiao-ru-he-zi-ding-yi-popupmenu-bei-jing-yan-se-ji-yang-shi-xiang-jie.html)
+
+[使用SVG_SVGFileToVectorDrawable](https://developer.android.com/studio/write/vector-asset-studio?hl=zh-cn#running)
+
+[ripple涟漪点击反馈](https://blog.csdn.net/wz1993_0719/article/details/78704189)
 
 [meta-data](https://www.cnblogs.com/xnnydx/p/4691487.html)
 

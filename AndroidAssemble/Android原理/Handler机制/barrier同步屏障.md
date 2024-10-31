@@ -209,3 +209,7 @@ boolean enqueueMessage(Message msg, long when) {
 如果消息队列只有一个屏障消息，插入一个异步消息会触发IdleHandler么？
 
 答：有可能，关键看屏障的触发时间到了没有，如果没有到，就会触发IdleHandler，反之就不会。
+
+//Todo
+了解 Android Handler 同步屏障
+https://mp.weixin.qq.com/s/IA_wDGp2JfkWtKBqkcfBvw

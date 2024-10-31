@@ -31,7 +31,7 @@ ViewRootImpl 实现了建立 DecorView 和 Window 之间的联系。
 
 ##### 创建PhoneWindow
 
-Activity启动时在此创建实例：ActivityThread.performLaunchActivity，创建Activity后进行attch进行一系列绑定
+Activity启动时在此创建实例：ActivityThread.performLaunchActivity，创建Activity后进行attach进行一系列绑定
 
     //ActivityThread.java
 
@@ -71,7 +71,9 @@ final void attach(Context context, ActivityThread aThread,
     //PhoneWindow实例化Window
     mWindow = new PhoneWindow(this, window, activityConfigCallback);
     mWindow.setWindowControllerCallback(mWindowControllerCallback);
+    
     mWindow.setCallback(this);
+    
     mWindow.setOnWindowDismissedCallback(this);
     mWindow.getLayoutInflater().setPrivateFactory(this);
     //....
@@ -84,6 +86,18 @@ final void attach(Context context, ActivityThread aThread,
     mWindowManager = mWindow.getWindowManager();
 }
 ```
+Activity本身实现了Window.Callback接口
+
+```
+public class Activity extends ContextThemeWrapper
+        implements LayoutInflater.Factory2,
+        Window.Callback, ... {
+
+```
+
+attach()中 `mWindow.setCallback(this);` 将activity赋值给window的callback，供后续使用
+
+
 
 ##### 初始化DecorView
 
@@ -125,6 +139,10 @@ final void attach(Context context, ActivityThread aThread,
         }
       //......
     }
+
+以上体现了DecorView和Window的关系：
+
+**DecorView中保存了一份Window的引用**
 
 ##### DecorView添加到WindowManager中
 
@@ -183,7 +201,7 @@ public void handleResumeActivity(ActivityClientRecord r, boolean finalStateReque
 
 这些做完以后，会调用 activity 的  makeVisible ，让视图可见。如果此时 DecorView 没有添加到 WindowManager，那么会添加
 
-###### addview 的逻辑
+###### addView 的逻辑，ViewRootImpl的实例化
 
 WindowManager 的实现类是 WindowManagerImpl，而它则是通过 WindowManagerGlobal 代理实现 addView，在其内部进行了**ViewRootImpl的创建**
 
@@ -292,3 +310,6 @@ https://maimai.cn/article/detail?fid=1634848295&efid=6fuxUYS8XEdc1J0Ru8gc9g
 
 绘制流程
 https://juejin.cn/post/6913743020244336653
+
+View绘制13问13答
+https://mp.weixin.qq.com/s/0mGB1Zv2ZKLANqs4AWiNsQ
