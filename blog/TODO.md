@@ -350,8 +350,6 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 
 [apktool反编译APK](https://blog.csdn.net/SonnyJack/article/details/79273023)
 
-[Rxjava入门](https://juejin.cn/post/6844903518407507976)
-
 [QQ、微信、微博的第三方登录和分享](https://juejin.cn/post/6844903518407507976)
 
 [Serializable Parcelable](https://juejin.cn/post/6844903518826921991)
@@ -363,8 +361,6 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 [开源时间日期选择合集](https://juejin.cn/post/6844903517015015431)
 
 [YMenuView扩展菜单](http://www.jianshu.com/p/9b05b22c474f)
-
-[APP从启动到主页面流程，切换了哪些进程](https://mp.weixin.qq.com/s/DWpzUBTWQNKzIwtgxtWXTA)
 
 [UI性能优化](https://juejin.cn/post/6844903495351402503)
 
@@ -445,8 +441,6 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 [电量](https://mp.weixin.qq.com/s/ZZJWyfKL7A5nR-JawinfwA)
 
 [点击缩略图, 显示高清图组件](https://github.com/Hitomis/TransferImage)
-
-[FlexboxLayout](https://mp.weixin.qq.com/s/w76l1fpbsEyWoowytDj0iw)
 
 [系统演进](http://gityuan.com/2019/03/20/android_future/)
 
@@ -650,3 +644,16 @@ https://juejin.cn/post/7041834777229393934
 
 https://blog.csdn.net/chen1234520nnn/article/details/76021026
 
+###### 动画
+
+[Android点赞烟花效果实现](https://mp.weixin.qq.com/s/cDxg-2oY8FBsa9ZkjBN6rA)
+
+###### 动态化
+
+[Facebook YOGA初探:跨平台的布局引擎(基于Android)](https://www.jianshu.com/p/d4289b16a133)
+
+[美团Litho的使用及原理剖析](https://tech.meituan.com/2019/03/14/litho-use-and-principle-analysis.html)
+
+###### RecyclerView
+
+[RecyclerView 打造抖音二级评论效果](https://juejin.cn/post/7276808079143190565)

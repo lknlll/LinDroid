@@ -57,7 +57,10 @@ ARouter维护了一个路由表Warehouse，其中保存着全部的模块跳转�
 安卓组件化开源方案实现
 https://juejin.im/post/5a7ab8846fb9a0634514a2f5
  
- 
+胡飞洋ARouter整体原理、APT、AGP
+https://mp.weixin.qq.com/s/lgbVCnAILk7Rp5AB6Oqs1g
+https://mp.weixin.qq.com/s/f_rVRR_KluBheu3M_gxs9g
+https://mp.weixin.qq.com/s/QrcoMOwomAVLf5yGGkatdw
  
  
  

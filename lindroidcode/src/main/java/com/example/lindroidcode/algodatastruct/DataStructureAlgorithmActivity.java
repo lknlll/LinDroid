@@ -2,6 +2,7 @@ package com.example.lindroidcode.algodatastruct;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.example.lindroidcode.R;
@@ -82,5 +83,35 @@ public class DataStructureAlgorithmActivity extends AppCompatActivity {
         tvReverseDigitsOnly.append("\n" + str);
         String strB = ReverseOnlyDigits.reverseOnlyDigitsSaveMemory(str);
         tvReverseDigitsOnly.append("\n" + strB);
+
+
+
+        //Use two Queue to implement a Stack;
+        StackUsingTwoQueue obj = new StackUsingTwoQueue();
+        obj.push(1);
+        Log.e("Stack top: ", "" + obj.top());
+        obj.push(2);
+        Log.e("Stack top: ", "" + obj.top());
+        obj.push(3);
+        Log.e("Stack top: ", "" + obj.top());
+        obj.push(4);
+        Log.e("Stack top: ", "" + obj.top());
+        obj.push(5);
+        Log.e("Stack top: ", "" + obj.top());
+        for (Integer i:obj.queue1){
+
+            Log.e("Stack q1: ", "" + i);
+        }
+        for (Integer i:obj.queue2){
+
+            Log.e("Stack q2: ", "" + i);
+        }
+
+        int param_2 = obj.pop();
+        Log.e("Stack top: ", "" + obj.top());
+        obj.pop();
+        Log.e("Stack top: ", "" + obj.top());
+
+        boolean param_4 = obj.empty();
     }
 }

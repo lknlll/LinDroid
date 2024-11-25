@@ -136,5 +136,5 @@ BitmapFactory提供的加载图片的四类方法（decodeFile、decodeResource�
 多图大图加载方案
 https://blog.csdn.net/guolin_blog/article/details/9316683
 
- 
- 
+
+[内存大户Bitmap](https://mp.weixin.qq.com/s/Dx3NiaaXsYRUTvMj4p0mZA)

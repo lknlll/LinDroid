@@ -24,9 +24,6 @@ http://blog.csdn.net/guolin_blog/article/details/12452307
 http://blog.csdn.net/whatday/article/details/38147103
 此处延伸：https的实现原理
 
-7.手写算法（选择冒泡必须要会）
-http://www.jianshu.com/p/ae97c3ceea8d
-
 8.进程保活（不死进程）
 http://www.jianshu.com/p/63aafe3c12af
 此处延伸：进程的优先级是什么（下面这篇文章，都有说）
@@ -89,9 +86,9 @@ http://blog.csdn.net/guolin_blog/article/details/43376527
 （2）http://blog.csdn.net/yanbober/article/details/50577855
 
 23.设计模式（单例，工厂，观察者。作用，使用场景）
-一般说自己会的就ok，不要只记得名字就一轮嘴说出来，不然有你好受。
+
 http://blog.csdn.net/jason0539/article/details/23297037/
-此处延伸：Double Check的写法被要求写出来。
+此处延伸：Double Check的写法
 
 （仿有道精品课）RxJava+OkHttp+Retrofit+Dagger2+MVP框架(kotlin版本)
 https://juejin.im/post/5c6e601cf265da2dc675b69e#comment
@@ -113,3 +110,126 @@ https://carsonho.blog.csdn.net/?type=blog
 
 qingmei2-blogs
 https://github.com/qingmei2/blogs
+
+潇风寒月
+https://github.com/xfhy/Android-Notes/tree/master
+
+
+
+3.快速排序和插入排序
+
+4.个大致有序的数组如何排序，最快时间复杂度
+
+5.如何自定义实现一个FlexLayout
+
+6.RecyclerView的回收复用机制
+
+7.如何实现RecyclerView的局部更新
+
+8.说说对泛型的了解，Retrofit中的泛型是怎么解析的
+
+9.说说对binder机制的了解
+
+10.进程的状态，线程的状态，两者有区别吗
+
+11.synchronized锁住对象的理解
+
+12.Fragment replace生命周期变化
+
+13.TCP和UDP有什么区别？ 讲讲招手挥手过程
+
+15.Dalvik和Hotspot虚拟机了解吗？有什么区别？
+
+
+6.热修复、插件化都用过，遇到过哪些坑？可以讲讲原理吗
+
+斗鱼一面
+1.Java多态的理解
+
+2.HashMap原理
+
+
+6.说说插件化的原理，资源的插件化id重复如何解决？
+
+7.Recyclerview优化
+
+8.Handler消息机制
+
+9.用过哪些第三方库，OKHTTP原理说一下，热修复原理呢？
+
+10.对屏幕刷新机制的了解，双重缓冲，三重缓冲，黄油模型
+
+
+12.为什么要用线程池（扯到线程分配资源的过程，和进程分配资源过程的区别）
+
+13.GC内核清理用什么算法，老年代有什么算法？
+
+14.TCP 三次握手四次挥手，第一次和第三次如果没收到回应会怎样？
+
+
+
+1.构造方法有哪些？重载与重写的区别？
+
+2.线程有哪些状态？
+
+3.WebView安全问题，做过WebView性能优化吗
+
+4.RecyclerView 缓存结构
+
+5.RecyclerView回收复用机制，回收什么？复用什么？回收到哪里去，复用从哪里拿？
+
+6.Handler休眠是怎样的？epoll的原理是什么？如何实现延时消息，如果移除一个延时消息会解除休眠吗？
+
+7.手势操作ActionCancel后怎么取消
+
+8.熟悉AIDL？支持哪些数据类型？说说oneway的作用？怎么理解单向调用？
+
+9.说说https怎么防止被抓包吧
+
+
+腾讯（offer）
+
+腾讯技术面
+1.介绍一下你们项目的架构
+
+2.Rxjava是怎么实现线程切换的
+
+3.Rxjava自定义操作符
+
+4.ARouter的原理
+
+5.ARouter怎么实现接口调用
+
+6.ARouter怎么实现页面拦截
+
+7.MVP怎么处理内存泄漏
+
+8.OkHttp怎么实现连接池
+
+9.如果让你来实现一个网络框架，你会考虑什么
+
+10.你做过什么性能优化的工作
+
+11.热修复的原理，资源的热修复的原理,会不会有资源冲突的问题
+
+12.ViewPager中嵌套ViewPager怎么处理滑动冲突
+
+13.android源码中有哪些设计模式
+
+14.说说binder机制的原理
+
+15.retrofit怎么做post请求
+
+16.界面优化的一些方法，ConstraintLayout实现三等分,ConstraintLayout动画.
+
+17.synchronize用法，volatile用法，两者的区别和场景
+
+18.做过进程保活吗？
+
+19.App 是如何沙箱化，为什么要这么做？
+
+20.讲讲 bindService 的过程，你当初是怎么优化后台服务进程的？
+
+21.弱网环境你如何做的网络优化？
+
+22.ConcurrentHashMap 的实现原理

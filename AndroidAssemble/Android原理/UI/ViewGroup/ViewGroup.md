@@ -12,3 +12,6 @@ RelativeLayout的子View如果高度和RelativeLayout不同，则会引发效率
 在不影响层级深度的情况下,使用LinearLayout和FrameLayout而不是RelativeLayout。
  
  
+FlexboxLayout 内部实现
+
+[FlexboxLayout](https://mp.weixin.qq.com/s/w76l1fpbsEyWoowytDj0iw)

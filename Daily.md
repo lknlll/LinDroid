@@ -70,6 +70,8 @@ Chrome CMD + SHIFT + P 弹出命令框 后输入 full 将整个网页另存为�
 
 ###### GIT  
 [Fundamental](http://www.cnblogs.com/tugenhua0707/p/4050072.html)
+
+传大文件失败，调整单文件大小
 Git config http.postBuffer 524288000
 
 只clone单独分支且只拉取一次commit 
@@ -96,6 +98,7 @@ git cherry-pick可以选择某一个分支中的一个或几个commit(s)来进�
 
 ###### 工具
 [找图标](https://mp.weixin.qq.com/s/EWSU7lfE2YTOk0FvGm-cXw)
+[阿里](https://www.iconfont.cn/)
 
 [DNS查询](http://tool.chinaz.com/dns/)
 

@@ -21,7 +21,7 @@ https://xxxblank.github.io/2017/09/14/singleTon/
         private SingletonTest() {  
         }
     
-        // 将自身的实例对象设置为一个属性,并加上Static和final修饰符
+        // 将自身的实例对象设置为一个属性,并加上static和final修饰符
         private static final SingletonTest instance = new SingletonTest();  
     
         // 静态方法返回该类的实例
@@ -69,3 +69,8 @@ https://xxxblank.github.io/2017/09/14/singleTon/
             return instance;   
         }   
     }
+
+
+[九种单例](https://mp.weixin.qq.com/s/LqndJzk6XKK9bQRdzZKvAg)
+
+[单例安全性防攻击](https://cloud.tencent.com/developer/article/1984289)

@@ -78,3 +78,8 @@ Large Object Space：离散地址的集合，分配一些大对象，用于提�
 ##### Android系统的内存管理
 
 https://blog.csdn.net/sz_chrome/article/details/106862916
+
+
+##### 不同步骤运行在JVM什么区
+
+[Java代码怎样运行的](https://juejin.cn/post/7107594538427875335)
