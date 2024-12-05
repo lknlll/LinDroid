@@ -63,3 +63,7 @@ NewGlobalRef
 
 ###### so动态加载
 [so 动态加载](https://juejin.cn/post/7089693552493461535)
+
+
+用Native方法加密APK包所有字符串，安全性拉满
+https://mp.weixin.qq.com/s/NaSLNantUThqBIJBSj-h_w

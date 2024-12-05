@@ -1,3 +1,5 @@
+[TOC]
+
 **知识准备**
 
 跨进程通信（IPC，Inter-Process Communication）
@@ -67,7 +69,7 @@ Binder一次数据拷贝原理，在内核空间和接收方用户空间中做�
 
 基于C/S架构，发起请求的进程属于Client，接收请求的进程属于Server。
 
-Binder 4个角色：Client、Server、Binder驱动和ServiceManager。  
+Binder 4个角色(层)：Client、Server、Binder驱动和ServiceManager。  
 Binder驱动类似于路由，将Client请求转发到Server，将Server返回的数据传给Client。
 ServiceManager类似于DNS，负责将Client请求的Server 描述符转化为具体的Server地址，以便于Binder驱动转发至Server，Server提供Binder服务都需要在ServiceManager注册。
 
@@ -109,3 +111,4 @@ aidl: Android Interface Definition Language, 接口定义语言，
 
 Client 和Server在不同进程，Client 请求后调用方线程会被挂起，Binder提供了异步方式，等待Server响应后返回数据，Server的响应线程是在Binder线程池中，而不是主线程。
 
+https://juejin.cn/post/7059601252367204365

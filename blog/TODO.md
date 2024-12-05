@@ -1,4 +1,4 @@
-##### 总结
+#### 总结
 
 [Xueli总结](https://mp.weixin.qq.com/s/yKsgPWx1WBvQg5geiW5PPg)
 
@@ -273,7 +273,7 @@ https://www.jianshu.com/p/de220733fdfa
 
 ---
 
-##### Java
+#### Java
 
 [错误做法二](https://mp.weixin.qq.com/s/uamUsLpOW9BA8a6Tw9e8ag)
 
@@ -324,7 +324,7 @@ https://blog.csdn.net/kingdtl/article/details/19554461
 
 ---
 
-##### Android
+#### Android
 
 [popupMenu](https://www.oryoy.com/news/android-kai-fa-ji-qiao-ru-he-zi-ding-yi-popupmenu-bei-jing-yan-se-ji-yang-shi-xiang-jie.html)
 
@@ -638,22 +638,46 @@ https://juejin.cn/post/7041834777229393934
 
 ---
 
-###### JNI 
+##### JNI 
 
 查看手机CPU框架
 
 https://blog.csdn.net/chen1234520nnn/article/details/76021026
 
-###### 动画
+##### 动画
 
 [Android点赞烟花效果实现](https://mp.weixin.qq.com/s/cDxg-2oY8FBsa9ZkjBN6rA)
 
-###### 动态化
+##### 动态化
 
 [Facebook YOGA初探:跨平台的布局引擎(基于Android)](https://www.jianshu.com/p/d4289b16a133)
 
 [美团Litho的使用及原理剖析](https://tech.meituan.com/2019/03/14/litho-use-and-principle-analysis.html)
 
-###### RecyclerView
+##### RecyclerView
 
 [RecyclerView 打造抖音二级评论效果](https://juejin.cn/post/7276808079143190565)
+
+##### resource
+
+[9-patch点9图](https://juejin.cn/post/7020754366474911774)
+
+一定要放在res/drawable目录下
+
+drawable 与 mipmap 文件夹存放图片有区别
+
+Android 存放图片资源 drawable 与 mipmap 文件夹有什么区别？
+如果一个 imageView 有缩放动画，使用 drawable 下的图片，会一直使用一张来缩放图片实现 imageView 缩放动画。
+如果使用 mipmap 下的图片，会根据缩放程度自动选择比当前分辨率大而又最接近当前分辨率的图片来做缩放处理。
+
+
+Android 官方对 drawable 和 mipmap 文件夹的用途描述。
+drawable 文件夹存储 bitmap 文件(png, jpeg, gif)、9-patch 文件 和 xml 文件，这些文件用于描述包含多种状态 (normal, pressed, focused) 的可绘制形状或可绘制对象。
+mipmap 文件夹用于存放 APP 的 icon 图标文件，Android系统会保留这个文件夹中所有的图片资源，而不受到应用安装的设备的屏幕分辨率的影响，这个行为允许启动程序为应用选择最好的分辨率图标显示在主屏幕上。
+
+##### Material Views
+
+###### CoordinatorLayout
+
+Android Behavior“协调”布局，实现酷炫交互
+https://mp.weixin.qq.com/s/S7QiPgJ3zJxqNRfSXwXwOg

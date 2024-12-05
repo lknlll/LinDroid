@@ -1,3 +1,8 @@
+
+
+Android应用架构进化史
+https://mp.weixin.qq.com/s/5bEuTfomdNveLtX-fB6WUQ
+
 干货 | 从智行 Android 项目看组件化架构实践
 https://mp.weixin.qq.com/s?__biz=MjM5MDI3MjA5MQ==&mid=2697268363&idx=1&sn=3db2dce36a912936961c671dd1f71c78&scene=21#wechat_redirect
 

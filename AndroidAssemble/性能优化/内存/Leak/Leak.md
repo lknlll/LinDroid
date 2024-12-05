@@ -156,3 +156,6 @@ WebView都存在内存泄漏的问题，在应用中只要使用一次WebView，
 [常见的内存泄露](https://mp.weixin.qq.com/s/azzM_PEgF5Qu5bvHb4k0Pw)
 
 [广播未取消注册为什么会内存泄漏](https://juejin.cn/post/7394790046715691046)
+
+内存泄漏：你不可错过的优化技巧
+https://mp.weixin.qq.com/s/BoztGZvYzluYcgqPteNPww
