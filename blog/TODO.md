@@ -658,6 +658,9 @@ https://blog.csdn.net/chen1234520nnn/article/details/76021026
 
 [RecyclerView 打造抖音二级评论效果](https://juejin.cn/post/7276808079143190565)
 
+GridLayoutManager结合ItemDecoration均分子item 自适应计算
+https://blog.csdn.net/u013394527/article/details/78474706
+
 ##### resource
 
 [9-patch点9图](https://juejin.cn/post/7020754366474911774)

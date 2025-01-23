@@ -1,7 +1,7 @@
 
 [TOC]索引
 
-###### ADB
+##### ADB
 
 adb -s 多设备选择设备  
 
@@ -52,11 +52,44 @@ adb push /Users/eleme/StudioProjects/warlock/app/build/outputs/apk/debug/app-deb
 设置logcat缓冲区大小
 adb logcat -G 50M
 
-###### MAC  
+开启开发者模式 (不行时先Root)
+adb shell settings put global development_settings_enabled 1
 
-Go2shell
+##### MAC  
+
+setup adb after android studio installed
+
+Add platform-tools to your path
+
+echo 'export ANDROID_HOME=/Users/$USER/Library/Android/sdk' >> ~/.bash_profile
+echo 'export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"' >> ~/.bash_profile
+
+Refresh your bash profile (or restart your terminal app)
+
+source ~/.bash_profile
+
+for zsh users in Terminal or iterm2
+add the android sdk and platform-tools to zsh 
+
+echo 'export ANDROID_HOME=/Users/$USER/Library/Android/sdk' >> ~/.zshrc
+echo 'export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools' >> ~/.zshrc
+
+source the zsh
+
+source ~/.zshrc
+
+查看默认shell
+
+echo $SHELL
+
+
+
+Go2shell 
+终端iTerm2  brew install --cask iterm2
 
 fcrackzip
+
+###### Hotkey
 
 Command+shift+. 显隐/隐藏  
 Command+→  行尾  
@@ -68,7 +101,12 @@ sudo vim /etc/hosts，然后输入电脑的密码进入host文件，按 i 键进
 
 Chrome CMD + SHIFT + P 弹出命令框 后输入 full 将整个网页另存为图片
 
-###### GIT  
+###### HomeBrew
+
+安装用户界面
+brew install --cask <soft-name>
+
+##### GIT  
 [Fundamental](http://www.cnblogs.com/tugenhua0707/p/4050072.html)
 
 传大文件失败，调整单文件大小
@@ -83,7 +121,7 @@ git 设置本地忽略必须保证 git 的远程仓库分支上没有这个要�
 
 git cherry-pick可以选择某一个分支中的一个或几个commit(s)来进行操作（操作的对象是commit），是本地操作
 
-###### 社区  
+##### 社区  
 [GoogleCodeLab](http://clmirror.storage.googleapis.com/index.html)  
 [codekk库分享、源码解析、框架设计、好文推荐、内推](https://a.codekk.com/)  
 [开源库检索](https://android-arsenal.com/)  
@@ -93,10 +131,10 @@ git cherry-pick可以选择某一个分支中的一个或几个commit(s)来进�
 [AndroidDevGoogleBlog](https://android-developers.googleblog.com/)  
 [Mark Allison - Styling Android](https://blog.stylingandroid.com/)  
 [WAN ANDROID](https://www.wanandroid.com/)
-###### Maven  
+##### Maven  
 [阿里云镜像](https://maven.aliyun.com)
 
-###### 工具
+##### 工具
 [找图标](https://mp.weixin.qq.com/s/EWSU7lfE2YTOk0FvGm-cXw)
 [阿里](https://www.iconfont.cn/)
 
@@ -106,7 +144,7 @@ git cherry-pick可以选择某一个分支中的一个或几个commit(s)来进�
 
 [github file download](https://d.serctl.com/)
 
-###### MarkDown  
+##### MarkDown  
 
 目录： [TOC]
 加粗：\*\*文本\*\*
@@ -132,7 +170,7 @@ git cherry-pick可以选择某一个分支中的一个或几个commit(s)来进�
 
 项目符号：在文字前面加上 - 
 
-###### Android Studio
+##### Android Studio
 
 create class 填写VISIBILITY PUBLIC 全部大写
 
@@ -171,7 +209,7 @@ View > Tool Windows > App Inspection
 
 在左侧边栏上方，Open New Query 标签页可进行SQL语句
 
-###### Java
+##### Java
 
 Java虚拟机（JVM）
 
@@ -285,7 +323,7 @@ java.net.SocketTimeoutException: Read timed out
 
 网络请求超时抛出
 
-###### Shell
+##### Shell
 
 cd .. 返回上一级
 
@@ -370,7 +408,7 @@ if using cmake for native code
 当前目录下输出app模块的依赖树
 ./gradlew :app:dependencies > test.txt
 
-###### Other
+##### Other
 
 微信文件传输网页
 https://filehelper.weixin.qq.com/

@@ -96,6 +96,10 @@ DNS和链接慢，想办法复用客户端使用的域名和链接。
 推荐文章：WebView性能、体验分析与优化
 https://tech.meituan.com/2017/06/09/webviewperf.html
 
+
+Android WebView常见的安全漏洞和解决方案
+https://juejin.cn/post/6844904151256678408
+
 进程调度
 https://paul.pub/android-process-priority/
 
