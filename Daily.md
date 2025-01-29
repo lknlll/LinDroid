@@ -112,6 +112,8 @@ brew install --cask <soft-name>
 传大文件失败，调整单文件大小
 Git config http.postBuffer 524288000
 
+云端校验提交用户邮箱，需要在git修改 git config中自定义的user.email和user.name
+
 只clone单独分支且只拉取一次commit 
 git clone -b LinDroid --depth 1  https://github.com/lknlll/LinDroid.git
 可以避免git目录下的pack 文件过大
@@ -328,6 +330,8 @@ java.net.SocketTimeoutException: Read timed out
 cd .. 返回上一级
 
 control + z 终止当前命令
+
+vim :q 退出
 
 ##### Gradle
 
