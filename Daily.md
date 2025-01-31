@@ -527,3 +527,10 @@ AAPT: error: resource android:color/system_neutral1_1000 not found.
 
 remote job
 https://github.com/lukasz-madon/awesome-remote-job
+
+recyclerView 添加ItemDecoration的时候 判断原有ItemDecoration数量避免重复添加
+
+```
+if (recyclerView.getItemDecorationCount() == 0)
+recyclerView.addItemDecoration(new GridSpacingItemDecoration(DpPxUtils.dip2px(mContext, 17)));
+```
