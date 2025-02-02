@@ -1,4 +1,4 @@
-##### ==
+##### == Any和Object
 kotlin.Any 类与 java.lang.Object 类相互映射
 
 Any.equals() 函数定义如下：
@@ -17,7 +17,7 @@ public static boolean areEqual(Object first, Object second) {
 
 这就保证了空安全。所以说，我们用 == 操作符时不需要担心空安全，a == b 并不等同于 a.equals(b)，而是 a?.equals(b) ?: b == null
 
-###### 空保护机制
+##### 空保护机制
 ?.表示对象为空时就直接返回null，仅当对象不为空时才调用后面的方法
 
 
@@ -30,7 +30,7 @@ public static boolean areEqual(Object first, Object second) {
         //age为空返回-1
         val ages2 = age?.toInt() ?: -1
 
-###### as
+##### as
 类型强转: as 运算符
 
 ##### 匿名内部类：
@@ -42,7 +42,7 @@ public static boolean areEqual(Object first, Object second) {
     })
 ```
 
-###### let
+##### let
 
 ```
 object.let{
@@ -50,17 +50,17 @@ object.let{
 }
 ```
 
-###### if
+##### if
 区别于Java，kotlin if可以直接作为表达式，赋值或在返回值中返回
 val max = if (a > b) a else b
 
 布尔型只有一个Boolean类型，值只能是true或false，不能用0或者非0来代表
 
-###### lateinit 修饰符
+##### lateinit 修饰符
 
 用 lateinit 修饰类属性的时候，实际上在告诉编译器：这个属性的初始化的时机和方式与编译器无关，由代码操作
 
-###### 智能类型转换
+##### 智能类型转换
 
 当 is 检测通过时，Kotlin 会自动将 obj 视为指定类型，因此在 if 语句的分支内不需要显式地进行类型转换。
 
@@ -68,7 +68,7 @@ val max = if (a > b) a else b
     if (obj is String) {
         println("字符串长度: ${obj.length}") // 在这里 `obj` 已被智能转换为 `String`，可以直接用String的方法
 ```
-###### 区间
+##### 区间
 ..操作符
 相当于rangeTo()，指定范围
 
@@ -96,7 +96,7 @@ val max = if (a > b) a else b
 
 ```
 
-###### 循环
+##### 循环
 
 数组遍历
 
@@ -157,3 +157,34 @@ val max = if (a > b) a else b
 
 从标签 @a 返回 1 
 `return@a 1`
+
+##### field标识符
+
+问题：会导致recursive call，正确是使用Backing field；
+```
+    class Student(_name: String, _age: Int) {
+        val name = _name
+            get() = this.name
+        var age = _age
+            get() = this.age
+            set(value) {
+                this.age = value
+            }
+    }
+```
+
+这里，name自定义了setter，只有isNotEmpty时，才把set的值传给backing field
+person.name = ""//这里是空串，不赋给field
+println(person.name) // 仍然输出 "initial value"
+
+```kotlin
+    class Person {
+        var name: String = "initial value"
+            set(value) {
+                if (value.isNotEmpty()) {
+                    field = value
+                }
+            }
+    }
+```
+

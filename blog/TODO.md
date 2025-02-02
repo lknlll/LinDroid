@@ -684,3 +684,7 @@ mipmap 文件夹用于存放 APP 的 icon 图标文件，Android系统会保留�
 
 Android Behavior“协调”布局，实现酷炫交互
 https://mp.weixin.qq.com/s/S7QiPgJ3zJxqNRfSXwXwOg
+
+###### sse 流式响应 gpt类应用
+https://juejin.cn/post/7352075763834912806
+Android 
